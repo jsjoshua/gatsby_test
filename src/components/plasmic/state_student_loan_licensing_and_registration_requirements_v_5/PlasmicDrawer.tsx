@@ -413,37 +413,43 @@ function PlasmicDrawer__RenderFunc(props: {
                 {...child$Props}
               >
                 <FormItemWrapper
-                  className={classNames("__wab_instance", sty.formField__mhIId)}
+                  className={classNames(
+                    "__wab_instance",
+                    sty.formField___8JyMy
+                  )}
                   label={"First Name"}
                   name={"comment_first_name"}
                   rules={[{ ruleType: "required" }]}
                 >
                   <AntdInput
-                    className={classNames("__wab_instance", sty.input__qykjM)}
+                    className={classNames("__wab_instance", sty.input__pNb2H)}
                   />
                 </FormItemWrapper>
                 <FormItemWrapper
-                  className={classNames("__wab_instance", sty.formField__cDcHj)}
+                  className={classNames(
+                    "__wab_instance",
+                    sty.formField___3LqAp
+                  )}
                   label={"Last Name"}
                   name={"comment_last_name"}
                   rules={[{ ruleType: "required" }]}
                 >
                   <AntdInput
-                    className={classNames("__wab_instance", sty.input__bTxU4)}
+                    className={classNames("__wab_instance", sty.input___6XzhU)}
                   />
                 </FormItemWrapper>
                 <FormItemWrapper
-                  className={classNames("__wab_instance", sty.formField__xLEjy)}
+                  className={classNames("__wab_instance", sty.formField__ph68H)}
                   label={"Email"}
                   name={"commentemail"}
                   rules={[{ ruleType: "required" }]}
                 >
                   <AntdInput
-                    className={classNames("__wab_instance", sty.input__q9Con)}
+                    className={classNames("__wab_instance", sty.input__ksFoJ)}
                   />
                 </FormItemWrapper>
                 <FormItemWrapper
-                  className={classNames("__wab_instance", sty.formField__lfwIm)}
+                  className={classNames("__wab_instance", sty.formField__mIvsS)}
                   label={"Message"}
                   name={"message"}
                   rules={[{ ruleType: "required" }]}

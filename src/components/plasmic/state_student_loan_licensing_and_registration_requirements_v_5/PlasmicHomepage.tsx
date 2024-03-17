@@ -1984,7 +1984,7 @@ export const PlasmicHomepage = Object.assign(
         "Summary of state laws requiring student loan servicers and lenders to obtain a license or to register. ",
       ogImageSrc:
         "https://site-assets.plasmic.app/e9d674bafca20a098c232da3e08e7ea6.png",
-      canonical: "https://app.studentloancompliance.com"
+      canonical: "https://www.studentloancompliance.com"
     }
   }
 );
