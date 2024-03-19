@@ -4,7 +4,7 @@ import * as React from "react";
 import {
   PlasmicFooter,
   DefaultFooterProps
-} from "./plasmic/state_student_loan_licensing_and_registration_requirements_v_5/PlasmicFooter";
+} from "./plasmic/test_state_student_loan_licensing_and_registration_requirements_v_6/PlasmicFooter";
 import { HTMLElementRefOf } from "@plasmicapp/react-web";
 
 // Your component props start with props for variants and slots you defined

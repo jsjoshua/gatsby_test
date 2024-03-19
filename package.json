@@ -27,6 +27,7 @@
     "@plasmicpkgs/radix-ui": "^0.0.45",
     "gatsby": "^5.13.3",
     "gatsby-plugin-react-helmet": "^6.13.1",
+    "jquery": "^3.7.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-helmet": "^6.1.0"

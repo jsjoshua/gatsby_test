@@ -4,7 +4,7 @@ import * as React from "react";
 import {
   PlasmicNavBar,
   DefaultNavBarProps
-} from "./plasmic/state_student_loan_licensing_and_registration_requirements_v_5/PlasmicNavBar";
+} from "./plasmic/test_state_student_loan_licensing_and_registration_requirements_v_6/PlasmicNavBar";
 
 // Your component props start with props for variants and slots you defined
 // in Plasmic, but you can add more here, like event handlers that you can

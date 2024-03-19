@@ -2,7 +2,7 @@ import * as React from "react";
 import {
   PlasmicTextInput,
   DefaultTextInputProps
-} from "./plasmic/state_student_loan_licensing_and_registration_requirements_v_5/PlasmicTextInput";
+} from "./plasmic/test_state_student_loan_licensing_and_registration_requirements_v_6/PlasmicTextInput";
 
 import { TextInputRef } from "@plasmicapp/react-web";
 

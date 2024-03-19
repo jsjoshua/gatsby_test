@@ -2,7 +2,7 @@ import * as React from "react";
 import {
   PlasmicButton,
   DefaultButtonProps
-} from "./plasmic/state_student_loan_licensing_and_registration_requirements_v_5/PlasmicButton";
+} from "./plasmic/test_state_student_loan_licensing_and_registration_requirements_v_6/PlasmicButton";
 
 import {
   ButtonRef,
