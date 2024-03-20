@@ -218,29 +218,29 @@
   min-width: 0;
   padding: 8px;
 }
-.formField__tIk0N:global(.__wab_instance) {
+.formField__noFbu:global(.__wab_instance) {
   width: 100%;
   margin-bottom: 24px;
   min-width: 0;
 }
-.input__b84Tn:global(.__wab_instance) {
+.input__o9Abt:global(.__wab_instance) {
   max-width: 100%;
   object-fit: cover;
 }
-.formField__fddX5:global(.__wab_instance) {
+.formField__tczdH:global(.__wab_instance) {
   width: 100%;
   margin-bottom: 24px;
   min-width: 0;
 }
-.passwordInput__yzlLj:global(.__wab_instance) {
+.passwordInput__dElF:global(.__wab_instance) {
   max-width: 100%;
   object-fit: cover;
 }
-.button___8P6Ky:global(.__wab_instance) {
+.button__tDor4:global(.__wab_instance) {
   max-width: 100%;
   object-fit: cover;
 }
-.text__tWrVd {
+.text___6POTj {
   position: relative;
   width: 100%;
   height: auto;
@@ -304,6 +304,11 @@
   max-width: 100%;
   object-fit: cover;
 }
+@media (min-width: 0px) and (max-width: 768px) {
+  .accessRequestAccordian:global(.__wab_instance) {
+    overflow: auto;
+  }
+}
 .text__gIk5 {
   position: relative;
   width: 100%;
@@ -333,70 +338,70 @@
   min-width: 0;
   padding: 8px;
 }
-.formField__jnx51:global(.__wab_instance) {
+.formField__kFVnj:global(.__wab_instance) {
   width: 100%;
   margin-bottom: 24px;
   min-width: 0;
 }
-.input__iutaJ:global(.__wab_instance) {
+.input__yV5Bb:global(.__wab_instance) {
   max-width: 100%;
   object-fit: cover;
 }
-.formField___1LSXx:global(.__wab_instance) {
+.formField__r8PQi:global(.__wab_instance) {
   width: 100%;
   margin-bottom: 24px;
   min-width: 0;
 }
-.input__jrP0V:global(.__wab_instance) {
+.input__qS8O:global(.__wab_instance) {
   max-width: 100%;
   object-fit: cover;
 }
-.formField__bufrz:global(.__wab_instance) {
+.formField__bw2Gj:global(.__wab_instance) {
   width: 100%;
   margin-bottom: 24px;
   min-width: 0;
 }
-.input__i1Zy1:global(.__wab_instance) {
+.input__eVm7A:global(.__wab_instance) {
   max-width: 100%;
   object-fit: cover;
 }
-.formField___6MQIm:global(.__wab_instance) {
+.formField__dbb2I:global(.__wab_instance) {
   width: 100%;
   margin-bottom: 24px;
   min-width: 0;
 }
-.input__kwFOb:global(.__wab_instance) {
+.input__nQiRb:global(.__wab_instance) {
   max-width: 100%;
   object-fit: cover;
 }
-.formField__kudw1:global(.__wab_instance) {
+.formField__sFr6H:global(.__wab_instance) {
   width: 100%;
   margin-bottom: 24px;
   min-width: 0;
 }
-.input___8Pv7K:global(.__wab_instance) {
+.input__w4RG7:global(.__wab_instance) {
   max-width: 100%;
   object-fit: cover;
 }
-.formField__gKlNm:global(.__wab_instance) {
+.formField__mo3Ql:global(.__wab_instance) {
   width: 100%;
   margin-bottom: 24px;
   min-width: 0;
 }
-.passwordInput__cFTuu:global(.__wab_instance) {
+.passwordInput___6LVix:global(.__wab_instance) {
   max-width: 100%;
   object-fit: cover;
 }
-.formField__n5Ws:global(.__wab_instance) {
+.formField__l8Spn:global(.__wab_instance) {
   width: 100%;
   margin-bottom: 24px;
   min-width: 0;
 }
-.passwordInput__esKDf:global(.__wab_instance) {
+.passwordInput___4VT1A:global(.__wab_instance) {
   max-width: 100%;
   object-fit: cover;
 }
-.formField__qkeJa:global(.__wab_instance) {
+.formField__p8F21:global(.__wab_instance) {
   width: 100%;
   margin-bottom: 24px;
   min-width: 0;
@@ -405,11 +410,11 @@
   max-width: 100%;
   object-fit: cover;
 }
-.button__cwlnD:global(.__wab_instance) {
+.button__pCzz:global(.__wab_instance) {
   max-width: 100%;
   object-fit: cover;
 }
-.text__oZ2Q {
+.text__zjKvu {
   position: relative;
   width: 100%;
   height: auto;
