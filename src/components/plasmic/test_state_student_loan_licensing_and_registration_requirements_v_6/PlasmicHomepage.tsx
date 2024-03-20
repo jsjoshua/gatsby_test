@@ -1158,94 +1158,125 @@ function PlasmicHomepage__RenderFunc(props: {
                                     })()}
                                   </React.Fragment>
                                 </div>
-                                <div
+                              </div>
+                              {(() => {
+                                try {
+                                  return $state.filterActivity !=
+                                    "filter_lending"
+                                    ? true
+                                    : false;
+                                } catch (e) {
+                                  if (
+                                    e instanceof TypeError ||
+                                    e?.plasmicType ===
+                                      "PlasmicUndefinedDataError"
+                                  ) {
+                                    return true;
+                                  }
+                                  throw e;
+                                }
+                              })() ? (
+                                <Stack__
+                                  as={"div"}
+                                  hasGap={true}
                                   className={classNames(
                                     projectcss.all,
-                                    sty.columns__z9XiB
+                                    sty.column__swwLy
                                   )}
                                 >
                                   <div
                                     className={classNames(
                                       projectcss.all,
-                                      sty.column__ayFks
+                                      projectcss.__wab_text,
+                                      sty.text__yYnZn
                                     )}
                                   >
-                                    <div
-                                      className={classNames(
-                                        projectcss.all,
-                                        projectcss.__wab_text,
-                                        sty.text__yYnZn
-                                      )}
-                                    >
-                                      {"Licenses Servicers?"}
-                                    </div>
-                                    <div
-                                      className={classNames(
-                                        projectcss.all,
-                                        projectcss.__wab_text,
-                                        sty.text__zhS5X
-                                      )}
-                                    >
-                                      {"Lenders Must register?"}
-                                    </div>
+                                    {"Licenses Servicers?"}
                                   </div>
                                   <div
                                     className={classNames(
                                       projectcss.all,
-                                      sty.column__ySRj
+                                      projectcss.__wab_text,
+                                      sty.text__xr8H8
                                     )}
                                   >
-                                    <div
-                                      className={classNames(
-                                        projectcss.all,
-                                        projectcss.__wab_text,
-                                        sty.text__xr8H8
-                                      )}
-                                    >
-                                      <React.Fragment>
-                                        {(() => {
-                                          try {
-                                            return currentItem.servicing_license_yn;
-                                          } catch (e) {
-                                            if (
-                                              e instanceof TypeError ||
-                                              e?.plasmicType ===
-                                                "PlasmicUndefinedDataError"
-                                            ) {
-                                              return "";
-                                            }
-                                            throw e;
+                                    <React.Fragment>
+                                      {(() => {
+                                        try {
+                                          return currentItem.servicing_license_yn;
+                                        } catch (e) {
+                                          if (
+                                            e instanceof TypeError ||
+                                            e?.plasmicType ===
+                                              "PlasmicUndefinedDataError"
+                                          ) {
+                                            return "";
                                           }
-                                        })()}
-                                      </React.Fragment>
-                                    </div>
-                                    <div
-                                      className={classNames(
-                                        projectcss.all,
-                                        projectcss.__wab_text,
-                                        sty.text__e8Avv
-                                      )}
-                                    >
-                                      <React.Fragment>
-                                        {(() => {
-                                          try {
-                                            return currentItem.lending_registration_yn;
-                                          } catch (e) {
-                                            if (
-                                              e instanceof TypeError ||
-                                              e?.plasmicType ===
-                                                "PlasmicUndefinedDataError"
-                                            ) {
-                                              return "";
-                                            }
-                                            throw e;
+                                          throw e;
+                                        }
+                                      })()}
+                                    </React.Fragment>
+                                  </div>
+                                </Stack__>
+                              ) : null}
+                              {(() => {
+                                try {
+                                  return $state.filterActivity !=
+                                    "filter_servicing"
+                                    ? true
+                                    : false;
+                                } catch (e) {
+                                  if (
+                                    e instanceof TypeError ||
+                                    e?.plasmicType ===
+                                      "PlasmicUndefinedDataError"
+                                  ) {
+                                    return true;
+                                  }
+                                  throw e;
+                                }
+                              })() ? (
+                                <div
+                                  className={classNames(
+                                    projectcss.all,
+                                    sty.column__vAQjM
+                                  )}
+                                >
+                                  <div
+                                    className={classNames(
+                                      projectcss.all,
+                                      projectcss.__wab_text,
+                                      sty.text__zhS5X
+                                    )}
+                                  >
+                                    {"Lenders Must register?"}
+                                  </div>
+                                  <div
+                                    className={classNames(
+                                      projectcss.all,
+                                      projectcss.__wab_text,
+                                      sty.text__e8Avv
+                                    )}
+                                  >
+                                    <React.Fragment>
+                                      {(() => {
+                                        try {
+                                          return currentItem.lending_registration_yn;
+                                        } catch (e) {
+                                          if (
+                                            e instanceof TypeError ||
+                                            e?.plasmicType ===
+                                              "PlasmicUndefinedDataError"
+                                          ) {
+                                            return "";
                                           }
-                                        })()}
-                                      </React.Fragment>
-                                    </div>
+                                          throw e;
+                                        }
+                                      })()}
+                                    </React.Fragment>
                                   </div>
                                 </div>
-                              </div>
+                              ) : null}
                             </div>
                           ),
                           onChange: generateStateOnChangePropForCodeComponents(
