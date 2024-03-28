@@ -578,7 +578,7 @@ function PlasmicFooter__RenderFunc(props: {
                       <FormItemWrapper
                         className={classNames(
                           "__wab_instance",
-                          sty.formField__rQ5F4
+                          sty.formField__ujsdS
                         )}
                         label={"First Name"}
                         name={"comment_first_name"}
@@ -587,14 +587,14 @@ function PlasmicFooter__RenderFunc(props: {
                         <AntdInput
                           className={classNames(
                             "__wab_instance",
-                            sty.input__sn0Qi
+                            sty.input__piLf
                           )}
                         />
                       </FormItemWrapper>
                       <FormItemWrapper
                         className={classNames(
                           "__wab_instance",
-                          sty.formField__ipfP2
+                          sty.formField___0THll
                         )}
                         label={"Last Name"}
                         name={"comment_last_name"}
@@ -603,14 +603,14 @@ function PlasmicFooter__RenderFunc(props: {
                         <AntdInput
                           className={classNames(
                             "__wab_instance",
-                            sty.input__rgrU0
+                            sty.input___90Vjv
                           )}
                         />
                       </FormItemWrapper>
                       <FormItemWrapper
                         className={classNames(
                           "__wab_instance",
-                          sty.formField__hkDvK
+                          sty.formField__m0Xep
                         )}
                         label={"Email"}
                         name={"commentemail"}
@@ -619,14 +619,14 @@ function PlasmicFooter__RenderFunc(props: {
                         <AntdInput
                           className={classNames(
                             "__wab_instance",
-                            sty.input__z05WG
+                            sty.input__c67Oj
                           )}
                         />
                       </FormItemWrapper>
                       <FormItemWrapper
                         className={classNames(
                           "__wab_instance",
-                          sty.formField__ttu47
+                          sty.formField___8WY6
                         )}
                         label={"Message"}
                         name={"message"}
@@ -639,7 +639,7 @@ function PlasmicFooter__RenderFunc(props: {
                       <AntdButton
                         className={classNames(
                           "__wab_instance",
-                          sty.button__bvImx
+                          sty.button__o4A26
                         )}
                         submitsForm={true}
                         type={"primary"}
@@ -648,7 +648,7 @@ function PlasmicFooter__RenderFunc(props: {
                           className={classNames(
                             projectcss.all,
                             projectcss.__wab_text,
-                            sty.text___9WNg2
+                            sty.text__vymq5
                           )}
                         >
                           {"Submit"}

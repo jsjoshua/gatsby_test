@@ -79,6 +79,7 @@ import { AntdOption } from "@plasmicpkgs/antd5/skinny/registerSelect";
 import { DataProvider } from "@plasmicpkgs/plasmic-basic-components";
 import { AntdSingleCollapse } from "@plasmicpkgs/antd5/skinny/registerCollapse";
 import { singleCollapseHelpers as AntdSingleCollapse_Helpers } from "@plasmicpkgs/antd5/skinny/registerCollapse";
+import { AntdTooltip } from "@plasmicpkgs/antd5/skinny/registerTooltip";
 import Button2 from "../../Button"; // plasmic-import: MKBce7v9ox0V/component
 import Footer from "../../Footer"; // plasmic-import: sdOW4HCB9nTz/component
 import { Fetcher } from "@plasmicapp/react-web/lib/data-sources";
@@ -121,6 +122,7 @@ export type PlasmicHomepage__OverridesType = {
   select?: Flex__<typeof AntdSelect>;
   dataProvider?: Flex__<typeof DataProvider>;
   collapse?: Flex__<typeof AntdSingleCollapse>;
+  tooltip?: Flex__<typeof AntdTooltip>;
   collapseServicing?: Flex__<typeof AntdSingleCollapse>;
   collapseLending?: Flex__<typeof AntdSingleCollapse>;
   footer?: Flex__<typeof Footer>;
@@ -1352,170 +1354,182 @@ function PlasmicHomepage__RenderFunc(props: {
                                       sty.column__v7Rpg
                                     )}
                                   >
-                                    <Button2
+                                    <AntdTooltip
+                                      data-plasmic-name={"tooltip"}
+                                      data-plasmic-override={overrides.tooltip}
                                       className={classNames(
                                         "__wab_instance",
-                                        sty.button__pfenc
+                                        sty.tooltip
                                       )}
-                                      color={"softSand"}
-                                      onClick={async event => {
-                                        const $steps = {};
-
-                                        $steps[
-                                          "updateNavBarHostlessRadixPopoverOpen"
-                                        ] = true
-                                          ? (() => {
-                                              const actionArgs = {
-                                                operation: 0,
-                                                variable: {
-                                                  objRoot: $state,
-                                                  variablePath: [
-                                                    "navBar",
-                                                    "hostlessRadixPopoverOpen"
-                                                  ]
-                                                },
-                                                value: true
-                                              };
-                                              return (({
-                                                variable,
-                                                value,
-                                                startIndex,
-                                                deleteCount
-                                              }) => {
-                                                if (!variable) {
-                                                  return;
-                                                }
-                                                const {
-                                                  objRoot,
-                                                  variablePath
-                                                } = variable;
-
-                                                $stateSet(
-                                                  objRoot,
-                                                  variablePath,
-                                                  value
-                                                );
-                                                return value;
-                                              })?.apply(null, [actionArgs]);
-                                            })()
-                                          : undefined;
-                                        if (
-                                          $steps[
-                                            "updateNavBarHostlessRadixPopoverOpen"
-                                          ] != null &&
-                                          typeof $steps[
-                                            "updateNavBarHostlessRadixPopoverOpen"
-                                          ] === "object" &&
-                                          typeof $steps[
-                                            "updateNavBarHostlessRadixPopoverOpen"
-                                          ].then === "function"
-                                        ) {
-                                          $steps[
-                                            "updateNavBarHostlessRadixPopoverOpen"
-                                          ] = await $steps[
-                                            "updateNavBarHostlessRadixPopoverOpen"
-                                          ];
-                                        }
-
-                                        $steps[
-                                          "updateNavBarPlasmicAntd5CollapseActiveKey"
-                                        ] = true
-                                          ? (() => {
-                                              const actionArgs = {
-                                                variable: {
-                                                  objRoot: $state,
-                                                  variablePath: [
-                                                    "navBar",
-                                                    "plasmicAntd5CollapseActiveKey"
-                                                  ]
-                                                },
-                                                operation: 0,
-                                                value: 3
-                                              };
-                                              return (({
-                                                variable,
-                                                value,
-                                                startIndex,
-                                                deleteCount
-                                              }) => {
-                                                if (!variable) {
-                                                  return;
-                                                }
-                                                const {
-                                                  objRoot,
-                                                  variablePath
-                                                } = variable;
-
-                                                $stateSet(
-                                                  objRoot,
-                                                  variablePath,
-                                                  value
-                                                );
-                                                return value;
-                                              })?.apply(null, [actionArgs]);
-                                            })()
-                                          : undefined;
-                                        if (
-                                          $steps[
-                                            "updateNavBarPlasmicAntd5CollapseActiveKey"
-                                          ] != null &&
-                                          typeof $steps[
-                                            "updateNavBarPlasmicAntd5CollapseActiveKey"
-                                          ] === "object" &&
-                                          typeof $steps[
-                                            "updateNavBarPlasmicAntd5CollapseActiveKey"
-                                          ].then === "function"
-                                        ) {
-                                          $steps[
-                                            "updateNavBarPlasmicAntd5CollapseActiveKey"
-                                          ] = await $steps[
-                                            "updateNavBarPlasmicAntd5CollapseActiveKey"
-                                          ];
-                                        }
-
-                                        $steps["runCode"] = true
-                                          ? (() => {
-                                              const actionArgs = {
-                                                customFunction: async () => {
-                                                  return (() => {
-                                                    return window.scroll({
-                                                      top: 0,
-                                                      left: 0,
-                                                      behavior: "smooth"
-                                                    });
-                                                  })();
-                                                }
-                                              };
-                                              return (({ customFunction }) => {
-                                                return customFunction();
-                                              })?.apply(null, [actionArgs]);
-                                            })()
-                                          : undefined;
-                                        if (
-                                          $steps["runCode"] != null &&
-                                          typeof $steps["runCode"] ===
-                                            "object" &&
-                                          typeof $steps["runCode"].then ===
-                                            "function"
-                                        ) {
-                                          $steps["runCode"] = await $steps[
-                                            "runCode"
-                                          ];
-                                        }
-                                      }}
-                                      shape={"rounded"}
-                                      size={"compact"}
+                                      titleText={"Free!"}
                                     >
-                                      <div
+                                      <Button2
                                         className={classNames(
-                                          projectcss.all,
-                                          projectcss.__wab_text,
-                                          sty.text__kurbn
+                                          "__wab_instance",
+                                          sty.button__pfenc
                                         )}
+                                        color={"softSand"}
+                                        onClick={async event => {
+                                          const $steps = {};
+
+                                          $steps[
+                                            "updateNavBarHostlessRadixPopoverOpen"
+                                          ] = true
+                                            ? (() => {
+                                                const actionArgs = {
+                                                  operation: 0,
+                                                  variable: {
+                                                    objRoot: $state,
+                                                    variablePath: [
+                                                      "navBar",
+                                                      "hostlessRadixPopoverOpen"
+                                                    ]
+                                                  },
+                                                  value: true
+                                                };
+                                                return (({
+                                                  variable,
+                                                  value,
+                                                  startIndex,
+                                                  deleteCount
+                                                }) => {
+                                                  if (!variable) {
+                                                    return;
+                                                  }
+                                                  const {
+                                                    objRoot,
+                                                    variablePath
+                                                  } = variable;
+
+                                                  $stateSet(
+                                                    objRoot,
+                                                    variablePath,
+                                                    value
+                                                  );
+                                                  return value;
+                                                })?.apply(null, [actionArgs]);
+                                              })()
+                                            : undefined;
+                                          if (
+                                            $steps[
+                                              "updateNavBarHostlessRadixPopoverOpen"
+                                            ] != null &&
+                                            typeof $steps[
+                                              "updateNavBarHostlessRadixPopoverOpen"
+                                            ] === "object" &&
+                                            typeof $steps[
+                                              "updateNavBarHostlessRadixPopoverOpen"
+                                            ].then === "function"
+                                          ) {
+                                            $steps[
+                                              "updateNavBarHostlessRadixPopoverOpen"
+                                            ] = await $steps[
+                                              "updateNavBarHostlessRadixPopoverOpen"
+                                            ];
+                                          }
+
+                                          $steps[
+                                            "updateNavBarPlasmicAntd5CollapseActiveKey"
+                                          ] = true
+                                            ? (() => {
+                                                const actionArgs = {
+                                                  variable: {
+                                                    objRoot: $state,
+                                                    variablePath: [
+                                                      "navBar",
+                                                      "plasmicAntd5CollapseActiveKey"
+                                                    ]
+                                                  },
+                                                  operation: 0,
+                                                  value: 3
+                                                };
+                                                return (({
+                                                  variable,
+                                                  value,
+                                                  startIndex,
+                                                  deleteCount
+                                                }) => {
+                                                  if (!variable) {
+                                                    return;
+                                                  }
+                                                  const {
+                                                    objRoot,
+                                                    variablePath
+                                                  } = variable;
+
+                                                  $stateSet(
+                                                    objRoot,
+                                                    variablePath,
+                                                    value
+                                                  );
+                                                  return value;
+                                                })?.apply(null, [actionArgs]);
+                                              })()
+                                            : undefined;
+                                          if (
+                                            $steps[
+                                              "updateNavBarPlasmicAntd5CollapseActiveKey"
+                                            ] != null &&
+                                            typeof $steps[
+                                              "updateNavBarPlasmicAntd5CollapseActiveKey"
+                                            ] === "object" &&
+                                            typeof $steps[
+                                              "updateNavBarPlasmicAntd5CollapseActiveKey"
+                                            ].then === "function"
+                                          ) {
+                                            $steps[
+                                              "updateNavBarPlasmicAntd5CollapseActiveKey"
+                                            ] = await $steps[
+                                              "updateNavBarPlasmicAntd5CollapseActiveKey"
+                                            ];
+                                          }
+
+                                          $steps["runCode"] = true
+                                            ? (() => {
+                                                const actionArgs = {
+                                                  customFunction: async () => {
+                                                    return (() => {
+                                                      return window.scroll({
+                                                        top: 0,
+                                                        left: 0,
+                                                        behavior: "smooth"
+                                                      });
+                                                    })();
+                                                  }
+                                                };
+                                                return (({
+                                                  customFunction
+                                                }) => {
+                                                  return customFunction();
+                                                })?.apply(null, [actionArgs]);
+                                              })()
+                                            : undefined;
+                                          if (
+                                            $steps["runCode"] != null &&
+                                            typeof $steps["runCode"] ===
+                                              "object" &&
+                                            typeof $steps["runCode"].then ===
+                                              "function"
+                                          ) {
+                                            $steps["runCode"] = await $steps[
+                                              "runCode"
+                                            ];
+                                          }
+                                        }}
+                                        shape={"rounded"}
+                                        size={"compact"}
                                       >
-                                        {"Request Access"}
-                                      </div>
-                                    </Button2>
+                                        <div
+                                          className={classNames(
+                                            projectcss.all,
+                                            projectcss.__wab_text,
+                                            sty.text__kurbn
+                                          )}
+                                        >
+                                          {"Request Access"}
+                                        </div>
+                                      </Button2>
+                                    </AntdTooltip>
                                   </div>
                                   <div
                                     className={classNames(
@@ -2571,6 +2585,7 @@ const PlasmicDescendants = {
     "select",
     "dataProvider",
     "collapse",
+    "tooltip",
     "collapseServicing",
     "collapseLending",
     "footer"
@@ -2584,10 +2599,12 @@ const PlasmicDescendants = {
   dataProvider: [
     "dataProvider",
     "collapse",
+    "tooltip",
     "collapseServicing",
     "collapseLending"
   ],
-  collapse: ["collapse", "collapseServicing", "collapseLending"],
+  collapse: ["collapse", "tooltip", "collapseServicing", "collapseLending"],
+  tooltip: ["tooltip"],
   collapseServicing: ["collapseServicing"],
   collapseLending: ["collapseLending"],
   footer: ["footer"]
@@ -2605,6 +2622,7 @@ type NodeDefaultElementType = {
   select: typeof AntdSelect;
   dataProvider: typeof DataProvider;
   collapse: typeof AntdSingleCollapse;
+  tooltip: typeof AntdTooltip;
   collapseServicing: typeof AntdSingleCollapse;
   collapseLending: typeof AntdSingleCollapse;
   footer: typeof Footer;
@@ -2678,6 +2696,7 @@ export const PlasmicHomepage = Object.assign(
     select: makeNodeComponent("select"),
     dataProvider: makeNodeComponent("dataProvider"),
     collapse: makeNodeComponent("collapse"),
+    tooltip: makeNodeComponent("tooltip"),
     collapseServicing: makeNodeComponent("collapseServicing"),
     collapseLending: makeNodeComponent("collapseLending"),
     footer: makeNodeComponent("footer"),

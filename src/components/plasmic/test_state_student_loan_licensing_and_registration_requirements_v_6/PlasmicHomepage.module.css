@@ -651,6 +651,11 @@
     justify-content: center;
   }
 }
+.tooltip:global(.__wab_instance) {
+  max-width: 100%;
+  object-fit: cover;
+  position: relative;
+}
 .button__pfenc:global(.__wab_instance) {
   max-width: auto;
   position: relative;
@@ -660,7 +665,7 @@
   bottom: auto;
   width: auto;
 }
-.svg__fDMi {
+.svg__ktoIa {
   position: relative;
   object-fit: cover;
   width: auto;
@@ -669,7 +674,7 @@
 .text__kurbn {
   color: var(--token-Le07ngBUPl2h);
 }
-.svg__bDWgo {
+.svg__d9Yx7 {
   position: relative;
   object-fit: cover;
   width: auto;
