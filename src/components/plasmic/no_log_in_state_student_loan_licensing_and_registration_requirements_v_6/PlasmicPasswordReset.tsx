@@ -555,7 +555,7 @@ function PlasmicPasswordReset__RenderFunc(props: {
                     <FormItemWrapper
                       className={classNames(
                         "__wab_instance",
-                        sty.formField__aaC2N
+                        sty.formField__eggCl
                       )}
                       label={"Email Address"}
                       name={"email_reset"}
@@ -564,14 +564,14 @@ function PlasmicPasswordReset__RenderFunc(props: {
                       <AntdInput
                         className={classNames(
                           "__wab_instance",
-                          sty.input__jZWi1
+                          sty.input___9M8Eg
                         )}
                       />
                     </FormItemWrapper>
                     <FormItemWrapper
                       className={classNames(
                         "__wab_instance",
-                        sty.formField__gWKzc
+                        sty.formField__bopVn
                       )}
                       label={"Temporary Password"}
                       name={"temp_password"}
@@ -579,14 +579,14 @@ function PlasmicPasswordReset__RenderFunc(props: {
                       <AntdInput
                         className={classNames(
                           "__wab_instance",
-                          sty.input__jewAe
+                          sty.input__eo5Mc
                         )}
                       />
                     </FormItemWrapper>
                     <AntdButton
                       className={classNames(
                         "__wab_instance",
-                        sty.button___74SQk
+                        sty.button__k746U
                       )}
                       submitsForm={true}
                       type={"primary"}
@@ -595,7 +595,7 @@ function PlasmicPasswordReset__RenderFunc(props: {
                         className={classNames(
                           projectcss.all,
                           projectcss.__wab_text,
-                          sty.text__wq6Pc
+                          sty.text__cbw3X
                         )}
                       >
                         {"Submit"}
@@ -817,7 +817,7 @@ function PlasmicPasswordReset__RenderFunc(props: {
                     <FormItemWrapper
                       className={classNames(
                         "__wab_instance",
-                        sty.formField__e9Dmj
+                        sty.formField__jdLbq
                       )}
                       label={"New Password"}
                       name={"new_pword1"}
@@ -840,14 +840,14 @@ function PlasmicPasswordReset__RenderFunc(props: {
                       <AntdPassword
                         className={classNames(
                           "__wab_instance",
-                          sty.passwordInput__so04L
+                          sty.passwordInput__gAYkI
                         )}
                       />
                     </FormItemWrapper>
                     <FormItemWrapper
                       className={classNames(
                         "__wab_instance",
-                        sty.formField__qhVa
+                        sty.formField__qTjIl
                       )}
                       label={"Reenter New Password"}
                       name={"new_pword2"}
@@ -867,12 +867,15 @@ function PlasmicPasswordReset__RenderFunc(props: {
                       <AntdPassword
                         className={classNames(
                           "__wab_instance",
-                          sty.passwordInput___20Vo5
+                          sty.passwordInput__gj8P9
                         )}
                       />
                     </FormItemWrapper>
                     <AntdButton
-                      className={classNames("__wab_instance", sty.button__i7Uy)}
+                      className={classNames(
+                        "__wab_instance",
+                        sty.button__av9Vd
+                      )}
                       disabled={(() => {
                         try {
                           return (
@@ -897,7 +900,7 @@ function PlasmicPasswordReset__RenderFunc(props: {
                         className={classNames(
                           projectcss.all,
                           projectcss.__wab_text,
-                          sty.text__tU7Or
+                          sty.text__p2JJ8
                         )}
                       >
                         {"Submit"}

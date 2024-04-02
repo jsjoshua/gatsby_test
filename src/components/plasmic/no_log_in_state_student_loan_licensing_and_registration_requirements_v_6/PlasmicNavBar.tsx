@@ -1049,7 +1049,7 @@ function PlasmicNavBar__RenderFunc(props: {
                                         <FormItemWrapper
                                           className={classNames(
                                             "__wab_instance",
-                                            sty.formField__u1VDg
+                                            sty.formField__zCB7
                                           )}
                                           label={"User Name"}
                                           name={"username"}
@@ -1063,14 +1063,14 @@ function PlasmicNavBar__RenderFunc(props: {
                                           <AntdInput
                                             className={classNames(
                                               "__wab_instance",
-                                              sty.input___3QTja
+                                              sty.input__lPtY9
                                             )}
                                           />
                                         </FormItemWrapper>
                                         <FormItemWrapper
                                           className={classNames(
                                             "__wab_instance",
-                                            sty.formField__gWPrg
+                                            sty.formField__wkUd1
                                           )}
                                           label={"Password"}
                                           name={"password"}
@@ -1084,14 +1084,14 @@ function PlasmicNavBar__RenderFunc(props: {
                                           <AntdPassword
                                             className={classNames(
                                               "__wab_instance",
-                                              sty.passwordInput__csORn
+                                              sty.passwordInput__pU3SG
                                             )}
                                           />
                                         </FormItemWrapper>
                                         <AntdButton
                                           className={classNames(
                                             "__wab_instance",
-                                            sty.button__l9Q4N
+                                            sty.button__jWjK
                                           )}
                                           submitsForm={true}
                                           type={"primary"}
@@ -1100,7 +1100,7 @@ function PlasmicNavBar__RenderFunc(props: {
                                             className={classNames(
                                               projectcss.all,
                                               projectcss.__wab_text,
-                                              sty.text__ue64
+                                              sty.text__tIncd
                                             )}
                                           >
                                             {"Submit"}
@@ -1764,7 +1764,7 @@ function PlasmicNavBar__RenderFunc(props: {
                                     <FormItemWrapper
                                       className={classNames(
                                         "__wab_instance",
-                                        sty.formField__i20R1
+                                        sty.formField__c5E3E
                                       )}
                                       label={"First Name"}
                                       name={"first_name"}
@@ -1778,14 +1778,14 @@ function PlasmicNavBar__RenderFunc(props: {
                                       <AntdInput
                                         className={classNames(
                                           "__wab_instance",
-                                          sty.input__jIwKn
+                                          sty.input__pdpJr
                                         )}
                                       />
                                     </FormItemWrapper>
                                     <FormItemWrapper
                                       className={classNames(
                                         "__wab_instance",
-                                        sty.formField__lSrdg
+                                        sty.formField__vDmPk
                                       )}
                                       label={"Last Name"}
                                       name={"last_name"}
@@ -1794,14 +1794,14 @@ function PlasmicNavBar__RenderFunc(props: {
                                       <AntdInput
                                         className={classNames(
                                           "__wab_instance",
-                                          sty.input__bWyJl
+                                          sty.input___8OwNd
                                         )}
                                       />
                                     </FormItemWrapper>
                                     <FormItemWrapper
                                       className={classNames(
                                         "__wab_instance",
-                                        sty.formField__uFsTy
+                                        sty.formField__rgApl
                                       )}
                                       label={"Email"}
                                       name={"email"}
@@ -1810,14 +1810,14 @@ function PlasmicNavBar__RenderFunc(props: {
                                       <AntdInput
                                         className={classNames(
                                           "__wab_instance",
-                                          sty.input__o9SVo
+                                          sty.input__mNxsO
                                         )}
                                       />
                                     </FormItemWrapper>
                                     <FormItemWrapper
                                       className={classNames(
                                         "__wab_instance",
-                                        sty.formField___57NjY
+                                        sty.formField__v4Gbi
                                       )}
                                       label={"Company Name (if applicable)"}
                                       name={"company"}
@@ -1825,14 +1825,14 @@ function PlasmicNavBar__RenderFunc(props: {
                                       <AntdInput
                                         className={classNames(
                                           "__wab_instance",
-                                          sty.input__w5R9
+                                          sty.input__y6Fj7
                                         )}
                                       />
                                     </FormItemWrapper>
                                     <FormItemWrapper
                                       className={classNames(
                                         "__wab_instance",
-                                        sty.formField__fz0LW
+                                        sty.formField__uNd1Z
                                       )}
                                       label={"User Name"}
                                       name={"new_user_username"}
@@ -1846,14 +1846,14 @@ function PlasmicNavBar__RenderFunc(props: {
                                       <AntdInput
                                         className={classNames(
                                           "__wab_instance",
-                                          sty.input__bCn7
+                                          sty.input___5Ekui
                                         )}
                                       />
                                     </FormItemWrapper>
                                     <FormItemWrapper
                                       className={classNames(
                                         "__wab_instance",
-                                        sty.formField__pJajh
+                                        sty.formField__axIz
                                       )}
                                       label={
                                         "Password (must be at least 8 characters)"
@@ -1868,14 +1868,14 @@ function PlasmicNavBar__RenderFunc(props: {
                                       <AntdPassword
                                         className={classNames(
                                           "__wab_instance",
-                                          sty.passwordInput___9TBe
+                                          sty.passwordInput__iSd1R
                                         )}
                                       />
                                     </FormItemWrapper>
                                     <FormItemWrapper
                                       className={classNames(
                                         "__wab_instance",
-                                        sty.formField__qXdox
+                                        sty.formField__kp01F
                                       )}
                                       label={"Retype Password"}
                                       name={"new_user_password2"}
@@ -1899,14 +1899,14 @@ function PlasmicNavBar__RenderFunc(props: {
                                       <AntdPassword
                                         className={classNames(
                                           "__wab_instance",
-                                          sty.passwordInput__lgUzn
+                                          sty.passwordInput__qd3Fy
                                         )}
                                       />
                                     </FormItemWrapper>
                                     <FormItemWrapper
                                       className={classNames(
                                         "__wab_instance",
-                                        sty.formField__aFi8F
+                                        sty.formField__z8Yet
                                       )}
                                       label={"Comments"}
                                       name={"comments"}
@@ -1921,7 +1921,7 @@ function PlasmicNavBar__RenderFunc(props: {
                                     <AntdButton
                                       className={classNames(
                                         "__wab_instance",
-                                        sty.button__utaqL
+                                        sty.button__eXeBc
                                       )}
                                       disabled={(() => {
                                         try {
@@ -1965,7 +1965,7 @@ function PlasmicNavBar__RenderFunc(props: {
                                         className={classNames(
                                           projectcss.all,
                                           projectcss.__wab_text,
-                                          sty.text__suz86
+                                          sty.text__oPrHd
                                         )}
                                       >
                                         {"Submit"}

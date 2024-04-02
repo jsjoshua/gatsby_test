@@ -453,9 +453,21 @@ function PlasmicHomepage__RenderFunc(props: {
                 sty.text___7Zij1
               )}
             >
-              {
-                "Student loan Servicing Licensing \nLender/Holder Registration Requirements"
-              }
+              <React.Fragment>
+                <React.Fragment>
+                  {
+                    "State Student Loan Servicing Licenses Provisions &\nState Laws Relating to Registration of Private Education Loan Creditors\n"
+                  }
+                </React.Fragment>
+                <span
+                  className={"plasmic_default__all plasmic_default__span"}
+                  style={{ fontWeight: 800 }}
+                >
+                  {
+                    "Note: This list does not address other potentially applicable licenses or other requirements that may apply to servicers or creditors."
+                  }
+                </span>
+              </React.Fragment>
             </div>
           </section>
           <section className={classNames(projectcss.all, sty.section__cAib)}>
@@ -494,7 +506,7 @@ function PlasmicHomepage__RenderFunc(props: {
                       sty.text__nFvro
                     )}
                   >
-                    {"Licenses Servicers?"}
+                    {"Licenses Student Loan Servicers?"}
                   </div>
                 </div>
               ) : null}
@@ -521,7 +533,7 @@ function PlasmicHomepage__RenderFunc(props: {
                       sty.text___9Yngh
                     )}
                   >
-                    {"Lenders Must Register?"}
+                    {"Private Education Loan Creditors Must Register?"}
                   </div>
                 </div>
               ) : null}
