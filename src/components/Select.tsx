@@ -2,7 +2,7 @@ import * as React from "react";
 import {
   PlasmicSelect,
   DefaultSelectProps
-} from "./plasmic/test_state_student_loan_licensing_and_registration_requirements_v_6/PlasmicSelect";
+} from "./plasmic/no_log_in_state_student_loan_licensing_and_registration_requirements_v_6/PlasmicSelect";
 
 import { SelectRef } from "@plasmicapp/react-web";
 import Select__Option from "./Select__Option";

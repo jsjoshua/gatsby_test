@@ -2,12 +2,12 @@
 // This file is owned by you, feel free to edit as you see fit.
 import * as React from "react";
 import { PageParamsProvider as PageParamsProvider__ } from "@plasmicapp/react-web/lib/host";
-import GlobalContextsProvider from "../components/plasmic/test_state_student_loan_licensing_and_registration_requirements_v_6/PlasmicGlobalContextsProvider";
-import { ScreenVariantProvider } from "../components/plasmic/test_state_student_loan_licensing_and_registration_requirements_v_6/PlasmicGlobalVariant__Screen";
+import GlobalContextsProvider from "../components/plasmic/no_log_in_state_student_loan_licensing_and_registration_requirements_v_6/PlasmicGlobalContextsProvider";
+import { ScreenVariantProvider } from "../components/plasmic/no_log_in_state_student_loan_licensing_and_registration_requirements_v_6/PlasmicGlobalVariant__Screen";
 import {
   PlasmicHomepage,
   Head
-} from "../components/plasmic/test_state_student_loan_licensing_and_registration_requirements_v_6/PlasmicHomepage";
+} from "../components/plasmic/no_log_in_state_student_loan_licensing_and_registration_requirements_v_6/PlasmicHomepage";
 import type { PageProps } from "gatsby";
 export { Head };
 
