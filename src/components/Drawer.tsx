@@ -4,7 +4,7 @@ import * as React from "react";
 import {
   PlasmicDrawer,
   DefaultDrawerProps
-} from "./plasmic/website_starter/PlasmicDrawer";
+} from "./plasmic/current_version_4_13_2024/PlasmicDrawer";
 
 // Your component props start with props for variants and slots you defined
 // in Plasmic, but you can add more here, like event handlers that you can

@@ -2,12 +2,12 @@
 // This file is owned by you, feel free to edit as you see fit.
 import * as React from "react";
 import { PageParamsProvider as PageParamsProvider__ } from "@plasmicapp/react-web/lib/host";
-import GlobalContextsProvider from "../components/plasmic/website_starter/PlasmicGlobalContextsProvider";
-import { ScreenVariantProvider } from "../components/plasmic/website_starter/PlasmicGlobalVariant__Screen";
+import GlobalContextsProvider from "../components/plasmic/current_version_4_13_2024/PlasmicGlobalContextsProvider";
+import { ScreenVariantProvider } from "../components/plasmic/current_version_4_13_2024/PlasmicGlobalVariant__Screen";
 import {
   PlasmicHomepage,
   Head
-} from "../components/plasmic/website_starter/PlasmicHomepage";
+} from "../components/plasmic/current_version_4_13_2024/PlasmicHomepage";
 import type { PageProps } from "gatsby";
 export { Head };
 
