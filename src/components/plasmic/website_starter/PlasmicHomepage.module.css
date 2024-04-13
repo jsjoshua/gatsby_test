@@ -330,6 +330,17 @@
   text-align: center;
   min-width: 0;
 }
+.freeBox__ymAbo {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  min-width: 0;
+}
 .stateDataFetcher:global(.__wab_instance) {
   max-width: 100%;
   object-fit: cover;
@@ -360,9 +371,7 @@
   object-fit: cover;
   position: relative;
   width: 100%;
-  justify-self: flex-start;
   overflow: auto;
-  margin: 10px 10px 10px 0px;
 }
 .option:global(.__wab_instance) {
   max-width: 100%;

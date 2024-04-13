@@ -296,6 +296,20 @@ function PlasmicHomepage__RenderFunc(props: {
         invalidatedKeys: null,
         roleId: null
       };
+    }),
+    onlyStatesWLicensesQuery: usePlasmicDataOp(() => {
+      return {
+        sourceId: "ipSSrwDSmeSif598bAYugE",
+        opId: "7749abe9-3c22-4c8b-aa2e-149fc935c3d5",
+        userArgs: {
+          params: [
+            `{"filter_type":"OR","filters":[{"type":"not_empty","field":"license_type_lookup","value":""}],"groups":[]}`
+          ]
+        },
+        cacheKey: `plasmic.$.7749abe9-3c22-4c8b-aa2e-149fc935c3d5.$.`,
+        invalidatedKeys: null,
+        roleId: null
+      };
     })
   };
   if (Object.keys(new$Queries).some(k => new$Queries[k] !== $queries[k])) {
@@ -345,21 +359,38 @@ function PlasmicHomepage__RenderFunc(props: {
                   {"State"}
                 </div>
               </div>
-              <div className={classNames(projectcss.all, sty.column__lXBi)}>
-                <div
-                  className={classNames(
-                    projectcss.all,
-                    projectcss.__wab_text,
-                    sty.text__qGgYl
-                  )}
-                >
-                  {"Licenses Student Loan Servicers?"}
-                </div>
-              </div>
               {(() => {
                 try {
                   return (
                     $state.licenseTypeSelect.value.flat().indexOf(1) != -1 ||
+                    $state.licenseTypeSelect.value.length == 0
+                  );
+                } catch (e) {
+                  if (
+                    e instanceof TypeError ||
+                    e?.plasmicType === "PlasmicUndefinedDataError"
+                  ) {
+                    return true;
+                  }
+                  throw e;
+                }
+              })() ? (
+                <div className={classNames(projectcss.all, sty.column__lXBi)}>
+                  <div
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.__wab_text,
+                      sty.text__qGgYl
+                    )}
+                  >
+                    {"Licenses Student Loan Servicers?"}
+                  </div>
+                </div>
+              ) : null}
+              {(() => {
+                try {
+                  return (
+                    $state.licenseTypeSelect.value.flat().indexOf(2) != -1 ||
                     $state.licenseTypeSelect.value.length == 0
                   );
                 } catch (e) {
@@ -387,7 +418,7 @@ function PlasmicHomepage__RenderFunc(props: {
               {(() => {
                 try {
                   return (
-                    $state.licenseTypeSelect.value.flat().indexOf(2) != -1 ||
+                    $state.licenseTypeSelect.value.flat().indexOf(3) != -1 ||
                     $state.licenseTypeSelect.value.length == 0
                   );
                 } catch (e) {
@@ -436,7 +467,10 @@ function PlasmicHomepage__RenderFunc(props: {
                         sty.link__mJijd
                       )}
                       component={Link}
+                      href={"www.joshualawfirm.com"}
                       platform={"gatsby"}
+                      target={"_blank"}
+                      title={"Open Joshua Law Firm website in new tab"}
                     >
                       <PlasmicImg__
                         alt={""}
@@ -465,117 +499,235 @@ function PlasmicHomepage__RenderFunc(props: {
                     >
                       {"Filters"}
                     </div>
-                    <Fetcher
-                      data-plasmic-name={"stateDataFetcher"}
-                      data-plasmic-override={overrides.stateDataFetcher}
-                      className={classNames(
-                        "__wab_instance",
-                        sty.stateDataFetcher
-                      )}
-                      dataOp={{
-                        sourceId: "ipSSrwDSmeSif598bAYugE",
-                        opId: "8d5ef383-d0e1-4716-aa32-1e9c5a2c187a",
-                        userArgs: {},
-                        cacheKey: `plasmic.$.BCpvZpMlG0OM.$.8d5ef383-d0e1-4716-aa32-1e9c5a2c187a.$.`,
-                        invalidatedKeys: null,
-                        roleId: null
-                      }}
-                      name={"state_names"}
-                      queries={$queries}
+                    <div
+                      className={classNames(projectcss.all, sty.freeBox__ymAbo)}
                     >
-                      {($queries: any) => (
-                        <AntdSelect
-                          data-plasmic-name={"stateSelectParent"}
-                          data-plasmic-override={overrides.stateSelectParent}
-                          allowClear={true}
-                          className={classNames(
-                            "__wab_instance",
-                            sty.stateSelectParent
-                          )}
-                          defaultStylesClassName={classNames(
-                            projectcss.root_reset,
-                            projectcss.plasmic_default_styles,
-                            projectcss.plasmic_mixins,
-                            projectcss.plasmic_tokens,
-                            plasmic_antd_5_hostless_css.plasmic_tokens
-                          )}
-                          mode={"multiple"}
-                          onChange={generateStateOnChangeProp($state, [
-                            "stateSelectParent",
-                            "value"
-                          ])}
-                          optionClassName={classNames({
-                            [sty["pcls_lMNlh5FZsqD6"]]: true
-                          })}
-                          options={[]}
-                          placeholder={
-                            <div
-                              className={classNames(
-                                projectcss.all,
-                                projectcss.__wab_text,
-                                sty.text__dflT4
-                              )}
-                            >
-                              {"By state(s)"}
-                            </div>
-                          }
-                          popupScopeClassName={sty["stateSelectParent__popup"]}
-                          showSearch={false}
-                          useChildren={true}
-                          value={generateStateValueProp($state, [
-                            "stateSelectParent",
-                            "value"
-                          ])}
-                        >
-                          {(_par =>
-                            !_par ? [] : Array.isArray(_par) ? _par : [_par])(
-                            (() => {
-                              try {
-                                return $queries.state_names.data.response
-                                  .results;
-                              } catch (e) {
-                                if (
-                                  e instanceof TypeError ||
-                                  e?.plasmicType === "PlasmicUndefinedDataError"
-                                ) {
-                                  return [];
-                                }
-                                throw e;
-                              }
-                            })()
-                          ).map((__plasmic_item_0, __plasmic_idx_0) => {
-                            const currentItem = __plasmic_item_0;
-                            const currentIndex = __plasmic_idx_0;
-                            return (
-                              <AntdOption
-                                data-plasmic-name={"stateSelectOption"}
-                                data-plasmic-override={
-                                  overrides.stateSelectOption
-                                }
+                      <Fetcher
+                        data-plasmic-name={"stateDataFetcher"}
+                        data-plasmic-override={overrides.stateDataFetcher}
+                        className={classNames(
+                          "__wab_instance",
+                          sty.stateDataFetcher
+                        )}
+                        dataOp={{
+                          sourceId: "ipSSrwDSmeSif598bAYugE",
+                          opId: "8d5ef383-d0e1-4716-aa32-1e9c5a2c187a",
+                          userArgs: {},
+                          cacheKey: `plasmic.$.BCpvZpMlG0OM.$.8d5ef383-d0e1-4716-aa32-1e9c5a2c187a.$.`,
+                          invalidatedKeys: null,
+                          roleId: null
+                        }}
+                        name={"state_names"}
+                        queries={$queries}
+                      >
+                        {($queries: any) => (
+                          <AntdSelect
+                            data-plasmic-name={"stateSelectParent"}
+                            data-plasmic-override={overrides.stateSelectParent}
+                            allowClear={true}
+                            className={classNames(
+                              "__wab_instance",
+                              sty.stateSelectParent
+                            )}
+                            defaultStylesClassName={classNames(
+                              projectcss.root_reset,
+                              projectcss.plasmic_default_styles,
+                              projectcss.plasmic_mixins,
+                              projectcss.plasmic_tokens,
+                              plasmic_antd_5_hostless_css.plasmic_tokens
+                            )}
+                            mode={"multiple"}
+                            onChange={generateStateOnChangeProp($state, [
+                              "stateSelectParent",
+                              "value"
+                            ])}
+                            optionClassName={classNames({
+                              [sty["pcls_lMNlh5FZsqD6"]]: true
+                            })}
+                            options={[]}
+                            placeholder={
+                              <div
                                 className={classNames(
-                                  "__wab_instance",
-                                  sty.stateSelectOption
+                                  projectcss.all,
+                                  projectcss.__wab_text,
+                                  sty.text__dflT4
                                 )}
-                                key={currentIndex}
-                                value={(() => {
-                                  try {
-                                    return currentItem.state;
-                                  } catch (e) {
-                                    if (
-                                      e instanceof TypeError ||
-                                      e?.plasmicType ===
-                                        "PlasmicUndefinedDataError"
-                                    ) {
-                                      return undefined;
-                                    }
-                                    throw e;
+                              >
+                                {"By state(s)"}
+                              </div>
+                            }
+                            popupScopeClassName={
+                              sty["stateSelectParent__popup"]
+                            }
+                            showSearch={false}
+                            useChildren={true}
+                            value={generateStateValueProp($state, [
+                              "stateSelectParent",
+                              "value"
+                            ])}
+                          >
+                            {(_par =>
+                              !_par ? [] : Array.isArray(_par) ? _par : [_par])(
+                              (() => {
+                                try {
+                                  return $queries.state_names.data.response
+                                    .results;
+                                } catch (e) {
+                                  if (
+                                    e instanceof TypeError ||
+                                    e?.plasmicType ===
+                                      "PlasmicUndefinedDataError"
+                                  ) {
+                                    return [];
                                   }
-                                })()}
+                                  throw e;
+                                }
+                              })()
+                            ).map((__plasmic_item_0, __plasmic_idx_0) => {
+                              const currentItem = __plasmic_item_0;
+                              const currentIndex = __plasmic_idx_0;
+                              return (
+                                <AntdOption
+                                  data-plasmic-name={"stateSelectOption"}
+                                  data-plasmic-override={
+                                    overrides.stateSelectOption
+                                  }
+                                  className={classNames(
+                                    "__wab_instance",
+                                    sty.stateSelectOption
+                                  )}
+                                  key={currentIndex}
+                                  value={(() => {
+                                    try {
+                                      return currentItem.state;
+                                    } catch (e) {
+                                      if (
+                                        e instanceof TypeError ||
+                                        e?.plasmicType ===
+                                          "PlasmicUndefinedDataError"
+                                      ) {
+                                        return undefined;
+                                      }
+                                      throw e;
+                                    }
+                                  })()}
+                                >
+                                  <React.Fragment>
+                                    {(() => {
+                                      try {
+                                        return currentItem.state;
+                                      } catch (e) {
+                                        if (
+                                          e instanceof TypeError ||
+                                          e?.plasmicType ===
+                                            "PlasmicUndefinedDataError"
+                                        ) {
+                                          return "Option";
+                                        }
+                                        throw e;
+                                      }
+                                    })()}
+                                  </React.Fragment>
+                                </AntdOption>
+                              );
+                            })}
+                          </AntdSelect>
+                        )}
+                      </Fetcher>
+                      <AntdSelect
+                        data-plasmic-name={"licenseTypeSelect"}
+                        data-plasmic-override={overrides.licenseTypeSelect}
+                        allowClear={true}
+                        className={classNames(
+                          "__wab_instance",
+                          sty.licenseTypeSelect
+                        )}
+                        defaultStylesClassName={classNames(
+                          projectcss.root_reset,
+                          projectcss.plasmic_default_styles,
+                          projectcss.plasmic_mixins,
+                          projectcss.plasmic_tokens,
+                          plasmic_antd_5_hostless_css.plasmic_tokens
+                        )}
+                        mode={"multiple"}
+                        onChange={generateStateOnChangeProp($state, [
+                          "licenseTypeSelect",
+                          "value"
+                        ])}
+                        options={[
+                          {
+                            value: "option1",
+                            label: "Option 1",
+                            type: "option"
+                          },
+                          {
+                            value: "option2",
+                            label: "Option 2",
+                            type: "option"
+                          }
+                        ]}
+                        placeholder={"By license type(s)"}
+                        popupScopeClassName={sty["licenseTypeSelect__popup"]}
+                        useChildren={true}
+                        value={generateStateValueProp($state, [
+                          "licenseTypeSelect",
+                          "value"
+                        ])}
+                      >
+                        {(_par =>
+                          !_par ? [] : Array.isArray(_par) ? _par : [_par])(
+                          (() => {
+                            try {
+                              return $queries.licenseTypeNoFilter.data.response
+                                .results;
+                            } catch (e) {
+                              if (
+                                e instanceof TypeError ||
+                                e?.plasmicType === "PlasmicUndefinedDataError"
+                              ) {
+                                return [];
+                              }
+                              throw e;
+                            }
+                          })()
+                        ).map((__plasmic_item_0, __plasmic_idx_0) => {
+                          const currentItem = __plasmic_item_0;
+                          const currentIndex = __plasmic_idx_0;
+                          return (
+                            <AntdOption
+                              data-plasmic-name={"option"}
+                              data-plasmic-override={overrides.option}
+                              className={classNames(
+                                "__wab_instance",
+                                sty.option
+                              )}
+                              key={currentIndex}
+                              value={(() => {
+                                try {
+                                  return currentItem.id;
+                                } catch (e) {
+                                  if (
+                                    e instanceof TypeError ||
+                                    e?.plasmicType ===
+                                      "PlasmicUndefinedDataError"
+                                  ) {
+                                    return undefined;
+                                  }
+                                  throw e;
+                                }
+                              })()}
+                            >
+                              <div
+                                className={classNames(
+                                  projectcss.all,
+                                  projectcss.__wab_text,
+                                  sty.text__i5Wh
+                                )}
                               >
                                 <React.Fragment>
                                   {(() => {
                                     try {
-                                      return currentItem.state;
+                                      return currentItem.name;
                                     } catch (e) {
                                       if (
                                         e instanceof TypeError ||
@@ -588,111 +740,12 @@ function PlasmicHomepage__RenderFunc(props: {
                                     }
                                   })()}
                                 </React.Fragment>
-                              </AntdOption>
-                            );
-                          })}
-                        </AntdSelect>
-                      )}
-                    </Fetcher>
-                    <AntdSelect
-                      data-plasmic-name={"licenseTypeSelect"}
-                      data-plasmic-override={overrides.licenseTypeSelect}
-                      allowClear={true}
-                      className={classNames(
-                        "__wab_instance",
-                        sty.licenseTypeSelect
-                      )}
-                      defaultStylesClassName={classNames(
-                        projectcss.root_reset,
-                        projectcss.plasmic_default_styles,
-                        projectcss.plasmic_mixins,
-                        projectcss.plasmic_tokens,
-                        plasmic_antd_5_hostless_css.plasmic_tokens
-                      )}
-                      mode={"multiple"}
-                      onChange={generateStateOnChangeProp($state, [
-                        "licenseTypeSelect",
-                        "value"
-                      ])}
-                      options={[
-                        { value: "option1", label: "Option 1", type: "option" },
-                        { value: "option2", label: "Option 2", type: "option" }
-                      ]}
-                      placeholder={"By license type(s)"}
-                      popupScopeClassName={sty["licenseTypeSelect__popup"]}
-                      useChildren={true}
-                      value={generateStateValueProp($state, [
-                        "licenseTypeSelect",
-                        "value"
-                      ])}
-                    >
-                      {(_par =>
-                        !_par ? [] : Array.isArray(_par) ? _par : [_par])(
-                        (() => {
-                          try {
-                            return $queries.licenseTypeNoFilter.data.response
-                              .results;
-                          } catch (e) {
-                            if (
-                              e instanceof TypeError ||
-                              e?.plasmicType === "PlasmicUndefinedDataError"
-                            ) {
-                              return [];
-                            }
-                            throw e;
-                          }
-                        })()
-                      ).map((__plasmic_item_0, __plasmic_idx_0) => {
-                        const currentItem = __plasmic_item_0;
-                        const currentIndex = __plasmic_idx_0;
-                        return (
-                          <AntdOption
-                            data-plasmic-name={"option"}
-                            data-plasmic-override={overrides.option}
-                            className={classNames("__wab_instance", sty.option)}
-                            key={currentIndex}
-                            value={(() => {
-                              try {
-                                return currentItem.id;
-                              } catch (e) {
-                                if (
-                                  e instanceof TypeError ||
-                                  e?.plasmicType === "PlasmicUndefinedDataError"
-                                ) {
-                                  return undefined;
-                                }
-                                throw e;
-                              }
-                            })()}
-                          >
-                            <div
-                              className={classNames(
-                                projectcss.all,
-                                projectcss.__wab_text,
-                                sty.text__i5Wh
-                              )}
-                            >
-                              <React.Fragment>
-                                {(() => {
-                                  try {
-                                    return currentItem.name;
-                                  } catch (e) {
-                                    if (
-                                      e instanceof TypeError ||
-                                      e?.plasmicType ===
-                                        "PlasmicUndefinedDataError"
-                                    ) {
-                                      return "Option";
-                                    }
-                                    throw e;
-                                  }
-                                })()}
-                              </React.Fragment>
-                            </div>
-                          </AntdOption>
-                        );
-                      })}
-                    </AntdSelect>
+                              </div>
+                            </AntdOption>
+                          );
+                        })}
+                      </AntdSelect>
+                    </div>
                   </section>
                 </section>
                 {(() => {
@@ -711,8 +764,7 @@ function PlasmicHomepage__RenderFunc(props: {
                       !_par ? [] : Array.isArray(_par) ? _par : [_par])(
                       (() => {
                         try {
-                          return $queries.stateListByStateFilterQuery.data
-                            .response.results;
+                          return $queries.allQuery.data.response.results;
                         } catch (e) {
                           if (
                             e instanceof TypeError ||
