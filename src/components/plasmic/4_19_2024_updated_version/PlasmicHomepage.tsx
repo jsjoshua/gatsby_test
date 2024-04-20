@@ -1675,104 +1675,158 @@ function PlasmicHomepage__RenderFunc(props: {
                 data-plasmic-override={overrides.filters}
                 className={classNames(projectcss.all, sty.filters)}
               >
-                <div className={classNames(projectcss.all, sty.freeBox__hCjH)}>
-                  <Button2
-                    className={classNames("__wab_instance", sty.button2__kCkIy)}
-                    color={"softSand"}
-                    onClick={async event => {
-                      const $steps = {};
-
-                      $steps["updateViewFiltersVariable"] = true
-                        ? (() => {
-                            const actionArgs = {
-                              variable: {
-                                objRoot: $state,
-                                variablePath: ["viewFiltersVariable"]
-                              },
-                              operation: 1
-                            };
-                            return (({
-                              variable,
-                              value,
-                              startIndex,
-                              deleteCount
-                            }) => {
-                              if (!variable) {
-                                return;
-                              }
-                              const { objRoot, variablePath } = variable;
-
-                              $stateSet(objRoot, variablePath, undefined);
-                              return undefined;
-                            })?.apply(null, [actionArgs]);
-                          })()
-                        : undefined;
-                      if (
-                        $steps["updateViewFiltersVariable"] != null &&
-                        typeof $steps["updateViewFiltersVariable"] ===
-                          "object" &&
-                        typeof $steps["updateViewFiltersVariable"].then ===
-                          "function"
-                      ) {
-                        $steps["updateViewFiltersVariable"] = await $steps[
-                          "updateViewFiltersVariable"
-                        ];
-                      }
-                    }}
-                    size={"compact"}
+                <div className={classNames(projectcss.all, sty.freeBox__jk5Rf)}>
+                  <div
+                    className={classNames(projectcss.all, sty.freeBox__hCjH)}
                   >
-                    {"Hide Filter View"}
-                  </Button2>
-                  {(() => {
-                    try {
-                      return (
-                        (typeof $state.stateNameFilterSelect.value !=
-                          "undefined" &&
-                          $state.stateNameFilterSelect.value.length > 0) ||
-                        (typeof $state.licenseTypeFilterSelect.value !=
-                          "undefined" &&
-                          $state.licenseTypeFilterSelect.value.length > 0) ||
-                        (typeof $state.prodExcludedFeatureSelect.value !=
-                          "undefined" &&
-                          $state.prodExcludedFeatureSelect.value.length > 0) ||
-                        (typeof $state.activityTypeSelect.value !=
-                          "undefined" &&
-                          $state.activityTypeSelect.value.length > 0) ||
-                        (typeof $state.licenseTriggerFilterSelect.value !=
-                          "undefined" &&
-                          $state.licenseTriggerFilterSelect.value.length > 0) ||
-                        (typeof $state.servExemptEntitiesFilterSelect.value !=
-                          "undefined" &&
-                          $state.servExemptEntitiesFilterSelect.value.length >
-                            0)
-                      );
-                    } catch (e) {
-                      if (
-                        e instanceof TypeError ||
-                        e?.plasmicType === "PlasmicUndefinedDataError"
-                      ) {
-                        return true;
-                      }
-                      throw e;
-                    }
-                  })() ? (
                     <Button2
                       className={classNames(
                         "__wab_instance",
-                        sty.button2__gb3D
+                        sty.button2__kCkIy
                       )}
-                      color={"softRed"}
+                      color={"softSand"}
                       onClick={async event => {
                         const $steps = {};
 
-                        $steps["updateServExemptEntitiesFilterSelectValue"] =
-                          true
+                        $steps["updateViewFiltersVariable"] = true
+                          ? (() => {
+                              const actionArgs = {
+                                variable: {
+                                  objRoot: $state,
+                                  variablePath: ["viewFiltersVariable"]
+                                },
+                                operation: 1
+                              };
+                              return (({
+                                variable,
+                                value,
+                                startIndex,
+                                deleteCount
+                              }) => {
+                                if (!variable) {
+                                  return;
+                                }
+                                const { objRoot, variablePath } = variable;
+
+                                $stateSet(objRoot, variablePath, undefined);
+                                return undefined;
+                              })?.apply(null, [actionArgs]);
+                            })()
+                          : undefined;
+                        if (
+                          $steps["updateViewFiltersVariable"] != null &&
+                          typeof $steps["updateViewFiltersVariable"] ===
+                            "object" &&
+                          typeof $steps["updateViewFiltersVariable"].then ===
+                            "function"
+                        ) {
+                          $steps["updateViewFiltersVariable"] = await $steps[
+                            "updateViewFiltersVariable"
+                          ];
+                        }
+                      }}
+                      size={"compact"}
+                    >
+                      {"Hide Filter View"}
+                    </Button2>
+                    {(() => {
+                      try {
+                        return (
+                          (typeof $state.stateNameFilterSelect.value !=
+                            "undefined" &&
+                            $state.stateNameFilterSelect.value.length > 0) ||
+                          (typeof $state.licenseTypeFilterSelect.value !=
+                            "undefined" &&
+                            $state.licenseTypeFilterSelect.value.length > 0) ||
+                          (typeof $state.prodExcludedFeatureSelect.value !=
+                            "undefined" &&
+                            $state.prodExcludedFeatureSelect.value.length >
+                              0) ||
+                          (typeof $state.activityTypeSelect.value !=
+                            "undefined" &&
+                            $state.activityTypeSelect.value.length > 0) ||
+                          (typeof $state.licenseTriggerFilterSelect.value !=
+                            "undefined" &&
+                            $state.licenseTriggerFilterSelect.value.length >
+                              0) ||
+                          (typeof $state.servExemptEntitiesFilterSelect.value !=
+                            "undefined" &&
+                            $state.servExemptEntitiesFilterSelect.value.length >
+                              0)
+                        );
+                      } catch (e) {
+                        if (
+                          e instanceof TypeError ||
+                          e?.plasmicType === "PlasmicUndefinedDataError"
+                        ) {
+                          return true;
+                        }
+                        throw e;
+                      }
+                    })() ? (
+                      <Button2
+                        className={classNames(
+                          "__wab_instance",
+                          sty.button2__gb3D
+                        )}
+                        color={"softRed"}
+                        onClick={async event => {
+                          const $steps = {};
+
+                          $steps["updateServExemptEntitiesFilterSelectValue"] =
+                            true
+                              ? (() => {
+                                  const actionArgs = {
+                                    variable: {
+                                      objRoot: $state,
+                                      variablePath: [
+                                        "servExemptEntitiesFilterSelect",
+                                        "value"
+                                      ]
+                                    },
+                                    operation: 1
+                                  };
+                                  return (({
+                                    variable,
+                                    value,
+                                    startIndex,
+                                    deleteCount
+                                  }) => {
+                                    if (!variable) {
+                                      return;
+                                    }
+                                    const { objRoot, variablePath } = variable;
+
+                                    $stateSet(objRoot, variablePath, undefined);
+                                    return undefined;
+                                  })?.apply(null, [actionArgs]);
+                                })()
+                              : undefined;
+                          if (
+                            $steps[
+                              "updateServExemptEntitiesFilterSelectValue"
+                            ] != null &&
+                            typeof $steps[
+                              "updateServExemptEntitiesFilterSelectValue"
+                            ] === "object" &&
+                            typeof $steps[
+                              "updateServExemptEntitiesFilterSelectValue"
+                            ].then === "function"
+                          ) {
+                            $steps[
+                              "updateServExemptEntitiesFilterSelectValue"
+                            ] = await $steps[
+                              "updateServExemptEntitiesFilterSelectValue"
+                            ];
+                          }
+
+                          $steps["updateProdExcludedFeatureSelectValue"] = true
                             ? (() => {
                                 const actionArgs = {
                                   variable: {
                                     objRoot: $state,
                                     variablePath: [
-                                      "servExemptEntitiesFilterSelect",
+                                      "prodExcludedFeatureSelect",
                                       "value"
                                     ]
                                   },
@@ -1794,295 +1848,293 @@ function PlasmicHomepage__RenderFunc(props: {
                                 })?.apply(null, [actionArgs]);
                               })()
                             : undefined;
-                        if (
-                          $steps["updateServExemptEntitiesFilterSelectValue"] !=
-                            null &&
-                          typeof $steps[
-                            "updateServExemptEntitiesFilterSelectValue"
-                          ] === "object" &&
-                          typeof $steps[
-                            "updateServExemptEntitiesFilterSelectValue"
-                          ].then === "function"
-                        ) {
-                          $steps["updateServExemptEntitiesFilterSelectValue"] =
-                            await $steps[
-                              "updateServExemptEntitiesFilterSelectValue"
-                            ];
-                        }
-
-                        $steps["updateProdExcludedFeatureSelectValue"] = true
-                          ? (() => {
-                              const actionArgs = {
-                                variable: {
-                                  objRoot: $state,
-                                  variablePath: [
-                                    "prodExcludedFeatureSelect",
-                                    "value"
-                                  ]
-                                },
-                                operation: 1
-                              };
-                              return (({
-                                variable,
-                                value,
-                                startIndex,
-                                deleteCount
-                              }) => {
-                                if (!variable) {
-                                  return;
-                                }
-                                const { objRoot, variablePath } = variable;
-
-                                $stateSet(objRoot, variablePath, undefined);
-                                return undefined;
-                              })?.apply(null, [actionArgs]);
-                            })()
-                          : undefined;
-                        if (
-                          $steps["updateProdExcludedFeatureSelectValue"] !=
-                            null &&
-                          typeof $steps[
-                            "updateProdExcludedFeatureSelectValue"
-                          ] === "object" &&
-                          typeof $steps["updateProdExcludedFeatureSelectValue"]
-                            .then === "function"
-                        ) {
-                          $steps["updateProdExcludedFeatureSelectValue"] =
-                            await $steps[
+                          if (
+                            $steps["updateProdExcludedFeatureSelectValue"] !=
+                              null &&
+                            typeof $steps[
                               "updateProdExcludedFeatureSelectValue"
-                            ];
-                        }
+                            ] === "object" &&
+                            typeof $steps[
+                              "updateProdExcludedFeatureSelectValue"
+                            ].then === "function"
+                          ) {
+                            $steps["updateProdExcludedFeatureSelectValue"] =
+                              await $steps[
+                                "updateProdExcludedFeatureSelectValue"
+                              ];
+                          }
 
-                        $steps["updateLicenseTriggerFilterSelectValue"] = true
-                          ? (() => {
-                              const actionArgs = {
-                                variable: {
-                                  objRoot: $state,
-                                  variablePath: [
-                                    "licenseTriggerFilterSelect",
-                                    "value"
-                                  ]
-                                },
-                                operation: 1
-                              };
-                              return (({
-                                variable,
-                                value,
-                                startIndex,
-                                deleteCount
-                              }) => {
-                                if (!variable) {
-                                  return;
-                                }
-                                const { objRoot, variablePath } = variable;
+                          $steps["updateLicenseTriggerFilterSelectValue"] = true
+                            ? (() => {
+                                const actionArgs = {
+                                  variable: {
+                                    objRoot: $state,
+                                    variablePath: [
+                                      "licenseTriggerFilterSelect",
+                                      "value"
+                                    ]
+                                  },
+                                  operation: 1
+                                };
+                                return (({
+                                  variable,
+                                  value,
+                                  startIndex,
+                                  deleteCount
+                                }) => {
+                                  if (!variable) {
+                                    return;
+                                  }
+                                  const { objRoot, variablePath } = variable;
 
-                                $stateSet(objRoot, variablePath, undefined);
-                                return undefined;
-                              })?.apply(null, [actionArgs]);
-                            })()
-                          : undefined;
-                        if (
-                          $steps["updateLicenseTriggerFilterSelectValue"] !=
-                            null &&
-                          typeof $steps[
-                            "updateLicenseTriggerFilterSelectValue"
-                          ] === "object" &&
-                          typeof $steps["updateLicenseTriggerFilterSelectValue"]
-                            .then === "function"
-                        ) {
-                          $steps["updateLicenseTriggerFilterSelectValue"] =
-                            await $steps[
+                                  $stateSet(objRoot, variablePath, undefined);
+                                  return undefined;
+                                })?.apply(null, [actionArgs]);
+                              })()
+                            : undefined;
+                          if (
+                            $steps["updateLicenseTriggerFilterSelectValue"] !=
+                              null &&
+                            typeof $steps[
                               "updateLicenseTriggerFilterSelectValue"
-                            ];
-                        }
+                            ] === "object" &&
+                            typeof $steps[
+                              "updateLicenseTriggerFilterSelectValue"
+                            ].then === "function"
+                          ) {
+                            $steps["updateLicenseTriggerFilterSelectValue"] =
+                              await $steps[
+                                "updateLicenseTriggerFilterSelectValue"
+                              ];
+                          }
 
-                        $steps["updateStateNameFilterSelectValue"] = true
-                          ? (() => {
-                              const actionArgs = {
-                                variable: {
-                                  objRoot: $state,
-                                  variablePath: [
-                                    "stateNameFilterSelect",
-                                    "value"
-                                  ]
-                                },
-                                operation: 1
-                              };
-                              return (({
-                                variable,
-                                value,
-                                startIndex,
-                                deleteCount
-                              }) => {
-                                if (!variable) {
-                                  return;
-                                }
-                                const { objRoot, variablePath } = variable;
+                          $steps["updateStateNameFilterSelectValue"] = true
+                            ? (() => {
+                                const actionArgs = {
+                                  variable: {
+                                    objRoot: $state,
+                                    variablePath: [
+                                      "stateNameFilterSelect",
+                                      "value"
+                                    ]
+                                  },
+                                  operation: 1
+                                };
+                                return (({
+                                  variable,
+                                  value,
+                                  startIndex,
+                                  deleteCount
+                                }) => {
+                                  if (!variable) {
+                                    return;
+                                  }
+                                  const { objRoot, variablePath } = variable;
 
-                                $stateSet(objRoot, variablePath, undefined);
-                                return undefined;
-                              })?.apply(null, [actionArgs]);
-                            })()
-                          : undefined;
-                        if (
-                          $steps["updateStateNameFilterSelectValue"] != null &&
-                          typeof $steps["updateStateNameFilterSelectValue"] ===
-                            "object" &&
-                          typeof $steps["updateStateNameFilterSelectValue"]
-                            .then === "function"
-                        ) {
-                          $steps["updateStateNameFilterSelectValue"] =
-                            await $steps["updateStateNameFilterSelectValue"];
-                        }
+                                  $stateSet(objRoot, variablePath, undefined);
+                                  return undefined;
+                                })?.apply(null, [actionArgs]);
+                              })()
+                            : undefined;
+                          if (
+                            $steps["updateStateNameFilterSelectValue"] !=
+                              null &&
+                            typeof $steps[
+                              "updateStateNameFilterSelectValue"
+                            ] === "object" &&
+                            typeof $steps["updateStateNameFilterSelectValue"]
+                              .then === "function"
+                          ) {
+                            $steps["updateStateNameFilterSelectValue"] =
+                              await $steps["updateStateNameFilterSelectValue"];
+                          }
 
-                        $steps["updateLicenseTypeFilterSelectValue"] = true
-                          ? (() => {
-                              const actionArgs = {
-                                variable: {
-                                  objRoot: $state,
-                                  variablePath: [
-                                    "licenseTypeFilterSelect",
-                                    "value"
-                                  ]
-                                },
-                                operation: 1
-                              };
-                              return (({
-                                variable,
-                                value,
-                                startIndex,
-                                deleteCount
-                              }) => {
-                                if (!variable) {
-                                  return;
-                                }
-                                const { objRoot, variablePath } = variable;
+                          $steps["updateLicenseTypeFilterSelectValue"] = true
+                            ? (() => {
+                                const actionArgs = {
+                                  variable: {
+                                    objRoot: $state,
+                                    variablePath: [
+                                      "licenseTypeFilterSelect",
+                                      "value"
+                                    ]
+                                  },
+                                  operation: 1
+                                };
+                                return (({
+                                  variable,
+                                  value,
+                                  startIndex,
+                                  deleteCount
+                                }) => {
+                                  if (!variable) {
+                                    return;
+                                  }
+                                  const { objRoot, variablePath } = variable;
 
-                                $stateSet(objRoot, variablePath, undefined);
-                                return undefined;
-                              })?.apply(null, [actionArgs]);
-                            })()
-                          : undefined;
-                        if (
-                          $steps["updateLicenseTypeFilterSelectValue"] !=
-                            null &&
-                          typeof $steps[
-                            "updateLicenseTypeFilterSelectValue"
-                          ] === "object" &&
-                          typeof $steps["updateLicenseTypeFilterSelectValue"]
-                            .then === "function"
-                        ) {
-                          $steps["updateLicenseTypeFilterSelectValue"] =
-                            await $steps["updateLicenseTypeFilterSelectValue"];
-                        }
+                                  $stateSet(objRoot, variablePath, undefined);
+                                  return undefined;
+                                })?.apply(null, [actionArgs]);
+                              })()
+                            : undefined;
+                          if (
+                            $steps["updateLicenseTypeFilterSelectValue"] !=
+                              null &&
+                            typeof $steps[
+                              "updateLicenseTypeFilterSelectValue"
+                            ] === "object" &&
+                            typeof $steps["updateLicenseTypeFilterSelectValue"]
+                              .then === "function"
+                          ) {
+                            $steps["updateLicenseTypeFilterSelectValue"] =
+                              await $steps[
+                                "updateLicenseTypeFilterSelectValue"
+                              ];
+                          }
 
-                        $steps["updateLicenseTriggerFilterSelectValue2"] = true
-                          ? (() => {
-                              const actionArgs = {
-                                variable: {
-                                  objRoot: $state,
-                                  variablePath: ["activityTypeSelect", "value"]
-                                },
-                                operation: 1
-                              };
-                              return (({
-                                variable,
-                                value,
-                                startIndex,
-                                deleteCount
-                              }) => {
-                                if (!variable) {
-                                  return;
-                                }
-                                const { objRoot, variablePath } = variable;
-
-                                $stateSet(objRoot, variablePath, undefined);
-                                return undefined;
-                              })?.apply(null, [actionArgs]);
-                            })()
-                          : undefined;
-                        if (
-                          $steps["updateLicenseTriggerFilterSelectValue2"] !=
-                            null &&
-                          typeof $steps[
-                            "updateLicenseTriggerFilterSelectValue2"
-                          ] === "object" &&
-                          typeof $steps[
-                            "updateLicenseTriggerFilterSelectValue2"
-                          ].then === "function"
-                        ) {
                           $steps["updateLicenseTriggerFilterSelectValue2"] =
-                            await $steps[
+                            true
+                              ? (() => {
+                                  const actionArgs = {
+                                    variable: {
+                                      objRoot: $state,
+                                      variablePath: [
+                                        "activityTypeSelect",
+                                        "value"
+                                      ]
+                                    },
+                                    operation: 1
+                                  };
+                                  return (({
+                                    variable,
+                                    value,
+                                    startIndex,
+                                    deleteCount
+                                  }) => {
+                                    if (!variable) {
+                                      return;
+                                    }
+                                    const { objRoot, variablePath } = variable;
+
+                                    $stateSet(objRoot, variablePath, undefined);
+                                    return undefined;
+                                  })?.apply(null, [actionArgs]);
+                                })()
+                              : undefined;
+                          if (
+                            $steps["updateLicenseTriggerFilterSelectValue2"] !=
+                              null &&
+                            typeof $steps[
                               "updateLicenseTriggerFilterSelectValue2"
-                            ];
-                        }
-                      }}
-                      size={"compact"}
-                    >
-                      {"Reset All Filters"}
-                    </Button2>
-                  ) : null}
-                </div>
-                {(() => {
-                  const child$Props = {
-                    activeKey: generateStateValueProp($state, [
-                      "accordion",
-                      "activePanelId"
-                    ]),
-                    bordered: true,
-                    className: classNames("__wab_instance", sty.accordion),
-                    items: (
-                      <React.Fragment>
-                        <AntdAccordionItem
-                          data-plasmic-name={"stateFilterAccordion"}
-                          data-plasmic-override={overrides.stateFilterAccordion}
-                          className={classNames(
-                            "__wab_instance",
-                            sty.stateFilterAccordion
-                          )}
-                          id={1}
-                          label2={
-                            <div
-                              className={classNames(
-                                projectcss.all,
-                                sty.columns__fTunS
-                              )}
-                            >
+                            ] === "object" &&
+                            typeof $steps[
+                              "updateLicenseTriggerFilterSelectValue2"
+                            ].then === "function"
+                          ) {
+                            $steps["updateLicenseTriggerFilterSelectValue2"] =
+                              await $steps[
+                                "updateLicenseTriggerFilterSelectValue2"
+                              ];
+                          }
+                        }}
+                        size={"compact"}
+                      >
+                        {"Reset All Filters"}
+                      </Button2>
+                    ) : null}
+                  </div>
+                  {(() => {
+                    const child$Props = {
+                      activeKey: generateStateValueProp($state, [
+                        "accordion",
+                        "activePanelId"
+                      ]),
+                      bordered: true,
+                      className: classNames("__wab_instance", sty.accordion),
+                      items: (
+                        <React.Fragment>
+                          <AntdAccordionItem
+                            data-plasmic-name={"stateFilterAccordion"}
+                            data-plasmic-override={
+                              overrides.stateFilterAccordion
+                            }
+                            className={classNames(
+                              "__wab_instance",
+                              sty.stateFilterAccordion
+                            )}
+                            id={1}
+                            label2={
                               <div
                                 className={classNames(
                                   projectcss.all,
-                                  sty.column__hkXxF
+                                  sty.columns__fTunS
                                 )}
                               >
-                                {(() => {
-                                  try {
-                                    return (
-                                      typeof $state.stateNameFilterSelect
-                                        .value == "undefined" ||
-                                      !$state.stateNameFilterSelect.value
-                                        .length > 0
-                                    );
-                                  } catch (e) {
-                                    if (
-                                      e instanceof TypeError ||
-                                      e?.plasmicType ===
-                                        "PlasmicUndefinedDataError"
-                                    ) {
-                                      return true;
+                                <div
+                                  className={classNames(
+                                    projectcss.all,
+                                    sty.column__hkXxF
+                                  )}
+                                >
+                                  {(() => {
+                                    try {
+                                      return (
+                                        typeof $state.stateNameFilterSelect
+                                          .value == "undefined" ||
+                                        !$state.stateNameFilterSelect.value
+                                          .length > 0
+                                      );
+                                    } catch (e) {
+                                      if (
+                                        e instanceof TypeError ||
+                                        e?.plasmicType ===
+                                          "PlasmicUndefinedDataError"
+                                      ) {
+                                        return true;
+                                      }
+                                      throw e;
                                     }
-                                    throw e;
-                                  }
-                                })() ? (
-                                  <div
-                                    className={classNames(
-                                      projectcss.all,
-                                      projectcss.__wab_text,
-                                      sty.text__ipcWp
-                                    )}
-                                  >
-                                    {"Filter by State"}
-                                  </div>
-                                ) : null}
+                                  })() ? (
+                                    <div
+                                      className={classNames(
+                                        projectcss.all,
+                                        projectcss.__wab_text,
+                                        sty.text__ipcWp
+                                      )}
+                                    >
+                                      {"Filter by State"}
+                                    </div>
+                                  ) : null}
+                                  {(() => {
+                                    try {
+                                      return !(
+                                        typeof $state.stateNameFilterSelect
+                                          .value === "undefined" ||
+                                        $state.stateNameFilterSelect.value
+                                          .length == 0
+                                      );
+                                    } catch (e) {
+                                      if (
+                                        e instanceof TypeError ||
+                                        e?.plasmicType ===
+                                          "PlasmicUndefinedDataError"
+                                      ) {
+                                        return true;
+                                      }
+                                      throw e;
+                                    }
+                                  })() ? (
+                                    <div
+                                      className={classNames(
+                                        projectcss.all,
+                                        projectcss.__wab_text,
+                                        sty.text__pbTYx
+                                      )}
+                                    >
+                                      {"Filter by State"}
+                                    </div>
+                                  ) : null}
+                                </div>
                                 {(() => {
                                   try {
                                     return !(
@@ -2105,230 +2157,190 @@ function PlasmicHomepage__RenderFunc(props: {
                                   <div
                                     className={classNames(
                                       projectcss.all,
-                                      projectcss.__wab_text,
-                                      sty.text__pbTYx
+                                      sty.column__w5YEq
                                     )}
                                   >
-                                    {"Filter by State"}
+                                    <Button2
+                                      className={classNames(
+                                        "__wab_instance",
+                                        sty.button2__ufGUq
+                                      )}
+                                      color={"clear"}
+                                      onClick={async event => {
+                                        const $steps = {};
+
+                                        $steps[
+                                          "updateStateNameFilterSelectValue"
+                                        ] = true
+                                          ? (() => {
+                                              const actionArgs = {
+                                                variable: {
+                                                  objRoot: $state,
+                                                  variablePath: [
+                                                    "stateNameFilterSelect",
+                                                    "value"
+                                                  ]
+                                                },
+                                                operation: 1
+                                              };
+                                              return (({
+                                                variable,
+                                                value,
+                                                startIndex,
+                                                deleteCount
+                                              }) => {
+                                                if (!variable) {
+                                                  return;
+                                                }
+                                                const {
+                                                  objRoot,
+                                                  variablePath
+                                                } = variable;
+
+                                                $stateSet(
+                                                  objRoot,
+                                                  variablePath,
+                                                  undefined
+                                                );
+                                                return undefined;
+                                              })?.apply(null, [actionArgs]);
+                                            })()
+                                          : undefined;
+                                        if (
+                                          $steps[
+                                            "updateStateNameFilterSelectValue"
+                                          ] != null &&
+                                          typeof $steps[
+                                            "updateStateNameFilterSelectValue"
+                                          ] === "object" &&
+                                          typeof $steps[
+                                            "updateStateNameFilterSelectValue"
+                                          ].then === "function"
+                                        ) {
+                                          $steps[
+                                            "updateStateNameFilterSelectValue"
+                                          ] = await $steps[
+                                            "updateStateNameFilterSelectValue"
+                                          ];
+                                        }
+                                      }}
+                                      size={"minimal"}
+                                    >
+                                      <div
+                                        className={classNames(
+                                          projectcss.all,
+                                          projectcss.__wab_text,
+                                          sty.text__iJ4HA
+                                        )}
+                                      >
+                                        {"Reset Filter"}
+                                      </div>
+                                    </Button2>
                                   </div>
                                 ) : null}
                               </div>
-                              {(() => {
-                                try {
-                                  return !(
-                                    typeof $state.stateNameFilterSelect
-                                      .value === "undefined" ||
-                                    $state.stateNameFilterSelect.value.length ==
-                                      0
-                                  );
-                                } catch (e) {
-                                  if (
-                                    e instanceof TypeError ||
-                                    e?.plasmicType ===
-                                      "PlasmicUndefinedDataError"
-                                  ) {
-                                    return true;
-                                  }
-                                  throw e;
+                            }
+                            showArrow={true}
+                          >
+                            <div
+                              className={classNames(
+                                projectcss.all,
+                                projectcss.__wab_text,
+                                sty.text__rrbdl
+                              )}
+                            >
+                              {
+                                "Limit results to only the selected states.  If no items are selected, all states will be shown."
+                              }
+                            </div>
+                            <AntdSelect
+                              data-plasmic-name={"stateNameFilterSelect"}
+                              data-plasmic-override={
+                                overrides.stateNameFilterSelect
+                              }
+                              allowClear={true}
+                              className={classNames(
+                                "__wab_instance",
+                                sty.stateNameFilterSelect
+                              )}
+                              defaultStylesClassName={classNames(
+                                projectcss.root_reset,
+                                projectcss.plasmic_default_styles,
+                                projectcss.plasmic_mixins,
+                                projectcss.plasmic_tokens,
+                                plasmic_antd_5_hostless_css.plasmic_tokens
+                              )}
+                              mode={"multiple"}
+                              onChange={generateStateOnChangeProp($state, [
+                                "stateNameFilterSelect",
+                                "value"
+                              ])}
+                              options={[
+                                {
+                                  value: "option1",
+                                  label: "Option 1",
+                                  type: "option"
+                                },
+                                {
+                                  value: "option2",
+                                  label: "Option 2",
+                                  type: "option"
                                 }
-                              })() ? (
+                              ]}
+                              placeholder={
                                 <div
                                   className={classNames(
                                     projectcss.all,
-                                    sty.column__w5YEq
+                                    projectcss.__wab_text,
+                                    sty.text__hisTl
                                   )}
                                 >
-                                  <Button2
+                                  {"Select state(s)"}
+                                </div>
+                              }
+                              popupScopeClassName={
+                                sty["stateNameFilterSelect__popup"]
+                              }
+                              showSearch={false}
+                              size={"middle"}
+                              useChildren={true}
+                              value={generateStateValueProp($state, [
+                                "stateNameFilterSelect",
+                                "value"
+                              ])}
+                            >
+                              {(_par =>
+                                !_par
+                                  ? []
+                                  : Array.isArray(_par)
+                                  ? _par
+                                  : [_par])(
+                                (() => {
+                                  try {
+                                    return $queries.baseQueryNoFilters.data
+                                      .response.list;
+                                  } catch (e) {
+                                    if (
+                                      e instanceof TypeError ||
+                                      e?.plasmicType ===
+                                        "PlasmicUndefinedDataError"
+                                    ) {
+                                      return [];
+                                    }
+                                    throw e;
+                                  }
+                                })()
+                              ).map((__plasmic_item_0, __plasmic_idx_0) => {
+                                const currentItem = __plasmic_item_0;
+                                const currentIndex = __plasmic_idx_0;
+                                return (
+                                  <AntdOption
                                     className={classNames(
                                       "__wab_instance",
-                                      sty.button2__ufGUq
+                                      sty.option__jbTgc
                                     )}
-                                    color={"clear"}
-                                    onClick={async event => {
-                                      const $steps = {};
-
-                                      $steps[
-                                        "updateStateNameFilterSelectValue"
-                                      ] = true
-                                        ? (() => {
-                                            const actionArgs = {
-                                              variable: {
-                                                objRoot: $state,
-                                                variablePath: [
-                                                  "stateNameFilterSelect",
-                                                  "value"
-                                                ]
-                                              },
-                                              operation: 1
-                                            };
-                                            return (({
-                                              variable,
-                                              value,
-                                              startIndex,
-                                              deleteCount
-                                            }) => {
-                                              if (!variable) {
-                                                return;
-                                              }
-                                              const { objRoot, variablePath } =
-                                                variable;
-
-                                              $stateSet(
-                                                objRoot,
-                                                variablePath,
-                                                undefined
-                                              );
-                                              return undefined;
-                                            })?.apply(null, [actionArgs]);
-                                          })()
-                                        : undefined;
-                                      if (
-                                        $steps[
-                                          "updateStateNameFilterSelectValue"
-                                        ] != null &&
-                                        typeof $steps[
-                                          "updateStateNameFilterSelectValue"
-                                        ] === "object" &&
-                                        typeof $steps[
-                                          "updateStateNameFilterSelectValue"
-                                        ].then === "function"
-                                      ) {
-                                        $steps[
-                                          "updateStateNameFilterSelectValue"
-                                        ] = await $steps[
-                                          "updateStateNameFilterSelectValue"
-                                        ];
-                                      }
-                                    }}
-                                    size={"minimal"}
-                                  >
-                                    <div
-                                      className={classNames(
-                                        projectcss.all,
-                                        projectcss.__wab_text,
-                                        sty.text__iJ4HA
-                                      )}
-                                    >
-                                      {"Reset Filter"}
-                                    </div>
-                                  </Button2>
-                                </div>
-                              ) : null}
-                            </div>
-                          }
-                          showArrow={true}
-                        >
-                          <div
-                            className={classNames(
-                              projectcss.all,
-                              projectcss.__wab_text,
-                              sty.text__rrbdl
-                            )}
-                          >
-                            {
-                              "Limit results to only the selected states.  If no items are selected, all states will be shown."
-                            }
-                          </div>
-                          <AntdSelect
-                            data-plasmic-name={"stateNameFilterSelect"}
-                            data-plasmic-override={
-                              overrides.stateNameFilterSelect
-                            }
-                            allowClear={true}
-                            className={classNames(
-                              "__wab_instance",
-                              sty.stateNameFilterSelect
-                            )}
-                            defaultStylesClassName={classNames(
-                              projectcss.root_reset,
-                              projectcss.plasmic_default_styles,
-                              projectcss.plasmic_mixins,
-                              projectcss.plasmic_tokens,
-                              plasmic_antd_5_hostless_css.plasmic_tokens
-                            )}
-                            mode={"multiple"}
-                            onChange={generateStateOnChangeProp($state, [
-                              "stateNameFilterSelect",
-                              "value"
-                            ])}
-                            options={[
-                              {
-                                value: "option1",
-                                label: "Option 1",
-                                type: "option"
-                              },
-                              {
-                                value: "option2",
-                                label: "Option 2",
-                                type: "option"
-                              }
-                            ]}
-                            placeholder={
-                              <div
-                                className={classNames(
-                                  projectcss.all,
-                                  projectcss.__wab_text,
-                                  sty.text__hisTl
-                                )}
-                              >
-                                {"Select state(s)"}
-                              </div>
-                            }
-                            popupScopeClassName={
-                              sty["stateNameFilterSelect__popup"]
-                            }
-                            showSearch={false}
-                            size={"middle"}
-                            useChildren={true}
-                            value={generateStateValueProp($state, [
-                              "stateNameFilterSelect",
-                              "value"
-                            ])}
-                          >
-                            {(_par =>
-                              !_par ? [] : Array.isArray(_par) ? _par : [_par])(
-                              (() => {
-                                try {
-                                  return $queries.baseQueryNoFilters.data
-                                    .response.list;
-                                } catch (e) {
-                                  if (
-                                    e instanceof TypeError ||
-                                    e?.plasmicType ===
-                                      "PlasmicUndefinedDataError"
-                                  ) {
-                                    return [];
-                                  }
-                                  throw e;
-                                }
-                              })()
-                            ).map((__plasmic_item_0, __plasmic_idx_0) => {
-                              const currentItem = __plasmic_item_0;
-                              const currentIndex = __plasmic_idx_0;
-                              return (
-                                <AntdOption
-                                  className={classNames(
-                                    "__wab_instance",
-                                    sty.option__jbTgc
-                                  )}
-                                  key={currentIndex}
-                                  value={(() => {
-                                    try {
-                                      return currentItem.state;
-                                    } catch (e) {
-                                      if (
-                                        e instanceof TypeError ||
-                                        e?.plasmicType ===
-                                          "PlasmicUndefinedDataError"
-                                      ) {
-                                        return undefined;
-                                      }
-                                      throw e;
-                                    }
-                                  })()}
-                                >
-                                  <React.Fragment>
-                                    {(() => {
+                                    key={currentIndex}
+                                    value={(() => {
                                       try {
                                         return currentItem.state;
                                       } catch (e) {
@@ -2337,69 +2349,115 @@ function PlasmicHomepage__RenderFunc(props: {
                                           e?.plasmicType ===
                                             "PlasmicUndefinedDataError"
                                         ) {
-                                          return "Option";
+                                          return undefined;
                                         }
                                         throw e;
                                       }
                                     })()}
-                                  </React.Fragment>
-                                </AntdOption>
-                              );
-                            })}
-                          </AntdSelect>
-                        </AntdAccordionItem>
-                        <AntdAccordionItem
-                          data-plasmic-name={"licenseTypeFilterAccordion"}
-                          data-plasmic-override={
-                            overrides.licenseTypeFilterAccordion
-                          }
-                          className={classNames(
-                            "__wab_instance",
-                            sty.licenseTypeFilterAccordion
-                          )}
-                          id={2}
-                          label2={
-                            <div
-                              className={classNames(
-                                projectcss.all,
-                                sty.columns__mFRdh
-                              )}
-                            >
+                                  >
+                                    <React.Fragment>
+                                      {(() => {
+                                        try {
+                                          return currentItem.state;
+                                        } catch (e) {
+                                          if (
+                                            e instanceof TypeError ||
+                                            e?.plasmicType ===
+                                              "PlasmicUndefinedDataError"
+                                          ) {
+                                            return "Option";
+                                          }
+                                          throw e;
+                                        }
+                                      })()}
+                                    </React.Fragment>
+                                  </AntdOption>
+                                );
+                              })}
+                            </AntdSelect>
+                          </AntdAccordionItem>
+                          <AntdAccordionItem
+                            data-plasmic-name={"licenseTypeFilterAccordion"}
+                            data-plasmic-override={
+                              overrides.licenseTypeFilterAccordion
+                            }
+                            className={classNames(
+                              "__wab_instance",
+                              sty.licenseTypeFilterAccordion
+                            )}
+                            id={2}
+                            label2={
                               <div
                                 className={classNames(
                                   projectcss.all,
-                                  sty.column__eQsq5
+                                  sty.columns__mFRdh
                                 )}
                               >
-                                {(() => {
-                                  try {
-                                    return (
-                                      typeof $state.licenseTypeFilterSelect
-                                        .value == "undefined" ||
-                                      !$state.licenseTypeFilterSelect.value
-                                        .length > 0
-                                    );
-                                  } catch (e) {
-                                    if (
-                                      e instanceof TypeError ||
-                                      e?.plasmicType ===
-                                        "PlasmicUndefinedDataError"
-                                    ) {
-                                      return true;
+                                <div
+                                  className={classNames(
+                                    projectcss.all,
+                                    sty.column__eQsq5
+                                  )}
+                                >
+                                  {(() => {
+                                    try {
+                                      return (
+                                        typeof $state.licenseTypeFilterSelect
+                                          .value == "undefined" ||
+                                        !$state.licenseTypeFilterSelect.value
+                                          .length > 0
+                                      );
+                                    } catch (e) {
+                                      if (
+                                        e instanceof TypeError ||
+                                        e?.plasmicType ===
+                                          "PlasmicUndefinedDataError"
+                                      ) {
+                                        return true;
+                                      }
+                                      throw e;
                                     }
-                                    throw e;
-                                  }
-                                })() ? (
-                                  <div
-                                    className={classNames(
-                                      projectcss.all,
-                                      projectcss.__wab_text,
-                                      sty.text___5Ft3E
-                                    )}
-                                  >
-                                    {"Filter by license type"}
-                                  </div>
-                                ) : null}
+                                  })() ? (
+                                    <div
+                                      className={classNames(
+                                        projectcss.all,
+                                        projectcss.__wab_text,
+                                        sty.text___5Ft3E
+                                      )}
+                                    >
+                                      {"Filter by license type"}
+                                    </div>
+                                  ) : null}
+                                  {(() => {
+                                    try {
+                                      return !(
+                                        typeof $state.licenseTypeFilterSelect
+                                          .value === "undefined" ||
+                                        $state.licenseTypeFilterSelect.value
+                                          .length == 0
+                                      );
+                                    } catch (e) {
+                                      if (
+                                        e instanceof TypeError ||
+                                        e?.plasmicType ===
+                                          "PlasmicUndefinedDataError"
+                                      ) {
+                                        return true;
+                                      }
+                                      throw e;
+                                    }
+                                  })() ? (
+                                    <div
+                                      className={classNames(
+                                        projectcss.all,
+                                        projectcss.__wab_text,
+                                        sty.text__aOgsa
+                                      )}
+                                    >
+                                      {"Filter by license type"}
+                                    </div>
+                                  ) : null}
+                                </div>
                                 {(() => {
                                   try {
                                     return !(
@@ -2422,311 +2480,317 @@ function PlasmicHomepage__RenderFunc(props: {
                                   <div
                                     className={classNames(
                                       projectcss.all,
-                                      projectcss.__wab_text,
-                                      sty.text__aOgsa
+                                      sty.column__e5Jq
                                     )}
                                   >
-                                    {"Filter by license type"}
+                                    <Button2
+                                      className={classNames(
+                                        "__wab_instance",
+                                        sty.button2___0VbHr
+                                      )}
+                                      color={"clear"}
+                                      onClick={async event => {
+                                        const $steps = {};
+
+                                        $steps[
+                                          "updateLicenseTypeFilterSelectValue"
+                                        ] = true
+                                          ? (() => {
+                                              const actionArgs = {
+                                                variable: {
+                                                  objRoot: $state,
+                                                  variablePath: [
+                                                    "licenseTypeFilterSelect",
+                                                    "value"
+                                                  ]
+                                                },
+                                                operation: 1
+                                              };
+                                              return (({
+                                                variable,
+                                                value,
+                                                startIndex,
+                                                deleteCount
+                                              }) => {
+                                                if (!variable) {
+                                                  return;
+                                                }
+                                                const {
+                                                  objRoot,
+                                                  variablePath
+                                                } = variable;
+
+                                                $stateSet(
+                                                  objRoot,
+                                                  variablePath,
+                                                  undefined
+                                                );
+                                                return undefined;
+                                              })?.apply(null, [actionArgs]);
+                                            })()
+                                          : undefined;
+                                        if (
+                                          $steps[
+                                            "updateLicenseTypeFilterSelectValue"
+                                          ] != null &&
+                                          typeof $steps[
+                                            "updateLicenseTypeFilterSelectValue"
+                                          ] === "object" &&
+                                          typeof $steps[
+                                            "updateLicenseTypeFilterSelectValue"
+                                          ].then === "function"
+                                        ) {
+                                          $steps[
+                                            "updateLicenseTypeFilterSelectValue"
+                                          ] = await $steps[
+                                            "updateLicenseTypeFilterSelectValue"
+                                          ];
+                                        }
+                                      }}
+                                      size={"minimal"}
+                                    >
+                                      <div
+                                        className={classNames(
+                                          projectcss.all,
+                                          projectcss.__wab_text,
+                                          sty.text__yhRgz
+                                        )}
+                                      >
+                                        {"Reset Filter"}
+                                      </div>
+                                    </Button2>
                                   </div>
                                 ) : null}
                               </div>
-                              {(() => {
-                                try {
-                                  return !(
-                                    typeof $state.licenseTypeFilterSelect
-                                      .value === "undefined" ||
-                                    $state.licenseTypeFilterSelect.value
-                                      .length == 0
-                                  );
-                                } catch (e) {
-                                  if (
-                                    e instanceof TypeError ||
-                                    e?.plasmicType ===
-                                      "PlasmicUndefinedDataError"
-                                  ) {
-                                    return true;
-                                  }
-                                  throw e;
-                                }
-                              })() ? (
-                                <div
-                                  className={classNames(
-                                    projectcss.all,
-                                    sty.column__e5Jq
-                                  )}
-                                >
-                                  <Button2
-                                    className={classNames(
-                                      "__wab_instance",
-                                      sty.button2___0VbHr
-                                    )}
-                                    color={"clear"}
-                                    onClick={async event => {
-                                      const $steps = {};
-
-                                      $steps[
-                                        "updateLicenseTypeFilterSelectValue"
-                                      ] = true
-                                        ? (() => {
-                                            const actionArgs = {
-                                              variable: {
-                                                objRoot: $state,
-                                                variablePath: [
-                                                  "licenseTypeFilterSelect",
-                                                  "value"
-                                                ]
-                                              },
-                                              operation: 1
-                                            };
-                                            return (({
-                                              variable,
-                                              value,
-                                              startIndex,
-                                              deleteCount
-                                            }) => {
-                                              if (!variable) {
-                                                return;
-                                              }
-                                              const { objRoot, variablePath } =
-                                                variable;
-
-                                              $stateSet(
-                                                objRoot,
-                                                variablePath,
-                                                undefined
-                                              );
-                                              return undefined;
-                                            })?.apply(null, [actionArgs]);
-                                          })()
-                                        : undefined;
-                                      if (
-                                        $steps[
-                                          "updateLicenseTypeFilterSelectValue"
-                                        ] != null &&
-                                        typeof $steps[
-                                          "updateLicenseTypeFilterSelectValue"
-                                        ] === "object" &&
-                                        typeof $steps[
-                                          "updateLicenseTypeFilterSelectValue"
-                                        ].then === "function"
-                                      ) {
-                                        $steps[
-                                          "updateLicenseTypeFilterSelectValue"
-                                        ] = await $steps[
-                                          "updateLicenseTypeFilterSelectValue"
-                                        ];
-                                      }
-                                    }}
-                                    size={"minimal"}
-                                  >
-                                    <div
-                                      className={classNames(
-                                        projectcss.all,
-                                        projectcss.__wab_text,
-                                        sty.text__yhRgz
-                                      )}
-                                    >
-                                      {"Reset Filter"}
-                                    </div>
-                                  </Button2>
-                                </div>
-                              ) : null}
-                            </div>
-                          }
-                          showArrow={true}
-                        >
-                          <div
-                            className={classNames(
-                              projectcss.all,
-                              projectcss.__wab_text,
-                              sty.text__wiz2A
-                            )}
+                            }
+                            showArrow={true}
                           >
-                            {
-                              "Select any of the following license-types to limit results to those licenses.  If no items are selected, all license-types will be shown.  If all license-types are selected, only states which require one or more of those licenses will be shown."
-                            }
-                          </div>
-                          <AntdSelect
-                            data-plasmic-name={"licenseTypeFilterSelect"}
-                            data-plasmic-override={
-                              overrides.licenseTypeFilterSelect
-                            }
-                            allowClear={true}
-                            className={classNames(
-                              "__wab_instance",
-                              sty.licenseTypeFilterSelect
-                            )}
-                            defaultStylesClassName={classNames(
-                              projectcss.root_reset,
-                              projectcss.plasmic_default_styles,
-                              projectcss.plasmic_mixins,
-                              projectcss.plasmic_tokens,
-                              plasmic_antd_5_hostless_css.plasmic_tokens
-                            )}
-                            mode={"multiple"}
-                            onChange={generateStateOnChangeProp($state, [
-                              "licenseTypeFilterSelect",
-                              "value"
-                            ])}
-                            options={[
-                              {
-                                value: "option1",
-                                label: "Option 1",
-                                type: "option"
-                              },
-                              {
-                                value: "option2",
-                                label: "Option 2",
-                                type: "option"
-                              }
-                            ]}
-                            placeholder={"Select..."}
-                            popupScopeClassName={
-                              sty["licenseTypeFilterSelect__popup"]
-                            }
-                            useChildren={true}
-                            value={generateStateValueProp($state, [
-                              "licenseTypeFilterSelect",
-                              "value"
-                            ])}
-                          >
-                            {(_par =>
-                              !_par ? [] : Array.isArray(_par) ? _par : [_par])(
-                              (() => {
-                                try {
-                                  return $queries.licenseTypeBaseQuery.data
-                                    .response.list;
-                                } catch (e) {
-                                  if (
-                                    e instanceof TypeError ||
-                                    e?.plasmicType ===
-                                      "PlasmicUndefinedDataError"
-                                  ) {
-                                    return [];
-                                  }
-                                  throw e;
-                                }
-                              })()
-                            ).map((__plasmic_item_0, __plasmic_idx_0) => {
-                              const currentItem = __plasmic_item_0;
-                              const currentIndex = __plasmic_idx_0;
-                              return (
-                                <AntdOption
-                                  data-plasmic-name={
-                                    "licenseTypeFilterSelectedOption"
-                                  }
-                                  data-plasmic-override={
-                                    overrides.licenseTypeFilterSelectedOption
-                                  }
-                                  className={classNames(
-                                    "__wab_instance",
-                                    sty.licenseTypeFilterSelectedOption
-                                  )}
-                                  key={currentIndex}
-                                  value={(() => {
-                                    try {
-                                      return currentItem.license_type_item;
-                                    } catch (e) {
-                                      if (
-                                        e instanceof TypeError ||
-                                        e?.plasmicType ===
-                                          "PlasmicUndefinedDataError"
-                                      ) {
-                                        return undefined;
-                                      }
-                                      throw e;
-                                    }
-                                  })()}
-                                >
-                                  <div
-                                    data-plasmic-name={
-                                      "licenseTypeFilterSelectedText"
-                                    }
-                                    data-plasmic-override={
-                                      overrides.licenseTypeFilterSelectedText
-                                    }
-                                    className={classNames(
-                                      projectcss.all,
-                                      projectcss.__wab_text,
-                                      sty.licenseTypeFilterSelectedText
-                                    )}
-                                  >
-                                    <React.Fragment>
-                                      {(() => {
-                                        try {
-                                          return currentItem.license_type_item;
-                                        } catch (e) {
-                                          if (
-                                            e instanceof TypeError ||
-                                            e?.plasmicType ===
-                                              "PlasmicUndefinedDataError"
-                                          ) {
-                                            return "Option";
-                                          }
-                                          throw e;
-                                        }
-                                      })()}
-                                    </React.Fragment>
-                                  </div>
-                                </AntdOption>
-                              );
-                            })}
-                          </AntdSelect>
-                        </AntdAccordionItem>
-                        <AntdAccordionItem
-                          data-plasmic-name={
-                            "productExcludedFeatureFilterAccordion2"
-                          }
-                          data-plasmic-override={
-                            overrides.productExcludedFeatureFilterAccordion2
-                          }
-                          className={classNames(
-                            "__wab_instance",
-                            sty.productExcludedFeatureFilterAccordion2
-                          )}
-                          id={"3"}
-                          label2={
                             <div
                               className={classNames(
                                 projectcss.all,
-                                sty.columns__xhUGm
+                                projectcss.__wab_text,
+                                sty.text__wiz2A
                               )}
                             >
-                              <div
-                                className={classNames(
-                                  projectcss.all,
-                                  sty.column__tuY98
-                                )}
-                              >
-                                {(() => {
+                              {
+                                "Select any of the following license-types to limit results to those licenses.  If no items are selected, all license-types will be shown.  If all license-types are selected, only states which require one or more of those licenses will be shown."
+                              }
+                            </div>
+                            <AntdSelect
+                              data-plasmic-name={"licenseTypeFilterSelect"}
+                              data-plasmic-override={
+                                overrides.licenseTypeFilterSelect
+                              }
+                              allowClear={true}
+                              className={classNames(
+                                "__wab_instance",
+                                sty.licenseTypeFilterSelect
+                              )}
+                              defaultStylesClassName={classNames(
+                                projectcss.root_reset,
+                                projectcss.plasmic_default_styles,
+                                projectcss.plasmic_mixins,
+                                projectcss.plasmic_tokens,
+                                plasmic_antd_5_hostless_css.plasmic_tokens
+                              )}
+                              mode={"multiple"}
+                              onChange={generateStateOnChangeProp($state, [
+                                "licenseTypeFilterSelect",
+                                "value"
+                              ])}
+                              options={[
+                                {
+                                  value: "option1",
+                                  label: "Option 1",
+                                  type: "option"
+                                },
+                                {
+                                  value: "option2",
+                                  label: "Option 2",
+                                  type: "option"
+                                }
+                              ]}
+                              placeholder={"Select..."}
+                              popupScopeClassName={
+                                sty["licenseTypeFilterSelect__popup"]
+                              }
+                              useChildren={true}
+                              value={generateStateValueProp($state, [
+                                "licenseTypeFilterSelect",
+                                "value"
+                              ])}
+                            >
+                              {(_par =>
+                                !_par
+                                  ? []
+                                  : Array.isArray(_par)
+                                  ? _par
+                                  : [_par])(
+                                (() => {
                                   try {
-                                    return (
-                                      typeof $state.prodExcludedFeatureSelect
-                                        .value == "undefined" ||
-                                      !$state.prodExcludedFeatureSelect.value
-                                        .length > 0
-                                    );
+                                    return $queries.licenseTypeBaseQuery.data
+                                      .response.list;
                                   } catch (e) {
                                     if (
                                       e instanceof TypeError ||
                                       e?.plasmicType ===
                                         "PlasmicUndefinedDataError"
                                     ) {
-                                      return true;
+                                      return [];
                                     }
                                     throw e;
                                   }
-                                })() ? (
-                                  <div
+                                })()
+                              ).map((__plasmic_item_0, __plasmic_idx_0) => {
+                                const currentItem = __plasmic_item_0;
+                                const currentIndex = __plasmic_idx_0;
+                                return (
+                                  <AntdOption
+                                    data-plasmic-name={
+                                      "licenseTypeFilterSelectedOption"
+                                    }
+                                    data-plasmic-override={
+                                      overrides.licenseTypeFilterSelectedOption
+                                    }
                                     className={classNames(
-                                      projectcss.all,
-                                      projectcss.__wab_text,
-                                      sty.text__i7BaS
+                                      "__wab_instance",
+                                      sty.licenseTypeFilterSelectedOption
                                     )}
+                                    key={currentIndex}
+                                    value={(() => {
+                                      try {
+                                        return currentItem.license_type_item;
+                                      } catch (e) {
+                                        if (
+                                          e instanceof TypeError ||
+                                          e?.plasmicType ===
+                                            "PlasmicUndefinedDataError"
+                                        ) {
+                                          return undefined;
+                                        }
+                                        throw e;
+                                      }
+                                    })()}
                                   >
-                                    {"How is the regulated product defined?"}
-                                  </div>
-                                ) : null}
+                                    <div
+                                      data-plasmic-name={
+                                        "licenseTypeFilterSelectedText"
+                                      }
+                                      data-plasmic-override={
+                                        overrides.licenseTypeFilterSelectedText
+                                      }
+                                      className={classNames(
+                                        projectcss.all,
+                                        projectcss.__wab_text,
+                                        sty.licenseTypeFilterSelectedText
+                                      )}
+                                    >
+                                      <React.Fragment>
+                                        {(() => {
+                                          try {
+                                            return currentItem.license_type_item;
+                                          } catch (e) {
+                                            if (
+                                              e instanceof TypeError ||
+                                              e?.plasmicType ===
+                                                "PlasmicUndefinedDataError"
+                                            ) {
+                                              return "Option";
+                                            }
+                                            throw e;
+                                          }
+                                        })()}
+                                      </React.Fragment>
+                                    </div>
+                                  </AntdOption>
+                                );
+                              })}
+                            </AntdSelect>
+                          </AntdAccordionItem>
+                          <AntdAccordionItem
+                            data-plasmic-name={
+                              "productExcludedFeatureFilterAccordion2"
+                            }
+                            data-plasmic-override={
+                              overrides.productExcludedFeatureFilterAccordion2
+                            }
+                            className={classNames(
+                              "__wab_instance",
+                              sty.productExcludedFeatureFilterAccordion2
+                            )}
+                            id={"3"}
+                            label2={
+                              <div
+                                className={classNames(
+                                  projectcss.all,
+                                  sty.columns__xhUGm
+                                )}
+                              >
+                                <div
+                                  className={classNames(
+                                    projectcss.all,
+                                    sty.column__tuY98
+                                  )}
+                                >
+                                  {(() => {
+                                    try {
+                                      return (
+                                        typeof $state.prodExcludedFeatureSelect
+                                          .value == "undefined" ||
+                                        !$state.prodExcludedFeatureSelect.value
+                                          .length > 0
+                                      );
+                                    } catch (e) {
+                                      if (
+                                        e instanceof TypeError ||
+                                        e?.plasmicType ===
+                                          "PlasmicUndefinedDataError"
+                                      ) {
+                                        return true;
+                                      }
+                                      throw e;
+                                    }
+                                  })() ? (
+                                    <div
+                                      className={classNames(
+                                        projectcss.all,
+                                        projectcss.__wab_text,
+                                        sty.text__i7BaS
+                                      )}
+                                    >
+                                      {"How is the regulated product defined?"}
+                                    </div>
+                                  ) : null}
+                                  {(() => {
+                                    try {
+                                      return !(
+                                        typeof $state.prodExcludedFeatureSelect
+                                          .value === "undefined" ||
+                                        $state.prodExcludedFeatureSelect.value
+                                          .length == 0
+                                      );
+                                    } catch (e) {
+                                      if (
+                                        e instanceof TypeError ||
+                                        e?.plasmicType ===
+                                          "PlasmicUndefinedDataError"
+                                      ) {
+                                        return true;
+                                      }
+                                      throw e;
+                                    }
+                                  })() ? (
+                                    <div
+                                      className={classNames(
+                                        projectcss.all,
+                                        projectcss.__wab_text,
+                                        sty.text__zloyH
+                                      )}
+                                    >
+                                      {"What product features are exempt?"}
+                                    </div>
+                                  ) : null}
+                                </div>
                                 {(() => {
                                   try {
                                     return !(
@@ -2749,327 +2813,336 @@ function PlasmicHomepage__RenderFunc(props: {
                                   <div
                                     className={classNames(
                                       projectcss.all,
-                                      projectcss.__wab_text,
-                                      sty.text__zloyH
+                                      sty.column__gWv5V
                                     )}
                                   >
-                                    {"What product features are exempt?"}
+                                    <Button2
+                                      className={classNames(
+                                        "__wab_instance",
+                                        sty.button2__m1ZzA
+                                      )}
+                                      color={"clear"}
+                                      onClick={async event => {
+                                        const $steps = {};
+
+                                        $steps[
+                                          "updateProdExcludedFeatureSelectValue"
+                                        ] = true
+                                          ? (() => {
+                                              const actionArgs = {
+                                                variable: {
+                                                  objRoot: $state,
+                                                  variablePath: [
+                                                    "prodExcludedFeatureSelect",
+                                                    "value"
+                                                  ]
+                                                },
+                                                operation: 1
+                                              };
+                                              return (({
+                                                variable,
+                                                value,
+                                                startIndex,
+                                                deleteCount
+                                              }) => {
+                                                if (!variable) {
+                                                  return;
+                                                }
+                                                const {
+                                                  objRoot,
+                                                  variablePath
+                                                } = variable;
+
+                                                $stateSet(
+                                                  objRoot,
+                                                  variablePath,
+                                                  undefined
+                                                );
+                                                return undefined;
+                                              })?.apply(null, [actionArgs]);
+                                            })()
+                                          : undefined;
+                                        if (
+                                          $steps[
+                                            "updateProdExcludedFeatureSelectValue"
+                                          ] != null &&
+                                          typeof $steps[
+                                            "updateProdExcludedFeatureSelectValue"
+                                          ] === "object" &&
+                                          typeof $steps[
+                                            "updateProdExcludedFeatureSelectValue"
+                                          ].then === "function"
+                                        ) {
+                                          $steps[
+                                            "updateProdExcludedFeatureSelectValue"
+                                          ] = await $steps[
+                                            "updateProdExcludedFeatureSelectValue"
+                                          ];
+                                        }
+                                      }}
+                                      size={"minimal"}
+                                    >
+                                      <div
+                                        className={classNames(
+                                          projectcss.all,
+                                          projectcss.__wab_text,
+                                          sty.text__uqAgv
+                                        )}
+                                      >
+                                        {"Reset Filter"}
+                                      </div>
+                                    </Button2>
                                   </div>
                                 ) : null}
                               </div>
-                              {(() => {
-                                try {
-                                  return !(
-                                    typeof $state.prodExcludedFeatureSelect
-                                      .value === "undefined" ||
-                                    $state.prodExcludedFeatureSelect.value
-                                      .length == 0
-                                  );
-                                } catch (e) {
-                                  if (
-                                    e instanceof TypeError ||
-                                    e?.plasmicType ===
-                                      "PlasmicUndefinedDataError"
-                                  ) {
-                                    return true;
-                                  }
-                                  throw e;
-                                }
-                              })() ? (
-                                <div
-                                  className={classNames(
-                                    projectcss.all,
-                                    sty.column__gWv5V
-                                  )}
-                                >
-                                  <Button2
-                                    className={classNames(
-                                      "__wab_instance",
-                                      sty.button2__m1ZzA
-                                    )}
-                                    color={"clear"}
-                                    onClick={async event => {
-                                      const $steps = {};
-
-                                      $steps[
-                                        "updateProdExcludedFeatureSelectValue"
-                                      ] = true
-                                        ? (() => {
-                                            const actionArgs = {
-                                              variable: {
-                                                objRoot: $state,
-                                                variablePath: [
-                                                  "prodExcludedFeatureSelect",
-                                                  "value"
-                                                ]
-                                              },
-                                              operation: 1
-                                            };
-                                            return (({
-                                              variable,
-                                              value,
-                                              startIndex,
-                                              deleteCount
-                                            }) => {
-                                              if (!variable) {
-                                                return;
-                                              }
-                                              const { objRoot, variablePath } =
-                                                variable;
-
-                                              $stateSet(
-                                                objRoot,
-                                                variablePath,
-                                                undefined
-                                              );
-                                              return undefined;
-                                            })?.apply(null, [actionArgs]);
-                                          })()
-                                        : undefined;
-                                      if (
-                                        $steps[
-                                          "updateProdExcludedFeatureSelectValue"
-                                        ] != null &&
-                                        typeof $steps[
-                                          "updateProdExcludedFeatureSelectValue"
-                                        ] === "object" &&
-                                        typeof $steps[
-                                          "updateProdExcludedFeatureSelectValue"
-                                        ].then === "function"
-                                      ) {
-                                        $steps[
-                                          "updateProdExcludedFeatureSelectValue"
-                                        ] = await $steps[
-                                          "updateProdExcludedFeatureSelectValue"
-                                        ];
-                                      }
-                                    }}
-                                    size={"minimal"}
-                                  >
-                                    <div
-                                      className={classNames(
-                                        projectcss.all,
-                                        projectcss.__wab_text,
-                                        sty.text__uqAgv
-                                      )}
-                                    >
-                                      {"Reset Filter"}
-                                    </div>
-                                  </Button2>
-                                </div>
-                              ) : null}
-                            </div>
-                          }
-                          showArrow={true}
-                        >
-                          <div
-                            className={classNames(
-                              projectcss.all,
-                              projectcss.__wab_text,
-                              sty.text__t88Q
-                            )}
+                            }
+                            showArrow={true}
                           >
-                            <React.Fragment>
-                              <React.Fragment>
-                                {
-                                  "Each of the below-described items are excluded from the relevant definitions in at least one state.  Select one or more relevant items to "
-                                }
-                              </React.Fragment>
-                              <span
-                                className={
-                                  "plasmic_default__all plasmic_default__span"
-                                }
-                                style={{ textDecorationLine: "underline" }}
-                              >
-                                {"exclude"}
-                              </span>
-                              <React.Fragment>
-                                {
-                                  " these items from your search results for the states in which they are exempt.  If no items are selected, no exclusions will be applied."
-                                }
-                              </React.Fragment>
-                            </React.Fragment>
-                          </div>
-                          <AntdSelect
-                            data-plasmic-name={"prodExcludedFeatureSelect"}
-                            data-plasmic-override={
-                              overrides.prodExcludedFeatureSelect
-                            }
-                            allowClear={true}
-                            className={classNames(
-                              "__wab_instance",
-                              sty.prodExcludedFeatureSelect
-                            )}
-                            defaultStylesClassName={classNames(
-                              projectcss.root_reset,
-                              projectcss.plasmic_default_styles,
-                              projectcss.plasmic_mixins,
-                              projectcss.plasmic_tokens,
-                              plasmic_antd_5_hostless_css.plasmic_tokens
-                            )}
-                            mode={"multiple"}
-                            onChange={generateStateOnChangeProp($state, [
-                              "prodExcludedFeatureSelect",
-                              "value"
-                            ])}
-                            options={[
-                              {
-                                value: "option1",
-                                label: "Option 1",
-                                type: "option"
-                              },
-                              {
-                                value: "option2",
-                                label: "Option 2",
-                                type: "option"
-                              }
-                            ]}
-                            placeholder={
-                              <div
-                                className={classNames(
-                                  projectcss.all,
-                                  projectcss.__wab_text,
-                                  sty.text__eubMi
-                                )}
-                              >
-                                {"Select..."}
-                              </div>
-                            }
-                            popupScopeClassName={
-                              sty["prodExcludedFeatureSelect__popup"]
-                            }
-                            size={"large"}
-                            useChildren={true}
-                            value={generateStateValueProp($state, [
-                              "prodExcludedFeatureSelect",
-                              "value"
-                            ])}
-                          >
-                            {(_par =>
-                              !_par ? [] : Array.isArray(_par) ? _par : [_par])(
-                              (() => {
-                                try {
-                                  return $queries.prodExcludedBaseFeaturesQuery
-                                    .data.response.list;
-                                } catch (e) {
-                                  if (
-                                    e instanceof TypeError ||
-                                    e?.plasmicType ===
-                                      "PlasmicUndefinedDataError"
-                                  ) {
-                                    return [];
-                                  }
-                                  throw e;
-                                }
-                              })()
-                            ).map((__plasmic_item_0, __plasmic_idx_0) => {
-                              const currentItem = __plasmic_item_0;
-                              const currentIndex = __plasmic_idx_0;
-                              return (
-                                <AntdOption
-                                  className={classNames(
-                                    "__wab_instance",
-                                    sty.option__pThAx
-                                  )}
-                                  key={currentIndex}
-                                  value={(() => {
-                                    try {
-                                      return currentItem.excluded_product_feature_list;
-                                    } catch (e) {
-                                      if (
-                                        e instanceof TypeError ||
-                                        e?.plasmicType ===
-                                          "PlasmicUndefinedDataError"
-                                      ) {
-                                        return undefined;
-                                      }
-                                      throw e;
-                                    }
-                                  })()}
-                                >
-                                  <div
-                                    className={classNames(
-                                      projectcss.all,
-                                      projectcss.__wab_text,
-                                      sty.text__oRmh9
-                                    )}
-                                  >
-                                    <React.Fragment>
-                                      {(() => {
-                                        try {
-                                          return currentItem.excluded_product_feature_list;
-                                        } catch (e) {
-                                          if (
-                                            e instanceof TypeError ||
-                                            e?.plasmicType ===
-                                              "PlasmicUndefinedDataError"
-                                          ) {
-                                            return "Option";
-                                          }
-                                          throw e;
-                                        }
-                                      })()}
-                                    </React.Fragment>
-                                  </div>
-                                </AntdOption>
-                              );
-                            })}
-                          </AntdSelect>
-                        </AntdAccordionItem>
-                        <AntdAccordionItem
-                          data-plasmic-name={"activityTypeFilterAccordion"}
-                          data-plasmic-override={
-                            overrides.activityTypeFilterAccordion
-                          }
-                          className={classNames(
-                            "__wab_instance",
-                            sty.activityTypeFilterAccordion
-                          )}
-                          id={"4"}
-                          label2={
                             <div
                               className={classNames(
                                 projectcss.all,
-                                sty.columns__mvk4S
+                                projectcss.__wab_text,
+                                sty.text__t88Q
                               )}
                             >
-                              <div
-                                className={classNames(
-                                  projectcss.all,
-                                  sty.column__euP31
-                                )}
-                              >
-                                {(() => {
+                              <React.Fragment>
+                                <React.Fragment>
+                                  {
+                                    "Each of the below-described items are excluded from the relevant definitions in at least one state.  Select one or more relevant items to "
+                                  }
+                                </React.Fragment>
+                                <span
+                                  className={
+                                    "plasmic_default__all plasmic_default__span"
+                                  }
+                                  style={{ textDecorationLine: "underline" }}
+                                >
+                                  {"exclude"}
+                                </span>
+                                <React.Fragment>
+                                  {
+                                    " these items from your search results for the states in which they are exempt.  If no items are selected, no exclusions will be applied."
+                                  }
+                                </React.Fragment>
+                              </React.Fragment>
+                            </div>
+                            <AntdSelect
+                              data-plasmic-name={"prodExcludedFeatureSelect"}
+                              data-plasmic-override={
+                                overrides.prodExcludedFeatureSelect
+                              }
+                              allowClear={true}
+                              className={classNames(
+                                "__wab_instance",
+                                sty.prodExcludedFeatureSelect
+                              )}
+                              defaultStylesClassName={classNames(
+                                projectcss.root_reset,
+                                projectcss.plasmic_default_styles,
+                                projectcss.plasmic_mixins,
+                                projectcss.plasmic_tokens,
+                                plasmic_antd_5_hostless_css.plasmic_tokens
+                              )}
+                              mode={"multiple"}
+                              onChange={generateStateOnChangeProp($state, [
+                                "prodExcludedFeatureSelect",
+                                "value"
+                              ])}
+                              options={[
+                                {
+                                  value: "option1",
+                                  label: "Option 1",
+                                  type: "option"
+                                },
+                                {
+                                  value: "option2",
+                                  label: "Option 2",
+                                  type: "option"
+                                }
+                              ]}
+                              placeholder={
+                                <div
+                                  className={classNames(
+                                    projectcss.all,
+                                    projectcss.__wab_text,
+                                    sty.text__eubMi
+                                  )}
+                                >
+                                  {"Select..."}
+                                </div>
+                              }
+                              popupScopeClassName={
+                                sty["prodExcludedFeatureSelect__popup"]
+                              }
+                              size={"large"}
+                              useChildren={true}
+                              value={generateStateValueProp($state, [
+                                "prodExcludedFeatureSelect",
+                                "value"
+                              ])}
+                            >
+                              {(_par =>
+                                !_par
+                                  ? []
+                                  : Array.isArray(_par)
+                                  ? _par
+                                  : [_par])(
+                                (() => {
                                   try {
-                                    return (
-                                      typeof $state.activityTypeSelect.value ==
-                                        "undefined" ||
-                                      !$state.activityTypeSelect.value.length >
-                                        0
-                                    );
+                                    return $queries
+                                      .prodExcludedBaseFeaturesQuery.data
+                                      .response.list;
                                   } catch (e) {
                                     if (
                                       e instanceof TypeError ||
                                       e?.plasmicType ===
                                         "PlasmicUndefinedDataError"
                                     ) {
-                                      return true;
+                                      return [];
                                     }
                                     throw e;
                                   }
-                                })() ? (
-                                  <div
+                                })()
+                              ).map((__plasmic_item_0, __plasmic_idx_0) => {
+                                const currentItem = __plasmic_item_0;
+                                const currentIndex = __plasmic_idx_0;
+                                return (
+                                  <AntdOption
                                     className={classNames(
-                                      projectcss.all,
-                                      projectcss.__wab_text,
-                                      sty.text__bc7K
+                                      "__wab_instance",
+                                      sty.option__pThAx
                                     )}
+                                    key={currentIndex}
+                                    value={(() => {
+                                      try {
+                                        return currentItem.excluded_product_feature_list;
+                                      } catch (e) {
+                                        if (
+                                          e instanceof TypeError ||
+                                          e?.plasmicType ===
+                                            "PlasmicUndefinedDataError"
+                                        ) {
+                                          return undefined;
+                                        }
+                                        throw e;
+                                      }
+                                    })()}
                                   >
-                                    {
-                                      "What activities may subject an entity to licensure?"
+                                    <div
+                                      className={classNames(
+                                        projectcss.all,
+                                        projectcss.__wab_text,
+                                        sty.text__oRmh9
+                                      )}
+                                    >
+                                      <React.Fragment>
+                                        {(() => {
+                                          try {
+                                            return currentItem.excluded_product_feature_list;
+                                          } catch (e) {
+                                            if (
+                                              e instanceof TypeError ||
+                                              e?.plasmicType ===
+                                                "PlasmicUndefinedDataError"
+                                            ) {
+                                              return "Option";
+                                            }
+                                            throw e;
+                                          }
+                                        })()}
+                                      </React.Fragment>
+                                    </div>
+                                  </AntdOption>
+                                );
+                              })}
+                            </AntdSelect>
+                          </AntdAccordionItem>
+                          <AntdAccordionItem
+                            data-plasmic-name={"activityTypeFilterAccordion"}
+                            data-plasmic-override={
+                              overrides.activityTypeFilterAccordion
+                            }
+                            className={classNames(
+                              "__wab_instance",
+                              sty.activityTypeFilterAccordion
+                            )}
+                            id={"4"}
+                            label2={
+                              <div
+                                className={classNames(
+                                  projectcss.all,
+                                  sty.columns__mvk4S
+                                )}
+                              >
+                                <div
+                                  className={classNames(
+                                    projectcss.all,
+                                    sty.column__euP31
+                                  )}
+                                >
+                                  {(() => {
+                                    try {
+                                      return (
+                                        typeof $state.activityTypeSelect
+                                          .value == "undefined" ||
+                                        !$state.activityTypeSelect.value
+                                          .length > 0
+                                      );
+                                    } catch (e) {
+                                      if (
+                                        e instanceof TypeError ||
+                                        e?.plasmicType ===
+                                          "PlasmicUndefinedDataError"
+                                      ) {
+                                        return true;
+                                      }
+                                      throw e;
                                     }
-                                  </div>
-                                ) : null}
+                                  })() ? (
+                                    <div
+                                      className={classNames(
+                                        projectcss.all,
+                                        projectcss.__wab_text,
+                                        sty.text__bc7K
+                                      )}
+                                    >
+                                      {
+                                        "What activities may subject an entity to licensure?"
+                                      }
+                                    </div>
+                                  ) : null}
+                                  {(() => {
+                                    try {
+                                      return !(
+                                        typeof $state.activityTypeSelect
+                                          .value === "undefined" ||
+                                        $state.activityTypeSelect.value
+                                          .length == 0
+                                      );
+                                    } catch (e) {
+                                      if (
+                                        e instanceof TypeError ||
+                                        e?.plasmicType ===
+                                          "PlasmicUndefinedDataError"
+                                      ) {
+                                        return true;
+                                      }
+                                      throw e;
+                                    }
+                                  })() ? (
+                                    <div
+                                      className={classNames(
+                                        projectcss.all,
+                                        projectcss.__wab_text,
+                                        sty.text__jSaSj
+                                      )}
+                                    >
+                                      {
+                                        "What activities may subject an entity to licensure?"
+                                      }
+                                    </div>
+                                  ) : null}
+                                </div>
                                 {(() => {
                                   try {
                                     return !(
@@ -3092,51 +3165,21 @@ function PlasmicHomepage__RenderFunc(props: {
                                   <div
                                     className={classNames(
                                       projectcss.all,
-                                      projectcss.__wab_text,
-                                      sty.text__jSaSj
+                                      sty.column__lj611
                                     )}
                                   >
-                                    {
-                                      "What activities may subject an entity to licensure?"
-                                    }
-                                  </div>
-                                ) : null}
-                              </div>
-                              {(() => {
-                                try {
-                                  return !(
-                                    typeof $state.activityTypeSelect.value ===
-                                      "undefined" ||
-                                    $state.activityTypeSelect.value.length == 0
-                                  );
-                                } catch (e) {
-                                  if (
-                                    e instanceof TypeError ||
-                                    e?.plasmicType ===
-                                      "PlasmicUndefinedDataError"
-                                  ) {
-                                    return true;
-                                  }
-                                  throw e;
-                                }
-                              })() ? (
-                                <div
-                                  className={classNames(
-                                    projectcss.all,
-                                    sty.column__lj611
-                                  )}
-                                >
-                                  <Button2
-                                    className={classNames(
-                                      "__wab_instance",
-                                      sty.button2__lu9P
-                                    )}
-                                    color={"clear"}
-                                    onClick={async event => {
-                                      const $steps = {};
+                                    <Button2
+                                      className={classNames(
+                                        "__wab_instance",
+                                        sty.button2__lu9P
+                                      )}
+                                      color={"clear"}
+                                      onClick={async event => {
+                                        const $steps = {};
 
-                                      $steps["updateActivityTypeSelectValue"] =
-                                        true
+                                        $steps[
+                                          "updateActivityTypeSelectValue"
+                                        ] = true
                                           ? (() => {
                                               const actionArgs = {
                                                 variable: {
@@ -3171,221 +3214,259 @@ function PlasmicHomepage__RenderFunc(props: {
                                               })?.apply(null, [actionArgs]);
                                             })()
                                           : undefined;
-                                      if (
-                                        $steps[
-                                          "updateActivityTypeSelectValue"
-                                        ] != null &&
-                                        typeof $steps[
-                                          "updateActivityTypeSelectValue"
-                                        ] === "object" &&
-                                        typeof $steps[
-                                          "updateActivityTypeSelectValue"
-                                        ].then === "function"
-                                      ) {
-                                        $steps[
-                                          "updateActivityTypeSelectValue"
-                                        ] = await $steps[
-                                          "updateActivityTypeSelectValue"
-                                        ];
-                                      }
-                                    }}
-                                    size={"minimal"}
-                                  >
-                                    <div
-                                      className={classNames(
-                                        projectcss.all,
-                                        projectcss.__wab_text,
-                                        sty.text__wpZCv
-                                      )}
-                                    >
-                                      {"Reset Filter"}
-                                    </div>
-                                  </Button2>
-                                </div>
-                              ) : null}
-                            </div>
-                          }
-                          showArrow={true}
-                        >
-                          <div
-                            className={classNames(
-                              projectcss.all,
-                              projectcss.__wab_text,
-                              sty.text__kbv0K
-                            )}
-                          >
-                            {
-                              "Select any of the following activities to limit results to licenses that apply to the selected activities.  If no items are selected, all activities will be shown."
-                            }
-                          </div>
-                          <AntdSelect
-                            data-plasmic-name={"activityTypeSelect"}
-                            data-plasmic-override={overrides.activityTypeSelect}
-                            allowClear={true}
-                            className={classNames(
-                              "__wab_instance",
-                              sty.activityTypeSelect
-                            )}
-                            defaultStylesClassName={classNames(
-                              projectcss.root_reset,
-                              projectcss.plasmic_default_styles,
-                              projectcss.plasmic_mixins,
-                              projectcss.plasmic_tokens,
-                              plasmic_antd_5_hostless_css.plasmic_tokens
-                            )}
-                            mode={"multiple"}
-                            onChange={generateStateOnChangeProp($state, [
-                              "activityTypeSelect",
-                              "value"
-                            ])}
-                            options={[
-                              {
-                                value: "option1",
-                                label: "Option 1",
-                                type: "option"
-                              },
-                              {
-                                value: "option2",
-                                label: "Option 2",
-                                type: "option"
-                              }
-                            ]}
-                            placeholder={"Select..."}
-                            popupScopeClassName={
-                              sty["activityTypeSelect__popup"]
-                            }
-                            size={"large"}
-                            useChildren={true}
-                            value={generateStateValueProp($state, [
-                              "activityTypeSelect",
-                              "value"
-                            ])}
-                          >
-                            {(_par =>
-                              !_par ? [] : Array.isArray(_par) ? _par : [_par])(
-                              (() => {
-                                try {
-                                  return $queries.activityTypeBaseQuery.data
-                                    .response.list;
-                                } catch (e) {
-                                  if (
-                                    e instanceof TypeError ||
-                                    e?.plasmicType ===
-                                      "PlasmicUndefinedDataError"
-                                  ) {
-                                    return [];
-                                  }
-                                  throw e;
-                                }
-                              })()
-                            ).map((__plasmic_item_0, __plasmic_idx_0) => {
-                              const currentItem = __plasmic_item_0;
-                              const currentIndex = __plasmic_idx_0;
-                              return (
-                                <AntdOption
-                                  className={classNames(
-                                    "__wab_instance",
-                                    sty.option__daJMu
-                                  )}
-                                  key={currentIndex}
-                                  value={(() => {
-                                    try {
-                                      return currentItem.regulated_activities_item_list;
-                                    } catch (e) {
-                                      if (
-                                        e instanceof TypeError ||
-                                        e?.plasmicType ===
-                                          "PlasmicUndefinedDataError"
-                                      ) {
-                                        return undefined;
-                                      }
-                                      throw e;
-                                    }
-                                  })()}
-                                >
-                                  <div
-                                    className={classNames(
-                                      projectcss.all,
-                                      projectcss.__wab_text,
-                                      sty.text__qdGfo
-                                    )}
-                                  >
-                                    <React.Fragment>
-                                      {(() => {
-                                        try {
-                                          return currentItem.regulated_activities_item_list;
-                                        } catch (e) {
-                                          if (
-                                            e instanceof TypeError ||
-                                            e?.plasmicType ===
-                                              "PlasmicUndefinedDataError"
-                                          ) {
-                                            return "Option";
-                                          }
-                                          throw e;
+                                        if (
+                                          $steps[
+                                            "updateActivityTypeSelectValue"
+                                          ] != null &&
+                                          typeof $steps[
+                                            "updateActivityTypeSelectValue"
+                                          ] === "object" &&
+                                          typeof $steps[
+                                            "updateActivityTypeSelectValue"
+                                          ].then === "function"
+                                        ) {
+                                          $steps[
+                                            "updateActivityTypeSelectValue"
+                                          ] = await $steps[
+                                            "updateActivityTypeSelectValue"
+                                          ];
                                         }
-                                      })()}
-                                    </React.Fragment>
+                                      }}
+                                      size={"minimal"}
+                                    >
+                                      <div
+                                        className={classNames(
+                                          projectcss.all,
+                                          projectcss.__wab_text,
+                                          sty.text__wpZCv
+                                        )}
+                                      >
+                                        {"Reset Filter"}
+                                      </div>
+                                    </Button2>
                                   </div>
-                                </AntdOption>
-                              );
-                            })}
-                          </AntdSelect>
-                        </AntdAccordionItem>
-                        <AntdAccordionItem
-                          data-plasmic-name={"licenseTriggerFilterAccordion"}
-                          data-plasmic-override={
-                            overrides.licenseTriggerFilterAccordion
-                          }
-                          className={classNames(
-                            "__wab_instance",
-                            sty.licenseTriggerFilterAccordion
-                          )}
-                          id={"5"}
-                          label2={
+                                ) : null}
+                              </div>
+                            }
+                            showArrow={true}
+                          >
                             <div
                               className={classNames(
                                 projectcss.all,
-                                sty.columns__tqaHd
+                                projectcss.__wab_text,
+                                sty.text__kbv0K
                               )}
                             >
-                              <div
-                                className={classNames(
-                                  projectcss.all,
-                                  sty.column__iaEgj
-                                )}
-                              >
-                                {(() => {
+                              {
+                                "Select any of the following activities to limit results to licenses that apply to the selected activities.  If no items are selected, all activities will be shown."
+                              }
+                            </div>
+                            <AntdSelect
+                              data-plasmic-name={"activityTypeSelect"}
+                              data-plasmic-override={
+                                overrides.activityTypeSelect
+                              }
+                              allowClear={true}
+                              className={classNames(
+                                "__wab_instance",
+                                sty.activityTypeSelect
+                              )}
+                              defaultStylesClassName={classNames(
+                                projectcss.root_reset,
+                                projectcss.plasmic_default_styles,
+                                projectcss.plasmic_mixins,
+                                projectcss.plasmic_tokens,
+                                plasmic_antd_5_hostless_css.plasmic_tokens
+                              )}
+                              mode={"multiple"}
+                              onChange={generateStateOnChangeProp($state, [
+                                "activityTypeSelect",
+                                "value"
+                              ])}
+                              options={[
+                                {
+                                  value: "option1",
+                                  label: "Option 1",
+                                  type: "option"
+                                },
+                                {
+                                  value: "option2",
+                                  label: "Option 2",
+                                  type: "option"
+                                }
+                              ]}
+                              placeholder={"Select..."}
+                              popupScopeClassName={
+                                sty["activityTypeSelect__popup"]
+                              }
+                              size={"large"}
+                              useChildren={true}
+                              value={generateStateValueProp($state, [
+                                "activityTypeSelect",
+                                "value"
+                              ])}
+                            >
+                              {(_par =>
+                                !_par
+                                  ? []
+                                  : Array.isArray(_par)
+                                  ? _par
+                                  : [_par])(
+                                (() => {
                                   try {
-                                    return (
-                                      typeof $state.licenseTriggerFilterSelect
-                                        .value == "undefined" ||
-                                      !$state.licenseTriggerFilterSelect.value
-                                        .length > 0
-                                    );
+                                    return $queries.activityTypeBaseQuery.data
+                                      .response.list;
                                   } catch (e) {
                                     if (
                                       e instanceof TypeError ||
                                       e?.plasmicType ===
                                         "PlasmicUndefinedDataError"
                                     ) {
-                                      return true;
+                                      return [];
                                     }
                                     throw e;
                                   }
-                                })() ? (
-                                  <div
+                                })()
+                              ).map((__plasmic_item_0, __plasmic_idx_0) => {
+                                const currentItem = __plasmic_item_0;
+                                const currentIndex = __plasmic_idx_0;
+                                return (
+                                  <AntdOption
                                     className={classNames(
-                                      projectcss.all,
-                                      projectcss.__wab_text,
-                                      sty.text___7Blxa
+                                      "__wab_instance",
+                                      sty.option__daJMu
                                     )}
+                                    key={currentIndex}
+                                    value={(() => {
+                                      try {
+                                        return currentItem.regulated_activities_item_list;
+                                      } catch (e) {
+                                        if (
+                                          e instanceof TypeError ||
+                                          e?.plasmicType ===
+                                            "PlasmicUndefinedDataError"
+                                        ) {
+                                          return undefined;
+                                        }
+                                        throw e;
+                                      }
+                                    })()}
                                   >
-                                    {
-                                      "What triggers the requirement to obtain a license?"
+                                    <div
+                                      className={classNames(
+                                        projectcss.all,
+                                        projectcss.__wab_text,
+                                        sty.text__qdGfo
+                                      )}
+                                    >
+                                      <React.Fragment>
+                                        {(() => {
+                                          try {
+                                            return currentItem.regulated_activities_item_list;
+                                          } catch (e) {
+                                            if (
+                                              e instanceof TypeError ||
+                                              e?.plasmicType ===
+                                                "PlasmicUndefinedDataError"
+                                            ) {
+                                              return "Option";
+                                            }
+                                            throw e;
+                                          }
+                                        })()}
+                                      </React.Fragment>
+                                    </div>
+                                  </AntdOption>
+                                );
+                              })}
+                            </AntdSelect>
+                          </AntdAccordionItem>
+                          <AntdAccordionItem
+                            data-plasmic-name={"licenseTriggerFilterAccordion"}
+                            data-plasmic-override={
+                              overrides.licenseTriggerFilterAccordion
+                            }
+                            className={classNames(
+                              "__wab_instance",
+                              sty.licenseTriggerFilterAccordion
+                            )}
+                            id={"5"}
+                            label2={
+                              <div
+                                className={classNames(
+                                  projectcss.all,
+                                  sty.columns__tqaHd
+                                )}
+                              >
+                                <div
+                                  className={classNames(
+                                    projectcss.all,
+                                    sty.column__iaEgj
+                                  )}
+                                >
+                                  {(() => {
+                                    try {
+                                      return (
+                                        typeof $state.licenseTriggerFilterSelect
+                                          .value == "undefined" ||
+                                        !$state.licenseTriggerFilterSelect.value
+                                          .length > 0
+                                      );
+                                    } catch (e) {
+                                      if (
+                                        e instanceof TypeError ||
+                                        e?.plasmicType ===
+                                          "PlasmicUndefinedDataError"
+                                      ) {
+                                        return true;
+                                      }
+                                      throw e;
                                     }
-                                  </div>
-                                ) : null}
+                                  })() ? (
+                                    <div
+                                      className={classNames(
+                                        projectcss.all,
+                                        projectcss.__wab_text,
+                                        sty.text___7Blxa
+                                      )}
+                                    >
+                                      {
+                                        "What triggers the requirement to obtain a license?"
+                                      }
+                                    </div>
+                                  ) : null}
+                                  {(() => {
+                                    try {
+                                      return !(
+                                        typeof $state.licenseTriggerFilterSelect
+                                          .value === "undefined" ||
+                                        $state.licenseTriggerFilterSelect.value
+                                          .length == 0
+                                      );
+                                    } catch (e) {
+                                      if (
+                                        e instanceof TypeError ||
+                                        e?.plasmicType ===
+                                          "PlasmicUndefinedDataError"
+                                      ) {
+                                        return true;
+                                      }
+                                      throw e;
+                                    }
+                                  })() ? (
+                                    <div
+                                      className={classNames(
+                                        projectcss.all,
+                                        projectcss.__wab_text,
+                                        sty.text__s3KOo
+                                      )}
+                                    >
+                                      {
+                                        "What triggers the requirement to obtain a license?"
+                                      }
+                                    </div>
+                                  ) : null}
+                                </div>
                                 {(() => {
                                   try {
                                     return !(
@@ -3408,280 +3489,291 @@ function PlasmicHomepage__RenderFunc(props: {
                                   <div
                                     className={classNames(
                                       projectcss.all,
-                                      projectcss.__wab_text,
-                                      sty.text__s3KOo
+                                      sty.column__dGSl2
                                     )}
                                   >
-                                    {
-                                      "What triggers the requirement to obtain a license?"
-                                    }
+                                    <Button2
+                                      className={classNames(
+                                        "__wab_instance",
+                                        sty.button2__zuyDn
+                                      )}
+                                      color={"clear"}
+                                      onClick={async event => {
+                                        const $steps = {};
+
+                                        $steps[
+                                          "updateLicenseTriggerFilterSelectValue"
+                                        ] = true
+                                          ? (() => {
+                                              const actionArgs = {
+                                                variable: {
+                                                  objRoot: $state,
+                                                  variablePath: [
+                                                    "licenseTriggerFilterSelect",
+                                                    "value"
+                                                  ]
+                                                },
+                                                operation: 1
+                                              };
+                                              return (({
+                                                variable,
+                                                value,
+                                                startIndex,
+                                                deleteCount
+                                              }) => {
+                                                if (!variable) {
+                                                  return;
+                                                }
+                                                const {
+                                                  objRoot,
+                                                  variablePath
+                                                } = variable;
+
+                                                $stateSet(
+                                                  objRoot,
+                                                  variablePath,
+                                                  undefined
+                                                );
+                                                return undefined;
+                                              })?.apply(null, [actionArgs]);
+                                            })()
+                                          : undefined;
+                                        if (
+                                          $steps[
+                                            "updateLicenseTriggerFilterSelectValue"
+                                          ] != null &&
+                                          typeof $steps[
+                                            "updateLicenseTriggerFilterSelectValue"
+                                          ] === "object" &&
+                                          typeof $steps[
+                                            "updateLicenseTriggerFilterSelectValue"
+                                          ].then === "function"
+                                        ) {
+                                          $steps[
+                                            "updateLicenseTriggerFilterSelectValue"
+                                          ] = await $steps[
+                                            "updateLicenseTriggerFilterSelectValue"
+                                          ];
+                                        }
+                                      }}
+                                      size={"minimal"}
+                                    >
+                                      <div
+                                        className={classNames(
+                                          projectcss.all,
+                                          projectcss.__wab_text,
+                                          sty.text__qRiJf
+                                        )}
+                                      >
+                                        {"Reset Filter"}
+                                      </div>
+                                    </Button2>
                                   </div>
                                 ) : null}
                               </div>
-                              {(() => {
-                                try {
-                                  return !(
-                                    typeof $state.licenseTriggerFilterSelect
-                                      .value === "undefined" ||
-                                    $state.licenseTriggerFilterSelect.value
-                                      .length == 0
-                                  );
-                                } catch (e) {
-                                  if (
-                                    e instanceof TypeError ||
-                                    e?.plasmicType ===
-                                      "PlasmicUndefinedDataError"
-                                  ) {
-                                    return true;
-                                  }
-                                  throw e;
-                                }
-                              })() ? (
-                                <div
-                                  className={classNames(
-                                    projectcss.all,
-                                    sty.column__dGSl2
-                                  )}
-                                >
-                                  <Button2
-                                    className={classNames(
-                                      "__wab_instance",
-                                      sty.button2__zuyDn
-                                    )}
-                                    color={"clear"}
-                                    onClick={async event => {
-                                      const $steps = {};
-
-                                      $steps[
-                                        "updateLicenseTriggerFilterSelectValue"
-                                      ] = true
-                                        ? (() => {
-                                            const actionArgs = {
-                                              variable: {
-                                                objRoot: $state,
-                                                variablePath: [
-                                                  "licenseTriggerFilterSelect",
-                                                  "value"
-                                                ]
-                                              },
-                                              operation: 1
-                                            };
-                                            return (({
-                                              variable,
-                                              value,
-                                              startIndex,
-                                              deleteCount
-                                            }) => {
-                                              if (!variable) {
-                                                return;
-                                              }
-                                              const { objRoot, variablePath } =
-                                                variable;
-
-                                              $stateSet(
-                                                objRoot,
-                                                variablePath,
-                                                undefined
-                                              );
-                                              return undefined;
-                                            })?.apply(null, [actionArgs]);
-                                          })()
-                                        : undefined;
-                                      if (
-                                        $steps[
-                                          "updateLicenseTriggerFilterSelectValue"
-                                        ] != null &&
-                                        typeof $steps[
-                                          "updateLicenseTriggerFilterSelectValue"
-                                        ] === "object" &&
-                                        typeof $steps[
-                                          "updateLicenseTriggerFilterSelectValue"
-                                        ].then === "function"
-                                      ) {
-                                        $steps[
-                                          "updateLicenseTriggerFilterSelectValue"
-                                        ] = await $steps[
-                                          "updateLicenseTriggerFilterSelectValue"
-                                        ];
-                                      }
-                                    }}
-                                    size={"minimal"}
-                                  >
-                                    <div
-                                      className={classNames(
-                                        projectcss.all,
-                                        projectcss.__wab_text,
-                                        sty.text__qRiJf
-                                      )}
-                                    >
-                                      {"Reset Filter"}
-                                    </div>
-                                  </Button2>
-                                </div>
-                              ) : null}
-                            </div>
-                          }
-                          showArrow={true}
-                        >
-                          <AntdSelect
-                            data-plasmic-name={"licenseTriggerFilterSelect"}
-                            data-plasmic-override={
-                              overrides.licenseTriggerFilterSelect
                             }
-                            allowClear={true}
-                            className={classNames(
-                              "__wab_instance",
-                              sty.licenseTriggerFilterSelect
-                            )}
-                            defaultStylesClassName={classNames(
-                              projectcss.root_reset,
-                              projectcss.plasmic_default_styles,
-                              projectcss.plasmic_mixins,
-                              projectcss.plasmic_tokens,
-                              plasmic_antd_5_hostless_css.plasmic_tokens
-                            )}
-                            mode={"multiple"}
-                            onChange={generateStateOnChangeProp($state, [
-                              "licenseTriggerFilterSelect",
-                              "value"
-                            ])}
-                            options={[]}
-                            placeholder={
-                              "Select one or more triggers to limit the results to only those triggers . . ."
-                            }
-                            popupScopeClassName={
-                              sty["licenseTriggerFilterSelect__popup"]
-                            }
-                            useChildren={true}
-                            value={generateStateValueProp($state, [
-                              "licenseTriggerFilterSelect",
-                              "value"
-                            ])}
+                            showArrow={true}
                           >
-                            {(_par =>
-                              !_par ? [] : Array.isArray(_par) ? _par : [_par])(
-                              (() => {
-                                try {
-                                  return $queries.licenseTriggerBaseQuery.data
-                                    .response.list;
-                                } catch (e) {
-                                  if (
-                                    e instanceof TypeError ||
-                                    e?.plasmicType ===
-                                      "PlasmicUndefinedDataError"
-                                  ) {
-                                    return [];
-                                  }
-                                  throw e;
-                                }
-                              })()
-                            ).map((__plasmic_item_0, __plasmic_idx_0) => {
-                              const currentItem = __plasmic_item_0;
-                              const currentIndex = __plasmic_idx_0;
-                              return (
-                                <AntdOption
-                                  className={classNames(
-                                    "__wab_instance",
-                                    sty.option__jsNpd
-                                  )}
-                                  key={currentIndex}
-                                  value={(() => {
-                                    try {
-                                      return currentItem.license_trigger_list;
-                                    } catch (e) {
-                                      if (
-                                        e instanceof TypeError ||
-                                        e?.plasmicType ===
-                                          "PlasmicUndefinedDataError"
-                                      ) {
-                                        return undefined;
-                                      }
-                                      throw e;
-                                    }
-                                  })()}
-                                >
-                                  <div
-                                    className={classNames(
-                                      projectcss.all,
-                                      projectcss.__wab_text,
-                                      sty.text___5K078
-                                    )}
-                                  >
-                                    <React.Fragment>
-                                      {(() => {
-                                        try {
-                                          return currentItem.license_trigger_list;
-                                        } catch (e) {
-                                          if (
-                                            e instanceof TypeError ||
-                                            e?.plasmicType ===
-                                              "PlasmicUndefinedDataError"
-                                          ) {
-                                            return "Option";
-                                          }
-                                          throw e;
-                                        }
-                                      })()}
-                                    </React.Fragment>
-                                  </div>
-                                </AntdOption>
-                              );
-                            })}
-                          </AntdSelect>
-                        </AntdAccordionItem>
-                        <AntdAccordionItem
-                          data-plasmic-name={"licensureExemptEntitiesAccordion"}
-                          data-plasmic-override={
-                            overrides.licensureExemptEntitiesAccordion
-                          }
-                          className={classNames(
-                            "__wab_instance",
-                            sty.licensureExemptEntitiesAccordion
-                          )}
-                          id={"6"}
-                          label2={
-                            <div
+                            <AntdSelect
+                              data-plasmic-name={"licenseTriggerFilterSelect"}
+                              data-plasmic-override={
+                                overrides.licenseTriggerFilterSelect
+                              }
+                              allowClear={true}
                               className={classNames(
-                                projectcss.all,
-                                sty.columns__ygENs
+                                "__wab_instance",
+                                sty.licenseTriggerFilterSelect
                               )}
+                              defaultStylesClassName={classNames(
+                                projectcss.root_reset,
+                                projectcss.plasmic_default_styles,
+                                projectcss.plasmic_mixins,
+                                projectcss.plasmic_tokens,
+                                plasmic_antd_5_hostless_css.plasmic_tokens
+                              )}
+                              mode={"multiple"}
+                              onChange={generateStateOnChangeProp($state, [
+                                "licenseTriggerFilterSelect",
+                                "value"
+                              ])}
+                              options={[]}
+                              placeholder={
+                                "Select one or more triggers to limit the results to only those triggers . . ."
+                              }
+                              popupScopeClassName={
+                                sty["licenseTriggerFilterSelect__popup"]
+                              }
+                              useChildren={true}
+                              value={generateStateValueProp($state, [
+                                "licenseTriggerFilterSelect",
+                                "value"
+                              ])}
                             >
-                              <div
-                                className={classNames(
-                                  projectcss.all,
-                                  sty.column__yq1Yw
-                                )}
-                              >
-                                {(() => {
+                              {(_par =>
+                                !_par
+                                  ? []
+                                  : Array.isArray(_par)
+                                  ? _par
+                                  : [_par])(
+                                (() => {
                                   try {
-                                    return (
-                                      typeof $state
-                                        .servExemptEntitiesFilterSelect.value ==
-                                        "undefined" ||
-                                      !$state.servExemptEntitiesFilterSelect
-                                        .value.length > 0
-                                    );
+                                    return $queries.licenseTriggerBaseQuery.data
+                                      .response.list;
                                   } catch (e) {
                                     if (
                                       e instanceof TypeError ||
                                       e?.plasmicType ===
                                         "PlasmicUndefinedDataError"
                                     ) {
-                                      return true;
+                                      return [];
                                     }
                                     throw e;
                                   }
-                                })() ? (
-                                  <div
+                                })()
+                              ).map((__plasmic_item_0, __plasmic_idx_0) => {
+                                const currentItem = __plasmic_item_0;
+                                const currentIndex = __plasmic_idx_0;
+                                return (
+                                  <AntdOption
                                     className={classNames(
-                                      projectcss.all,
-                                      projectcss.__wab_text,
-                                      sty.text___4Vxr8
+                                      "__wab_instance",
+                                      sty.option__jsNpd
                                     )}
+                                    key={currentIndex}
+                                    value={(() => {
+                                      try {
+                                        return currentItem.license_trigger_list;
+                                      } catch (e) {
+                                        if (
+                                          e instanceof TypeError ||
+                                          e?.plasmicType ===
+                                            "PlasmicUndefinedDataError"
+                                        ) {
+                                          return undefined;
+                                        }
+                                        throw e;
+                                      }
+                                    })()}
                                   >
-                                    {"What entities are exempt from licensure?"}
-                                  </div>
-                                ) : null}
+                                    <div
+                                      className={classNames(
+                                        projectcss.all,
+                                        projectcss.__wab_text,
+                                        sty.text___5K078
+                                      )}
+                                    >
+                                      <React.Fragment>
+                                        {(() => {
+                                          try {
+                                            return currentItem.license_trigger_list;
+                                          } catch (e) {
+                                            if (
+                                              e instanceof TypeError ||
+                                              e?.plasmicType ===
+                                                "PlasmicUndefinedDataError"
+                                            ) {
+                                              return "Option";
+                                            }
+                                            throw e;
+                                          }
+                                        })()}
+                                      </React.Fragment>
+                                    </div>
+                                  </AntdOption>
+                                );
+                              })}
+                            </AntdSelect>
+                          </AntdAccordionItem>
+                          <AntdAccordionItem
+                            data-plasmic-name={
+                              "licensureExemptEntitiesAccordion"
+                            }
+                            data-plasmic-override={
+                              overrides.licensureExemptEntitiesAccordion
+                            }
+                            className={classNames(
+                              "__wab_instance",
+                              sty.licensureExemptEntitiesAccordion
+                            )}
+                            id={"6"}
+                            label2={
+                              <div
+                                className={classNames(
+                                  projectcss.all,
+                                  sty.columns__ygENs
+                                )}
+                              >
+                                <div
+                                  className={classNames(
+                                    projectcss.all,
+                                    sty.column__yq1Yw
+                                  )}
+                                >
+                                  {(() => {
+                                    try {
+                                      return (
+                                        typeof $state
+                                          .servExemptEntitiesFilterSelect
+                                          .value == "undefined" ||
+                                        !$state.servExemptEntitiesFilterSelect
+                                          .value.length > 0
+                                      );
+                                    } catch (e) {
+                                      if (
+                                        e instanceof TypeError ||
+                                        e?.plasmicType ===
+                                          "PlasmicUndefinedDataError"
+                                      ) {
+                                        return true;
+                                      }
+                                      throw e;
+                                    }
+                                  })() ? (
+                                    <div
+                                      className={classNames(
+                                        projectcss.all,
+                                        projectcss.__wab_text,
+                                        sty.text___4Vxr8
+                                      )}
+                                    >
+                                      {
+                                        "What entities are exempt from licensure?"
+                                      }
+                                    </div>
+                                  ) : null}
+                                  {(() => {
+                                    try {
+                                      return !(
+                                        typeof $state
+                                          .servExemptEntitiesFilterSelect
+                                          .value === "undefined" ||
+                                        $state.servExemptEntitiesFilterSelect
+                                          .value.length == 0
+                                      );
+                                    } catch (e) {
+                                      if (
+                                        e instanceof TypeError ||
+                                        e?.plasmicType ===
+                                          "PlasmicUndefinedDataError"
+                                      ) {
+                                        return true;
+                                      }
+                                      throw e;
+                                    }
+                                  })() ? (
+                                    <div
+                                      className={classNames(
+                                        projectcss.all,
+                                        projectcss.__wab_text,
+                                        sty.text__kjNmb
+                                      )}
+                                    >
+                                      {
+                                        "What entities are exempt from licensure?"
+                                      }
+                                    </div>
+                                  ) : null}
+                                </div>
                                 {(() => {
                                   try {
                                     return !(
@@ -3705,282 +3797,261 @@ function PlasmicHomepage__RenderFunc(props: {
                                   <div
                                     className={classNames(
                                       projectcss.all,
-                                      projectcss.__wab_text,
-                                      sty.text__kjNmb
+                                      sty.column__zMfMt
                                     )}
                                   >
-                                    {"What entities are exempt from licensure?"}
+                                    <Button2
+                                      className={classNames(
+                                        "__wab_instance",
+                                        sty.button2__zqcr
+                                      )}
+                                      color={"clear"}
+                                      onClick={async event => {
+                                        const $steps = {};
+
+                                        $steps[
+                                          "updateServExemptEntitiesFilterSelectValue"
+                                        ] = true
+                                          ? (() => {
+                                              const actionArgs = {
+                                                variable: {
+                                                  objRoot: $state,
+                                                  variablePath: [
+                                                    "servExemptEntitiesFilterSelect",
+                                                    "value"
+                                                  ]
+                                                },
+                                                operation: 1
+                                              };
+                                              return (({
+                                                variable,
+                                                value,
+                                                startIndex,
+                                                deleteCount
+                                              }) => {
+                                                if (!variable) {
+                                                  return;
+                                                }
+                                                const {
+                                                  objRoot,
+                                                  variablePath
+                                                } = variable;
+
+                                                $stateSet(
+                                                  objRoot,
+                                                  variablePath,
+                                                  undefined
+                                                );
+                                                return undefined;
+                                              })?.apply(null, [actionArgs]);
+                                            })()
+                                          : undefined;
+                                        if (
+                                          $steps[
+                                            "updateServExemptEntitiesFilterSelectValue"
+                                          ] != null &&
+                                          typeof $steps[
+                                            "updateServExemptEntitiesFilterSelectValue"
+                                          ] === "object" &&
+                                          typeof $steps[
+                                            "updateServExemptEntitiesFilterSelectValue"
+                                          ].then === "function"
+                                        ) {
+                                          $steps[
+                                            "updateServExemptEntitiesFilterSelectValue"
+                                          ] = await $steps[
+                                            "updateServExemptEntitiesFilterSelectValue"
+                                          ];
+                                        }
+                                      }}
+                                      size={"minimal"}
+                                    >
+                                      <div
+                                        className={classNames(
+                                          projectcss.all,
+                                          projectcss.__wab_text,
+                                          sty.text__vv8Qt
+                                        )}
+                                      >
+                                        {"Reset Filter"}
+                                      </div>
+                                    </Button2>
                                   </div>
                                 ) : null}
                               </div>
-                              {(() => {
-                                try {
-                                  return !(
-                                    typeof $state.servExemptEntitiesFilterSelect
-                                      .value === "undefined" ||
-                                    $state.servExemptEntitiesFilterSelect.value
-                                      .length == 0
-                                  );
-                                } catch (e) {
-                                  if (
-                                    e instanceof TypeError ||
-                                    e?.plasmicType ===
-                                      "PlasmicUndefinedDataError"
-                                  ) {
-                                    return true;
+                            }
+                            showArrow={true}
+                          >
+                            <div
+                              className={classNames(
+                                projectcss.all,
+                                projectcss.__wab_text,
+                                sty.text__ny04C
+                              )}
+                            >
+                              <React.Fragment>
+                                <React.Fragment>
+                                  {
+                                    "Each of the below entity types are exempt from licensure in at least one state.  Select one or more relevant entity types to "
                                   }
-                                  throw e;
-                                }
-                              })() ? (
-                                <div
-                                  className={classNames(
-                                    projectcss.all,
-                                    sty.column__zMfMt
-                                  )}
+                                </React.Fragment>
+                                <span
+                                  className={
+                                    "plasmic_default__all plasmic_default__span"
+                                  }
+                                  style={{ textDecorationLine: "underline" }}
                                 >
-                                  <Button2
+                                  {"exclude"}
+                                </span>
+                                <React.Fragment>
+                                  {
+                                    " these entity types from your search results for the states in which they are exempt.  If no items are selected, no exclusions will be applied."
+                                  }
+                                </React.Fragment>
+                              </React.Fragment>
+                            </div>
+                            <AntdSelect
+                              data-plasmic-name={
+                                "servExemptEntitiesFilterSelect"
+                              }
+                              data-plasmic-override={
+                                overrides.servExemptEntitiesFilterSelect
+                              }
+                              allowClear={true}
+                              className={classNames(
+                                "__wab_instance",
+                                sty.servExemptEntitiesFilterSelect
+                              )}
+                              defaultStylesClassName={classNames(
+                                projectcss.root_reset,
+                                projectcss.plasmic_default_styles,
+                                projectcss.plasmic_mixins,
+                                projectcss.plasmic_tokens,
+                                plasmic_antd_5_hostless_css.plasmic_tokens
+                              )}
+                              mode={"multiple"}
+                              onChange={generateStateOnChangeProp($state, [
+                                "servExemptEntitiesFilterSelect",
+                                "value"
+                              ])}
+                              options={[]}
+                              placeholder={"Select . . ."}
+                              popupScopeClassName={
+                                sty["servExemptEntitiesFilterSelect__popup"]
+                              }
+                              useChildren={true}
+                              value={generateStateValueProp($state, [
+                                "servExemptEntitiesFilterSelect",
+                                "value"
+                              ])}
+                            >
+                              {(_par =>
+                                !_par
+                                  ? []
+                                  : Array.isArray(_par)
+                                  ? _par
+                                  : [_par])(
+                                (() => {
+                                  try {
+                                    return $queries.exemptEntityBaseQuery.data
+                                      .response.list;
+                                  } catch (e) {
+                                    if (
+                                      e instanceof TypeError ||
+                                      e?.plasmicType ===
+                                        "PlasmicUndefinedDataError"
+                                    ) {
+                                      return [];
+                                    }
+                                    throw e;
+                                  }
+                                })()
+                              ).map((__plasmic_item_0, __plasmic_idx_0) => {
+                                const currentItem = __plasmic_item_0;
+                                const currentIndex = __plasmic_idx_0;
+                                return (
+                                  <AntdOption
                                     className={classNames(
                                       "__wab_instance",
-                                      sty.button2__zqcr
+                                      sty.option___4GtgH
                                     )}
-                                    color={"clear"}
-                                    onClick={async event => {
-                                      const $steps = {};
-
-                                      $steps[
-                                        "updateServExemptEntitiesFilterSelectValue"
-                                      ] = true
-                                        ? (() => {
-                                            const actionArgs = {
-                                              variable: {
-                                                objRoot: $state,
-                                                variablePath: [
-                                                  "servExemptEntitiesFilterSelect",
-                                                  "value"
-                                                ]
-                                              },
-                                              operation: 1
-                                            };
-                                            return (({
-                                              variable,
-                                              value,
-                                              startIndex,
-                                              deleteCount
-                                            }) => {
-                                              if (!variable) {
-                                                return;
-                                              }
-                                              const { objRoot, variablePath } =
-                                                variable;
-
-                                              $stateSet(
-                                                objRoot,
-                                                variablePath,
-                                                undefined
-                                              );
-                                              return undefined;
-                                            })?.apply(null, [actionArgs]);
-                                          })()
-                                        : undefined;
-                                      if (
-                                        $steps[
-                                          "updateServExemptEntitiesFilterSelectValue"
-                                        ] != null &&
-                                        typeof $steps[
-                                          "updateServExemptEntitiesFilterSelectValue"
-                                        ] === "object" &&
-                                        typeof $steps[
-                                          "updateServExemptEntitiesFilterSelectValue"
-                                        ].then === "function"
-                                      ) {
-                                        $steps[
-                                          "updateServExemptEntitiesFilterSelectValue"
-                                        ] = await $steps[
-                                          "updateServExemptEntitiesFilterSelectValue"
-                                        ];
+                                    key={currentIndex}
+                                    value={(() => {
+                                      try {
+                                        return currentItem.entity_type_list;
+                                      } catch (e) {
+                                        if (
+                                          e instanceof TypeError ||
+                                          e?.plasmicType ===
+                                            "PlasmicUndefinedDataError"
+                                        ) {
+                                          return undefined;
+                                        }
+                                        throw e;
                                       }
-                                    }}
-                                    size={"minimal"}
+                                    })()}
                                   >
                                     <div
                                       className={classNames(
                                         projectcss.all,
                                         projectcss.__wab_text,
-                                        sty.text__vv8Qt
+                                        sty.text__plnY
                                       )}
                                     >
-                                      {"Reset Filter"}
-                                    </div>
-                                  </Button2>
-                                </div>
-                              ) : null}
-                            </div>
-                          }
-                          showArrow={true}
-                        >
-                          <div
-                            className={classNames(
-                              projectcss.all,
-                              projectcss.__wab_text,
-                              sty.text__ny04C
-                            )}
-                          >
-                            <React.Fragment>
-                              <React.Fragment>
-                                {
-                                  "Each of the below entity types are exempt from licensure in at least one state.  Select one or more relevant entity types to "
-                                }
-                              </React.Fragment>
-                              <span
-                                className={
-                                  "plasmic_default__all plasmic_default__span"
-                                }
-                                style={{ textDecorationLine: "underline" }}
-                              >
-                                {"exclude"}
-                              </span>
-                              <React.Fragment>
-                                {
-                                  " these entity types from your search results for the states in which they are exempt.  If no items are selected, no exclusions will be applied."
-                                }
-                              </React.Fragment>
-                            </React.Fragment>
-                          </div>
-                          <AntdSelect
-                            data-plasmic-name={"servExemptEntitiesFilterSelect"}
-                            data-plasmic-override={
-                              overrides.servExemptEntitiesFilterSelect
-                            }
-                            allowClear={true}
-                            className={classNames(
-                              "__wab_instance",
-                              sty.servExemptEntitiesFilterSelect
-                            )}
-                            defaultStylesClassName={classNames(
-                              projectcss.root_reset,
-                              projectcss.plasmic_default_styles,
-                              projectcss.plasmic_mixins,
-                              projectcss.plasmic_tokens,
-                              plasmic_antd_5_hostless_css.plasmic_tokens
-                            )}
-                            mode={"multiple"}
-                            onChange={generateStateOnChangeProp($state, [
-                              "servExemptEntitiesFilterSelect",
-                              "value"
-                            ])}
-                            options={[]}
-                            placeholder={"Select . . ."}
-                            popupScopeClassName={
-                              sty["servExemptEntitiesFilterSelect__popup"]
-                            }
-                            useChildren={true}
-                            value={generateStateValueProp($state, [
-                              "servExemptEntitiesFilterSelect",
-                              "value"
-                            ])}
-                          >
-                            {(_par =>
-                              !_par ? [] : Array.isArray(_par) ? _par : [_par])(
-                              (() => {
-                                try {
-                                  return $queries.exemptEntityBaseQuery.data
-                                    .response.list;
-                                } catch (e) {
-                                  if (
-                                    e instanceof TypeError ||
-                                    e?.plasmicType ===
-                                      "PlasmicUndefinedDataError"
-                                  ) {
-                                    return [];
-                                  }
-                                  throw e;
-                                }
-                              })()
-                            ).map((__plasmic_item_0, __plasmic_idx_0) => {
-                              const currentItem = __plasmic_item_0;
-                              const currentIndex = __plasmic_idx_0;
-                              return (
-                                <AntdOption
-                                  className={classNames(
-                                    "__wab_instance",
-                                    sty.option___4GtgH
-                                  )}
-                                  key={currentIndex}
-                                  value={(() => {
-                                    try {
-                                      return currentItem.entity_type_list;
-                                    } catch (e) {
-                                      if (
-                                        e instanceof TypeError ||
-                                        e?.plasmicType ===
-                                          "PlasmicUndefinedDataError"
-                                      ) {
-                                        return undefined;
-                                      }
-                                      throw e;
-                                    }
-                                  })()}
-                                >
-                                  <div
-                                    className={classNames(
-                                      projectcss.all,
-                                      projectcss.__wab_text,
-                                      sty.text__plnY
-                                    )}
-                                  >
-                                    <React.Fragment>
-                                      {(() => {
-                                        try {
-                                          return currentItem.entity_type_list;
-                                        } catch (e) {
-                                          if (
-                                            e instanceof TypeError ||
-                                            e?.plasmicType ===
-                                              "PlasmicUndefinedDataError"
-                                          ) {
-                                            return "Option";
+                                      <React.Fragment>
+                                        {(() => {
+                                          try {
+                                            return currentItem.entity_type_list;
+                                          } catch (e) {
+                                            if (
+                                              e instanceof TypeError ||
+                                              e?.plasmicType ===
+                                                "PlasmicUndefinedDataError"
+                                            ) {
+                                              return "Option";
+                                            }
+                                            throw e;
                                           }
-                                          throw e;
-                                        }
-                                      })()}
-                                    </React.Fragment>
-                                  </div>
-                                </AntdOption>
-                              );
-                            })}
-                          </AntdSelect>
-                        </AntdAccordionItem>
-                      </React.Fragment>
-                    ),
-                    onChange: generateStateOnChangePropForCodeComponents(
+                                        })()}
+                                      </React.Fragment>
+                                    </div>
+                                  </AntdOption>
+                                );
+                              })}
+                            </AntdSelect>
+                          </AntdAccordionItem>
+                        </React.Fragment>
+                      ),
+                      onChange: generateStateOnChangePropForCodeComponents(
+                        $state,
+                        "activePanelId",
+                        ["accordion", "activePanelId"],
+                        AntdAccordion_Helpers
+                      ),
+                      size: "small"
+                    };
+                    initializeCodeComponentStates(
                       $state,
-                      "activePanelId",
-                      ["accordion", "activePanelId"],
-                      AntdAccordion_Helpers
-                    ),
-                    size: "small"
-                  };
-                  initializeCodeComponentStates(
-                    $state,
-                    [
-                      {
-                        name: "activePanelId",
-                        plasmicStateName: "accordion.activePanelId"
-                      }
-                    ],
-                    [],
-                    AntdAccordion_Helpers ?? {},
-                    child$Props
-                  );
+                      [
+                        {
+                          name: "activePanelId",
+                          plasmicStateName: "accordion.activePanelId"
+                        }
+                      ],
+                      [],
+                      AntdAccordion_Helpers ?? {},
+                      child$Props
+                    );
 
-                  return (
-                    <AntdAccordion
-                      data-plasmic-name={"accordion"}
-                      data-plasmic-override={overrides.accordion}
-                      {...child$Props}
-                    />
-                  );
-                })()}
+                    return (
+                      <AntdAccordion
+                        data-plasmic-name={"accordion"}
+                        data-plasmic-override={overrides.accordion}
+                        {...child$Props}
+                      />
+                    );
+                  })()}
+                </div>
               </section>
             ) : null}
             <div className={classNames(projectcss.all, sty.freeBox__wqdi)}>
@@ -4120,7 +4191,7 @@ function PlasmicHomepage__RenderFunc(props: {
                           sty.text__itHib
                         )}
                       >
-                        {"Licenses Servicers?"}
+                        {"Licenses Student Loan Servicers?"}
                       </div>
                     </div>
                   ) : null}
@@ -4152,7 +4223,7 @@ function PlasmicHomepage__RenderFunc(props: {
                           sty.text___3AOeo
                         )}
                       >
-                        {"Creditors Must Register?"}
+                        {"Student Loan Creditors Must Register?"}
                       </div>
                     </div>
                   ) : null}
@@ -4184,7 +4255,7 @@ function PlasmicHomepage__RenderFunc(props: {
                           sty.text__carc3
                         )}
                       >
-                        {"Servicers Must Notify Ombudsman?"}
+                        {"Student Loan Servicers Must Notify Ombudsman?"}
                       </div>
                     </div>
                   ) : null}
