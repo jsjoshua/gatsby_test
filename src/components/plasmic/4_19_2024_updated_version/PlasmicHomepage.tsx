@@ -67,7 +67,6 @@ import {
   usePlasmicInvalidate
 } from "@plasmicapp/react-web/lib/data-sources";
 
-import { LoadingBoundary } from "@plasmicpkgs/plasmic-basic-components";
 import Button2 from "../../Button2"; // plasmic-import: kgfn78PLkhCM/component
 import { AntdPopover } from "@plasmicpkgs/antd5/skinny/registerPopover";
 import { AntdAccordion } from "@plasmicpkgs/antd5/skinny/registerCollapse";
@@ -111,7 +110,6 @@ export const PlasmicHomepage__ArgProps = new Array<ArgPropType>();
 
 export type PlasmicHomepage__OverridesType = {
   root?: Flex__<"div">;
-  loadingBoundary?: Flex__<typeof LoadingBoundary>;
   img?: Flex__<typeof PlasmicImg__>;
   popover?: Flex__<typeof AntdPopover>;
   filters?: Flex__<"section">;
@@ -553,27 +551,6 @@ function PlasmicHomepage__RenderFunc(props: {
             sty.root
           )}
         >
-          <LoadingBoundary
-            data-plasmic-name={"loadingBoundary"}
-            data-plasmic-override={overrides.loadingBoundary}
-            className={classNames("__wab_instance", sty.loadingBoundary)}
-            loadingState={
-              <DataCtxReader__>
-                {$ctx => (
-                  <div
-                    className={classNames(
-                      projectcss.all,
-                      projectcss.__wab_text,
-                      sty.text__ij0
-                    )}
-                  >
-                    {"Loading..."}
-                  </div>
-                )}
-              </DataCtxReader__>
-            }
-          />
-
           <section className={classNames(projectcss.all, sty.section__xwUM)}>
             <div className={classNames(projectcss.all, sty.freeBox__gbAtw)}>
               <div className={classNames(projectcss.all, sty.freeBox__yujli)}>
@@ -1231,7 +1208,7 @@ function PlasmicHomepage__RenderFunc(props: {
                       projectcss.plasmic_tokens,
                       plasmic_antd_5_hostless_css.plasmic_tokens
                     )}
-                    mouseEnterDelay={1}
+                    mouseEnterDelay={0}
                     mouseLeaveDelay={1}
                     onOpenChange={generateStateOnChangeProp($state, [
                       "popover",
@@ -1241,6 +1218,7 @@ function PlasmicHomepage__RenderFunc(props: {
                     overlayClassName={classNames({
                       [sty["pcls_GBTISuXT58m7"]]: true
                     })}
+                    placement={"right"}
                     popoverScopeClassName={sty["popover__popover"]}
                     title={
                       <React.Fragment>
@@ -3840,6 +3818,33 @@ function PlasmicHomepage__RenderFunc(props: {
                   ) : null}
                 </div>
               </section>
+              {(() => {
+                try {
+                  return $queries.allFiltersQuery.isLoading;
+                } catch (e) {
+                  if (
+                    e instanceof TypeError ||
+                    e?.plasmicType === "PlasmicUndefinedDataError"
+                  ) {
+                    return true;
+                  }
+                  throw e;
+                }
+              })() ? (
+                <section
+                  className={classNames(projectcss.all, sty.section__fbQo3)}
+                >
+                  <div
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.__wab_text,
+                      sty.text__yomgO
+                    )}
+                  >
+                    {"Loading . . . "}
+                  </div>
+                </section>
+              ) : null}
               <section
                 data-plasmic-name={"dataSection"}
                 data-plasmic-override={overrides.dataSection}
@@ -7960,7 +7965,6 @@ function PlasmicHomepage__RenderFunc(props: {
 const PlasmicDescendants = {
   root: [
     "root",
-    "loadingBoundary",
     "img",
     "popover",
     "filters",
@@ -8014,7 +8018,6 @@ const PlasmicDescendants = {
     "popoverCore13",
     "footer"
   ],
-  loadingBoundary: ["loadingBoundary"],
   img: ["img"],
   popover: ["popover"],
   filters: [
@@ -8262,7 +8265,6 @@ type DescendantsType<T extends NodeNameType> =
   (typeof PlasmicDescendants)[T][number];
 type NodeDefaultElementType = {
   root: "div";
-  loadingBoundary: typeof LoadingBoundary;
   img: typeof PlasmicImg__;
   popover: typeof AntdPopover;
   filters: "section";
@@ -8377,7 +8379,6 @@ export const PlasmicHomepage = Object.assign(
   makeNodeComponent("root"),
   {
     // Helper components rendering sub-elements
-    loadingBoundary: makeNodeComponent("loadingBoundary"),
     img: makeNodeComponent("img"),
     popover: makeNodeComponent("popover"),
     filters: makeNodeComponent("filters"),
