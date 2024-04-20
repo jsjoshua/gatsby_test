@@ -2,7 +2,7 @@ import * as React from "react";
 import {
   PlasmicCheckbox,
   DefaultCheckboxProps
-} from "./plasmic/no_log_in_state_student_loan_licensing_and_registration_requirements_v_6/PlasmicCheckbox";
+} from "./plasmic/4_19_2024_updated_version/PlasmicCheckbox";
 
 import { CheckboxRef } from "@plasmicapp/react-web";
 
