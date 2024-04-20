@@ -21,6 +21,7 @@
     "@plasmicapp/loader-gatsby": "^1.0.344",
     "@plasmicapp/react-web": "^0.2.322",
     "@plasmicpkgs/antd5": "^0.0.218",
+    "@plasmicpkgs/lottie-react": "^0.0.178",
     "@plasmicpkgs/plasmic-basic-components": "^0.0.210",
     "@plasmicpkgs/plasmic-link-preview": "^1.0.88",
     "@plasmicpkgs/plasmic-nav": "^0.0.161",
