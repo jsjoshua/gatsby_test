@@ -26,14 +26,14 @@
 }
 .section__xwUM {
   display: grid;
-  position: fixed;
+  position: relative;
   align-content: center;
   justify-items: flex-start;
   width: 100%;
   padding-left: 0;
   padding-right: 0;
-  left: 0;
-  top: 0;
+  left: auto;
+  top: auto;
   z-index: 1;
   grid-column-start: 1 !important;
   grid-column-end: -1 !important;
@@ -67,15 +67,15 @@
 }
 .freeBox__yujli {
   display: flex;
-  position: relative;
+  position: fixed;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   width: auto;
   height: auto;
   max-width: 100%;
-  left: auto;
-  top: auto;
+  left: 8px;
+  top: 8px;
   z-index: 1;
   align-self: flex-start;
   padding: 8px;
@@ -89,7 +89,7 @@
   width: 250px;
   height: auto;
   max-width: 100%;
-  padding: 8px 8px 26px;
+  padding: 8px 8px 9px;
 }
 .img {
   position: relative;
@@ -530,7 +530,7 @@
 }
 .filters {
   display: grid;
-  position: relative;
+  position: sticky;
   align-content: flex-start;
   justify-items: center;
   width: 100%;
@@ -538,6 +538,9 @@
   padding-right: 0;
   padding-top: 100px;
   max-width: 40%;
+  left: 0px;
+  top: 0px;
+  z-index: 1;
   min-width: 0;
   grid-template-columns:
     var(--plsmc-viewport-gap) 1fr minmax(0, var(--plsmc-wide-chunk))
