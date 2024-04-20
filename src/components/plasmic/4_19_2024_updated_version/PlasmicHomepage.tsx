@@ -564,6 +564,7 @@ function PlasmicHomepage__RenderFunc(props: {
                   href={"https://www.joshualawfirm.com"}
                   platform={"gatsby"}
                   target={"_blank"}
+                  title={"Opens in new tab"}
                 >
                   <PlasmicImg__
                     data-plasmic-name={"img"}
@@ -585,787 +586,810 @@ function PlasmicHomepage__RenderFunc(props: {
                     }}
                   />
                 </PlasmicLink__>
-                <Button2
-                  className={classNames("__wab_instance", sty.button2__gtOcI)}
-                  color={(() => {
-                    try {
-                      return $state.viewFiltersVariable == true
-                        ? "green"
-                        : "blue";
-                    } catch (e) {
-                      if (
-                        e instanceof TypeError ||
-                        e?.plasmicType === "PlasmicUndefinedDataError"
-                      ) {
-                        return "softBlue";
-                      }
-                      throw e;
-                    }
-                  })()}
-                  onClick={async event => {
-                    const $steps = {};
-
-                    $steps["updateViewFiltersVariable"] = true
-                      ? (() => {
-                          const actionArgs = {
-                            variable: {
-                              objRoot: $state,
-                              variablePath: ["viewFiltersVariable"]
-                            },
-                            operation: 4
-                          };
-                          return (({
-                            variable,
-                            value,
-                            startIndex,
-                            deleteCount
-                          }) => {
-                            if (!variable) {
-                              return;
-                            }
-                            const { objRoot, variablePath } = variable;
-
-                            const oldValue = $stateGet(objRoot, variablePath);
-                            $stateSet(objRoot, variablePath, !oldValue);
-                            return !oldValue;
-                          })?.apply(null, [actionArgs]);
-                        })()
-                      : undefined;
+                {(() => {
+                  try {
+                    return !$state.viewFiltersVariable;
+                  } catch (e) {
                     if (
-                      $steps["updateViewFiltersVariable"] != null &&
-                      typeof $steps["updateViewFiltersVariable"] === "object" &&
-                      typeof $steps["updateViewFiltersVariable"].then ===
-                        "function"
+                      e instanceof TypeError ||
+                      e?.plasmicType === "PlasmicUndefinedDataError"
                     ) {
-                      $steps["updateViewFiltersVariable"] = await $steps[
-                        "updateViewFiltersVariable"
-                      ];
+                      return true;
                     }
-                  }}
-                  size={"compact"}
-                >
-                  <AntdPopover
-                    data-plasmic-name={"popover"}
-                    data-plasmic-override={overrides.popover}
-                    arrow={true}
-                    className={classNames("__wab_instance", sty.popover)}
-                    content={
+                    throw e;
+                  }
+                })() ? (
+                  <Button2
+                    className={classNames("__wab_instance", sty.button2__gtOcI)}
+                    color={(() => {
+                      try {
+                        return $state.viewFiltersVariable == true
+                          ? "green"
+                          : "blue";
+                      } catch (e) {
+                        if (
+                          e instanceof TypeError ||
+                          e?.plasmicType === "PlasmicUndefinedDataError"
+                        ) {
+                          return "softBlue";
+                        }
+                        throw e;
+                      }
+                    })()}
+                    onClick={async event => {
+                      const $steps = {};
+
+                      $steps["updateViewFiltersVariable"] = true
+                        ? (() => {
+                            const actionArgs = {
+                              variable: {
+                                objRoot: $state,
+                                variablePath: ["viewFiltersVariable"]
+                              },
+                              operation: 4
+                            };
+                            return (({
+                              variable,
+                              value,
+                              startIndex,
+                              deleteCount
+                            }) => {
+                              if (!variable) {
+                                return;
+                              }
+                              const { objRoot, variablePath } = variable;
+
+                              const oldValue = $stateGet(objRoot, variablePath);
+                              $stateSet(objRoot, variablePath, !oldValue);
+                              return !oldValue;
+                            })?.apply(null, [actionArgs]);
+                          })()
+                        : undefined;
+                      if (
+                        $steps["updateViewFiltersVariable"] != null &&
+                        typeof $steps["updateViewFiltersVariable"] ===
+                          "object" &&
+                        typeof $steps["updateViewFiltersVariable"].then ===
+                          "function"
+                      ) {
+                        $steps["updateViewFiltersVariable"] = await $steps[
+                          "updateViewFiltersVariable"
+                        ];
+                      }
+                    }}
+                    size={"compact"}
+                  >
+                    <AntdPopover
+                      data-plasmic-name={"popover"}
+                      data-plasmic-override={overrides.popover}
+                      arrow={true}
+                      className={classNames("__wab_instance", sty.popover)}
+                      content={
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            sty.freeBox__heXi6
+                          )}
+                        >
+                          {(() => {
+                            try {
+                              return (
+                                typeof $state.stateNameFilterSelect.value !=
+                                  "undefined" &&
+                                $state.stateNameFilterSelect.value.length > 0
+                              );
+                            } catch (e) {
+                              if (
+                                e instanceof TypeError ||
+                                e?.plasmicType === "PlasmicUndefinedDataError"
+                              ) {
+                                return true;
+                              }
+                              throw e;
+                            }
+                          })() ? (
+                            <div
+                              className={classNames(
+                                projectcss.all,
+                                projectcss.__wab_text,
+                                sty.text__qNeu
+                              )}
+                            >
+                              <React.Fragment>
+                                {(() => {
+                                  try {
+                                    return $state.stateNameFilterSelect.value >
+                                      0
+                                      ? ""
+                                      : "State(s): " +
+                                          $state.stateNameFilterSelect.value.join(
+                                            ", "
+                                          );
+                                  } catch (e) {
+                                    if (
+                                      e instanceof TypeError ||
+                                      e?.plasmicType ===
+                                        "PlasmicUndefinedDataError"
+                                    ) {
+                                      return "";
+                                    }
+                                    throw e;
+                                  }
+                                })()}
+                              </React.Fragment>
+                            </div>
+                          ) : null}
+                          {(() => {
+                            try {
+                              return (
+                                typeof $state.licenseTypeFilterSelect.value !=
+                                  "undefined" &&
+                                $state.licenseTypeFilterSelect.value.length > 0
+                              );
+                            } catch (e) {
+                              if (
+                                e instanceof TypeError ||
+                                e?.plasmicType === "PlasmicUndefinedDataError"
+                              ) {
+                                return true;
+                              }
+                              throw e;
+                            }
+                          })() ? (
+                            <div
+                              className={classNames(
+                                projectcss.all,
+                                projectcss.__wab_text,
+                                sty.text___77X3V
+                              )}
+                            >
+                              <React.Fragment>
+                                {(() => {
+                                  try {
+                                    return $state.licenseTypeFilterSelect
+                                      .value > 0
+                                      ? ""
+                                      : "License Type(s): " +
+                                          $state.licenseTypeFilterSelect.value.join(
+                                            ", "
+                                          );
+                                  } catch (e) {
+                                    if (
+                                      e instanceof TypeError ||
+                                      e?.plasmicType ===
+                                        "PlasmicUndefinedDataError"
+                                    ) {
+                                      return "";
+                                    }
+                                    throw e;
+                                  }
+                                })()}
+                              </React.Fragment>
+                            </div>
+                          ) : null}
+                          {(() => {
+                            try {
+                              return (
+                                typeof $state.prodExcludedFeatureSelect.value !=
+                                  "undefined" &&
+                                $state.prodExcludedFeatureSelect.value.length >
+                                  0
+                              );
+                            } catch (e) {
+                              if (
+                                e instanceof TypeError ||
+                                e?.plasmicType === "PlasmicUndefinedDataError"
+                              ) {
+                                return true;
+                              }
+                              throw e;
+                            }
+                          })() ? (
+                            <section
+                              className={classNames(
+                                projectcss.all,
+                                sty.section__fQvRp
+                              )}
+                            >
+                              <div
+                                className={classNames(
+                                  projectcss.all,
+                                  sty.freeBox__qRXbg
+                                )}
+                              >
+                                <div
+                                  className={classNames(
+                                    projectcss.all,
+                                    projectcss.__wab_text,
+                                    sty.text__jhIv
+                                  )}
+                                >
+                                  {
+                                    "Excluded product features (only selected items are included in results)"
+                                  }
+                                </div>
+                                {(_par =>
+                                  !_par
+                                    ? []
+                                    : Array.isArray(_par)
+                                    ? _par
+                                    : [_par])(
+                                  (() => {
+                                    try {
+                                      return $state.prodExcludedFeatureSelect
+                                        .value;
+                                    } catch (e) {
+                                      if (
+                                        e instanceof TypeError ||
+                                        e?.plasmicType ===
+                                          "PlasmicUndefinedDataError"
+                                      ) {
+                                        return [];
+                                      }
+                                      throw e;
+                                    }
+                                  })()
+                                ).map((__plasmic_item_0, __plasmic_idx_0) => {
+                                  const currentItem = __plasmic_item_0;
+                                  const currentIndex = __plasmic_idx_0;
+                                  return (
+                                    <Stack__
+                                      as={"div"}
+                                      hasGap={true}
+                                      className={classNames(
+                                        projectcss.all,
+                                        sty.freeBox__uwqTg
+                                      )}
+                                      key={currentIndex}
+                                    >
+                                      <IconIcon
+                                        className={classNames(
+                                          projectcss.all,
+                                          sty.svg__p86Lm
+                                        )}
+                                        role={"img"}
+                                      />
+
+                                      <div
+                                        className={classNames(
+                                          projectcss.all,
+                                          projectcss.__wab_text,
+                                          sty.text__zItZh
+                                        )}
+                                      >
+                                        <React.Fragment>
+                                          {(() => {
+                                            try {
+                                              return currentItem;
+                                            } catch (e) {
+                                              if (
+                                                e instanceof TypeError ||
+                                                e?.plasmicType ===
+                                                  "PlasmicUndefinedDataError"
+                                              ) {
+                                                return "";
+                                              }
+                                              throw e;
+                                            }
+                                          })()}
+                                        </React.Fragment>
+                                      </div>
+                                    </Stack__>
+                                  );
+                                })}
+                              </div>
+                            </section>
+                          ) : null}
+                          {(() => {
+                            try {
+                              return (
+                                typeof $state.activityTypeSelect.value !=
+                                  "undefined" &&
+                                $state.activityTypeSelect.value.length > 0
+                              );
+                            } catch (e) {
+                              if (
+                                e instanceof TypeError ||
+                                e?.plasmicType === "PlasmicUndefinedDataError"
+                              ) {
+                                return true;
+                              }
+                              throw e;
+                            }
+                          })() ? (
+                            <section
+                              className={classNames(
+                                projectcss.all,
+                                sty.section__hdNlW
+                              )}
+                            >
+                              <div
+                                className={classNames(
+                                  projectcss.all,
+                                  sty.freeBox__oUfOj
+                                )}
+                              >
+                                <div
+                                  className={classNames(
+                                    projectcss.all,
+                                    projectcss.__wab_text,
+                                    sty.text__hCa1J
+                                  )}
+                                >
+                                  {
+                                    "Regulated activity filters (only selected items are included in results) "
+                                  }
+                                </div>
+                                {(_par =>
+                                  !_par
+                                    ? []
+                                    : Array.isArray(_par)
+                                    ? _par
+                                    : [_par])(
+                                  (() => {
+                                    try {
+                                      return $state.activityTypeSelect.value;
+                                    } catch (e) {
+                                      if (
+                                        e instanceof TypeError ||
+                                        e?.plasmicType ===
+                                          "PlasmicUndefinedDataError"
+                                      ) {
+                                        return [];
+                                      }
+                                      throw e;
+                                    }
+                                  })()
+                                ).map((__plasmic_item_0, __plasmic_idx_0) => {
+                                  const currentItem = __plasmic_item_0;
+                                  const currentIndex = __plasmic_idx_0;
+                                  return (
+                                    <Stack__
+                                      as={"div"}
+                                      hasGap={true}
+                                      className={classNames(
+                                        projectcss.all,
+                                        sty.freeBox__iFhQb
+                                      )}
+                                      key={currentIndex}
+                                    >
+                                      <IconIcon
+                                        className={classNames(
+                                          projectcss.all,
+                                          sty.svg__sUdJx
+                                        )}
+                                        role={"img"}
+                                      />
+
+                                      <div
+                                        className={classNames(
+                                          projectcss.all,
+                                          projectcss.__wab_text,
+                                          sty.text__gCgC6
+                                        )}
+                                      >
+                                        <React.Fragment>
+                                          {(() => {
+                                            try {
+                                              return currentItem;
+                                            } catch (e) {
+                                              if (
+                                                e instanceof TypeError ||
+                                                e?.plasmicType ===
+                                                  "PlasmicUndefinedDataError"
+                                              ) {
+                                                return "";
+                                              }
+                                              throw e;
+                                            }
+                                          })()}
+                                        </React.Fragment>
+                                      </div>
+                                    </Stack__>
+                                  );
+                                })}
+                              </div>
+                            </section>
+                          ) : null}
+                          {(() => {
+                            try {
+                              return (
+                                typeof $state.licenseTriggerFilterSelect
+                                  .value != "undefined" &&
+                                $state.licenseTriggerFilterSelect.value.length >
+                                  0
+                              );
+                            } catch (e) {
+                              if (
+                                e instanceof TypeError ||
+                                e?.plasmicType === "PlasmicUndefinedDataError"
+                              ) {
+                                return true;
+                              }
+                              throw e;
+                            }
+                          })() ? (
+                            <section
+                              className={classNames(
+                                projectcss.all,
+                                sty.section__huU2G
+                              )}
+                            >
+                              <div
+                                className={classNames(
+                                  projectcss.all,
+                                  sty.freeBox__yJoqe
+                                )}
+                              >
+                                <div
+                                  className={classNames(
+                                    projectcss.all,
+                                    projectcss.__wab_text,
+                                    sty.text__uKk1S
+                                  )}
+                                >
+                                  {
+                                    "Selected License Triggers (only selected items are included in results):"
+                                  }
+                                </div>
+                                {(_par =>
+                                  !_par
+                                    ? []
+                                    : Array.isArray(_par)
+                                    ? _par
+                                    : [_par])(
+                                  (() => {
+                                    try {
+                                      return $state.licenseTriggerFilterSelect
+                                        .value;
+                                    } catch (e) {
+                                      if (
+                                        e instanceof TypeError ||
+                                        e?.plasmicType ===
+                                          "PlasmicUndefinedDataError"
+                                      ) {
+                                        return [];
+                                      }
+                                      throw e;
+                                    }
+                                  })()
+                                ).map((__plasmic_item_0, __plasmic_idx_0) => {
+                                  const currentItem = __plasmic_item_0;
+                                  const currentIndex = __plasmic_idx_0;
+                                  return (
+                                    <Stack__
+                                      as={"div"}
+                                      hasGap={true}
+                                      className={classNames(
+                                        projectcss.all,
+                                        sty.freeBox__yw5EC
+                                      )}
+                                      key={currentIndex}
+                                    >
+                                      <IconIcon
+                                        className={classNames(
+                                          projectcss.all,
+                                          sty.svg___2M4U9
+                                        )}
+                                        role={"img"}
+                                      />
+
+                                      <div
+                                        className={classNames(
+                                          projectcss.all,
+                                          projectcss.__wab_text,
+                                          sty.text__r94Cy
+                                        )}
+                                      >
+                                        <React.Fragment>
+                                          {(() => {
+                                            try {
+                                              return currentItem;
+                                            } catch (e) {
+                                              if (
+                                                e instanceof TypeError ||
+                                                e?.plasmicType ===
+                                                  "PlasmicUndefinedDataError"
+                                              ) {
+                                                return "";
+                                              }
+                                              throw e;
+                                            }
+                                          })()}
+                                        </React.Fragment>
+                                      </div>
+                                    </Stack__>
+                                  );
+                                })}
+                              </div>
+                            </section>
+                          ) : null}
+                          {(() => {
+                            try {
+                              return (
+                                typeof $state.servExemptEntitiesFilterSelect
+                                  .value != "undefined" &&
+                                $state.servExemptEntitiesFilterSelect.value
+                                  .length > 0
+                              );
+                            } catch (e) {
+                              if (
+                                e instanceof TypeError ||
+                                e?.plasmicType === "PlasmicUndefinedDataError"
+                              ) {
+                                return true;
+                              }
+                              throw e;
+                            }
+                          })() ? (
+                            <section
+                              className={classNames(
+                                projectcss.all,
+                                sty.section__eZwo
+                              )}
+                            >
+                              <div
+                                className={classNames(
+                                  projectcss.all,
+                                  sty.freeBox__hioGs
+                                )}
+                              >
+                                <div
+                                  className={classNames(
+                                    projectcss.all,
+                                    projectcss.__wab_text,
+                                    sty.text__bhSGi
+                                  )}
+                                >
+                                  {
+                                    "Selected Exemptions (excluded from results):"
+                                  }
+                                </div>
+                                {(_par =>
+                                  !_par
+                                    ? []
+                                    : Array.isArray(_par)
+                                    ? _par
+                                    : [_par])(
+                                  (() => {
+                                    try {
+                                      return $state
+                                        .servExemptEntitiesFilterSelect.value;
+                                    } catch (e) {
+                                      if (
+                                        e instanceof TypeError ||
+                                        e?.plasmicType ===
+                                          "PlasmicUndefinedDataError"
+                                      ) {
+                                        return [];
+                                      }
+                                      throw e;
+                                    }
+                                  })()
+                                ).map((__plasmic_item_0, __plasmic_idx_0) => {
+                                  const currentItem = __plasmic_item_0;
+                                  const currentIndex = __plasmic_idx_0;
+                                  return (
+                                    <Stack__
+                                      as={"div"}
+                                      hasGap={true}
+                                      className={classNames(
+                                        projectcss.all,
+                                        sty.freeBox__jp3Aj
+                                      )}
+                                      key={currentIndex}
+                                    >
+                                      <IconIcon
+                                        className={classNames(
+                                          projectcss.all,
+                                          sty.svg__ve7Wd
+                                        )}
+                                        role={"img"}
+                                      />
+
+                                      <div
+                                        className={classNames(
+                                          projectcss.all,
+                                          projectcss.__wab_text,
+                                          sty.text__sZchk
+                                        )}
+                                      >
+                                        <React.Fragment>
+                                          {(() => {
+                                            try {
+                                              return currentItem;
+                                            } catch (e) {
+                                              if (
+                                                e instanceof TypeError ||
+                                                e?.plasmicType ===
+                                                  "PlasmicUndefinedDataError"
+                                              ) {
+                                                return "";
+                                              }
+                                              throw e;
+                                            }
+                                          })()}
+                                        </React.Fragment>
+                                      </div>
+                                    </Stack__>
+                                  );
+                                })}
+                              </div>
+                            </section>
+                          ) : null}
+                        </div>
+                      }
+                      contentText={"Popover contents"}
+                      defaultOpen={false}
+                      defaultStylesClassName={classNames(
+                        projectcss.root_reset,
+                        projectcss.plasmic_default_styles,
+                        projectcss.plasmic_mixins,
+                        projectcss.plasmic_tokens,
+                        plasmic_antd_5_hostless_css.plasmic_tokens
+                      )}
+                      mouseEnterDelay={0}
+                      mouseLeaveDelay={1}
+                      onOpenChange={generateStateOnChangeProp($state, [
+                        "popover",
+                        "open"
+                      ])}
+                      open={generateStateValueProp($state, ["popover", "open"])}
+                      overlayClassName={classNames({
+                        [sty["pcls_GBTISuXT58m7"]]: true
+                      })}
+                      placement={"right"}
+                      popoverScopeClassName={sty["popover__popover"]}
+                      title={
+                        <React.Fragment>
+                          {(() => {
+                            try {
+                              return (
+                                (typeof $state.stateNameFilterSelect.value !=
+                                  "undefined" &&
+                                  $state.stateNameFilterSelect.value.length >
+                                    0) ||
+                                (typeof $state.licenseTypeFilterSelect.value !=
+                                  "undefined" &&
+                                  $state.licenseTypeFilterSelect.value.length >
+                                    0) ||
+                                (typeof $state.prodExcludedFeatureSelect
+                                  .value != "undefined" &&
+                                  $state.prodExcludedFeatureSelect.value
+                                    .length > 0) ||
+                                (typeof $state.activityTypeSelect.value !=
+                                  "undefined" &&
+                                  $state.activityTypeSelect.value.length > 0) ||
+                                (typeof $state.licenseTriggerFilterSelect
+                                  .value != "undefined" &&
+                                  $state.licenseTriggerFilterSelect.value
+                                    .length > 0) ||
+                                (typeof $state.servExemptEntitiesFilterSelect
+                                  .value != "undefined" &&
+                                  $state.servExemptEntitiesFilterSelect.value
+                                    .length > 0)
+                              );
+                            } catch (e) {
+                              if (
+                                e instanceof TypeError ||
+                                e?.plasmicType === "PlasmicUndefinedDataError"
+                              ) {
+                                return true;
+                              }
+                              throw e;
+                            }
+                          })() ? (
+                            <div
+                              className={classNames(
+                                projectcss.all,
+                                projectcss.__wab_text,
+                                sty.text___0JiR5
+                              )}
+                            >
+                              {"Current Filters"}
+                            </div>
+                          ) : null}
+                          {(() => {
+                            try {
+                              return !(
+                                (typeof $state.stateNameFilterSelect.value !=
+                                  "undefined" &&
+                                  $state.stateNameFilterSelect.value.length >
+                                    0) ||
+                                (typeof $state.licenseTypeFilterSelect.value !=
+                                  "undefined" &&
+                                  $state.licenseTypeFilterSelect.value.length >
+                                    0) ||
+                                (typeof $state.prodExcludedFeatureSelect
+                                  .value != "undefined" &&
+                                  $state.prodExcludedFeatureSelect.value
+                                    .length > 0) ||
+                                (typeof $state.activityTypeSelect.value !=
+                                  "undefined" &&
+                                  $state.activityTypeSelect.value.length > 0) ||
+                                (typeof $state.licenseTriggerFilterSelect
+                                  .value != "undefined" &&
+                                  $state.licenseTriggerFilterSelect.value
+                                    .length > 0) ||
+                                (typeof $state.servExemptEntitiesFilterSelect
+                                  .value != "undefined" &&
+                                  $state.servExemptEntitiesFilterSelect.value
+                                    .length > 0)
+                              );
+                            } catch (e) {
+                              if (
+                                e instanceof TypeError ||
+                                e?.plasmicType === "PlasmicUndefinedDataError"
+                              ) {
+                                return true;
+                              }
+                              throw e;
+                            }
+                          })() ? (
+                            <div
+                              className={classNames(
+                                projectcss.all,
+                                projectcss.__wab_text,
+                                sty.text__aBgI
+                              )}
+                            >
+                              {"No Filters Applied"}
+                            </div>
+                          ) : null}
+                        </React.Fragment>
+                      }
+                    >
                       <div
                         className={classNames(
                           projectcss.all,
-                          sty.freeBox__heXi6
+                          projectcss.__wab_text,
+                          sty.text__vdpsd
                         )}
                       >
-                        {(() => {
-                          try {
-                            return (
-                              typeof $state.stateNameFilterSelect.value !=
-                                "undefined" &&
-                              $state.stateNameFilterSelect.value.length > 0
-                            );
-                          } catch (e) {
-                            if (
-                              e instanceof TypeError ||
-                              e?.plasmicType === "PlasmicUndefinedDataError"
-                            ) {
-                              return true;
+                        <React.Fragment>
+                          {(() => {
+                            try {
+                              return $state.viewFiltersVariable == true
+                                ? "Hide Filters"
+                                : "View Filters";
+                            } catch (e) {
+                              if (
+                                e instanceof TypeError ||
+                                e?.plasmicType === "PlasmicUndefinedDataError"
+                              ) {
+                                return "Filters";
+                              }
+                              throw e;
                             }
-                            throw e;
-                          }
-                        })() ? (
-                          <div
-                            className={classNames(
-                              projectcss.all,
-                              projectcss.__wab_text,
-                              sty.text__qNeu
-                            )}
-                          >
-                            <React.Fragment>
-                              {(() => {
-                                try {
-                                  return $state.stateNameFilterSelect.value > 0
-                                    ? ""
-                                    : "State(s): " +
-                                        $state.stateNameFilterSelect.value.join(
-                                          ", "
-                                        );
-                                } catch (e) {
-                                  if (
-                                    e instanceof TypeError ||
-                                    e?.plasmicType ===
-                                      "PlasmicUndefinedDataError"
-                                  ) {
-                                    return "";
-                                  }
-                                  throw e;
-                                }
-                              })()}
-                            </React.Fragment>
-                          </div>
-                        ) : null}
-                        {(() => {
-                          try {
-                            return (
-                              typeof $state.licenseTypeFilterSelect.value !=
-                                "undefined" &&
-                              $state.licenseTypeFilterSelect.value.length > 0
-                            );
-                          } catch (e) {
-                            if (
-                              e instanceof TypeError ||
-                              e?.plasmicType === "PlasmicUndefinedDataError"
-                            ) {
-                              return true;
-                            }
-                            throw e;
-                          }
-                        })() ? (
-                          <div
-                            className={classNames(
-                              projectcss.all,
-                              projectcss.__wab_text,
-                              sty.text___77X3V
-                            )}
-                          >
-                            <React.Fragment>
-                              {(() => {
-                                try {
-                                  return $state.licenseTypeFilterSelect.value >
-                                    0
-                                    ? ""
-                                    : "License Type(s): " +
-                                        $state.licenseTypeFilterSelect.value.join(
-                                          ", "
-                                        );
-                                } catch (e) {
-                                  if (
-                                    e instanceof TypeError ||
-                                    e?.plasmicType ===
-                                      "PlasmicUndefinedDataError"
-                                  ) {
-                                    return "";
-                                  }
-                                  throw e;
-                                }
-                              })()}
-                            </React.Fragment>
-                          </div>
-                        ) : null}
-                        {(() => {
-                          try {
-                            return (
-                              typeof $state.prodExcludedFeatureSelect.value !=
-                                "undefined" &&
-                              $state.prodExcludedFeatureSelect.value.length > 0
-                            );
-                          } catch (e) {
-                            if (
-                              e instanceof TypeError ||
-                              e?.plasmicType === "PlasmicUndefinedDataError"
-                            ) {
-                              return true;
-                            }
-                            throw e;
-                          }
-                        })() ? (
-                          <section
-                            className={classNames(
-                              projectcss.all,
-                              sty.section__fQvRp
-                            )}
-                          >
-                            <div
-                              className={classNames(
-                                projectcss.all,
-                                sty.freeBox__qRXbg
-                              )}
-                            >
-                              <div
-                                className={classNames(
-                                  projectcss.all,
-                                  projectcss.__wab_text,
-                                  sty.text__jhIv
-                                )}
-                              >
-                                {
-                                  "Excluded product features (only selected items are included in results)"
-                                }
-                              </div>
-                              {(_par =>
-                                !_par
-                                  ? []
-                                  : Array.isArray(_par)
-                                  ? _par
-                                  : [_par])(
-                                (() => {
-                                  try {
-                                    return $state.prodExcludedFeatureSelect
-                                      .value;
-                                  } catch (e) {
-                                    if (
-                                      e instanceof TypeError ||
-                                      e?.plasmicType ===
-                                        "PlasmicUndefinedDataError"
-                                    ) {
-                                      return [];
-                                    }
-                                    throw e;
-                                  }
-                                })()
-                              ).map((__plasmic_item_0, __plasmic_idx_0) => {
-                                const currentItem = __plasmic_item_0;
-                                const currentIndex = __plasmic_idx_0;
-                                return (
-                                  <Stack__
-                                    as={"div"}
-                                    hasGap={true}
-                                    className={classNames(
-                                      projectcss.all,
-                                      sty.freeBox__uwqTg
-                                    )}
-                                    key={currentIndex}
-                                  >
-                                    <IconIcon
-                                      className={classNames(
-                                        projectcss.all,
-                                        sty.svg__p86Lm
-                                      )}
-                                      role={"img"}
-                                    />
-
-                                    <div
-                                      className={classNames(
-                                        projectcss.all,
-                                        projectcss.__wab_text,
-                                        sty.text__zItZh
-                                      )}
-                                    >
-                                      <React.Fragment>
-                                        {(() => {
-                                          try {
-                                            return currentItem;
-                                          } catch (e) {
-                                            if (
-                                              e instanceof TypeError ||
-                                              e?.plasmicType ===
-                                                "PlasmicUndefinedDataError"
-                                            ) {
-                                              return "";
-                                            }
-                                            throw e;
-                                          }
-                                        })()}
-                                      </React.Fragment>
-                                    </div>
-                                  </Stack__>
-                                );
-                              })}
-                            </div>
-                          </section>
-                        ) : null}
-                        {(() => {
-                          try {
-                            return (
-                              typeof $state.activityTypeSelect.value !=
-                                "undefined" &&
-                              $state.activityTypeSelect.value.length > 0
-                            );
-                          } catch (e) {
-                            if (
-                              e instanceof TypeError ||
-                              e?.plasmicType === "PlasmicUndefinedDataError"
-                            ) {
-                              return true;
-                            }
-                            throw e;
-                          }
-                        })() ? (
-                          <section
-                            className={classNames(
-                              projectcss.all,
-                              sty.section__hdNlW
-                            )}
-                          >
-                            <div
-                              className={classNames(
-                                projectcss.all,
-                                sty.freeBox__oUfOj
-                              )}
-                            >
-                              <div
-                                className={classNames(
-                                  projectcss.all,
-                                  projectcss.__wab_text,
-                                  sty.text__hCa1J
-                                )}
-                              >
-                                {
-                                  "Regulated activity filters (only selected items are included in results) "
-                                }
-                              </div>
-                              {(_par =>
-                                !_par
-                                  ? []
-                                  : Array.isArray(_par)
-                                  ? _par
-                                  : [_par])(
-                                (() => {
-                                  try {
-                                    return $state.activityTypeSelect.value;
-                                  } catch (e) {
-                                    if (
-                                      e instanceof TypeError ||
-                                      e?.plasmicType ===
-                                        "PlasmicUndefinedDataError"
-                                    ) {
-                                      return [];
-                                    }
-                                    throw e;
-                                  }
-                                })()
-                              ).map((__plasmic_item_0, __plasmic_idx_0) => {
-                                const currentItem = __plasmic_item_0;
-                                const currentIndex = __plasmic_idx_0;
-                                return (
-                                  <Stack__
-                                    as={"div"}
-                                    hasGap={true}
-                                    className={classNames(
-                                      projectcss.all,
-                                      sty.freeBox__iFhQb
-                                    )}
-                                    key={currentIndex}
-                                  >
-                                    <IconIcon
-                                      className={classNames(
-                                        projectcss.all,
-                                        sty.svg__sUdJx
-                                      )}
-                                      role={"img"}
-                                    />
-
-                                    <div
-                                      className={classNames(
-                                        projectcss.all,
-                                        projectcss.__wab_text,
-                                        sty.text__gCgC6
-                                      )}
-                                    >
-                                      <React.Fragment>
-                                        {(() => {
-                                          try {
-                                            return currentItem;
-                                          } catch (e) {
-                                            if (
-                                              e instanceof TypeError ||
-                                              e?.plasmicType ===
-                                                "PlasmicUndefinedDataError"
-                                            ) {
-                                              return "";
-                                            }
-                                            throw e;
-                                          }
-                                        })()}
-                                      </React.Fragment>
-                                    </div>
-                                  </Stack__>
-                                );
-                              })}
-                            </div>
-                          </section>
-                        ) : null}
-                        {(() => {
-                          try {
-                            return (
-                              typeof $state.licenseTriggerFilterSelect.value !=
-                                "undefined" &&
-                              $state.licenseTriggerFilterSelect.value.length > 0
-                            );
-                          } catch (e) {
-                            if (
-                              e instanceof TypeError ||
-                              e?.plasmicType === "PlasmicUndefinedDataError"
-                            ) {
-                              return true;
-                            }
-                            throw e;
-                          }
-                        })() ? (
-                          <section
-                            className={classNames(
-                              projectcss.all,
-                              sty.section__huU2G
-                            )}
-                          >
-                            <div
-                              className={classNames(
-                                projectcss.all,
-                                sty.freeBox__yJoqe
-                              )}
-                            >
-                              <div
-                                className={classNames(
-                                  projectcss.all,
-                                  projectcss.__wab_text,
-                                  sty.text__uKk1S
-                                )}
-                              >
-                                {
-                                  "Selected License Triggers (only selected items are included in results):"
-                                }
-                              </div>
-                              {(_par =>
-                                !_par
-                                  ? []
-                                  : Array.isArray(_par)
-                                  ? _par
-                                  : [_par])(
-                                (() => {
-                                  try {
-                                    return $state.licenseTriggerFilterSelect
-                                      .value;
-                                  } catch (e) {
-                                    if (
-                                      e instanceof TypeError ||
-                                      e?.plasmicType ===
-                                        "PlasmicUndefinedDataError"
-                                    ) {
-                                      return [];
-                                    }
-                                    throw e;
-                                  }
-                                })()
-                              ).map((__plasmic_item_0, __plasmic_idx_0) => {
-                                const currentItem = __plasmic_item_0;
-                                const currentIndex = __plasmic_idx_0;
-                                return (
-                                  <Stack__
-                                    as={"div"}
-                                    hasGap={true}
-                                    className={classNames(
-                                      projectcss.all,
-                                      sty.freeBox__yw5EC
-                                    )}
-                                    key={currentIndex}
-                                  >
-                                    <IconIcon
-                                      className={classNames(
-                                        projectcss.all,
-                                        sty.svg___2M4U9
-                                      )}
-                                      role={"img"}
-                                    />
-
-                                    <div
-                                      className={classNames(
-                                        projectcss.all,
-                                        projectcss.__wab_text,
-                                        sty.text__r94Cy
-                                      )}
-                                    >
-                                      <React.Fragment>
-                                        {(() => {
-                                          try {
-                                            return currentItem;
-                                          } catch (e) {
-                                            if (
-                                              e instanceof TypeError ||
-                                              e?.plasmicType ===
-                                                "PlasmicUndefinedDataError"
-                                            ) {
-                                              return "";
-                                            }
-                                            throw e;
-                                          }
-                                        })()}
-                                      </React.Fragment>
-                                    </div>
-                                  </Stack__>
-                                );
-                              })}
-                            </div>
-                          </section>
-                        ) : null}
-                        {(() => {
-                          try {
-                            return (
-                              typeof $state.servExemptEntitiesFilterSelect
-                                .value != "undefined" &&
-                              $state.servExemptEntitiesFilterSelect.value
-                                .length > 0
-                            );
-                          } catch (e) {
-                            if (
-                              e instanceof TypeError ||
-                              e?.plasmicType === "PlasmicUndefinedDataError"
-                            ) {
-                              return true;
-                            }
-                            throw e;
-                          }
-                        })() ? (
-                          <section
-                            className={classNames(
-                              projectcss.all,
-                              sty.section__eZwo
-                            )}
-                          >
-                            <div
-                              className={classNames(
-                                projectcss.all,
-                                sty.freeBox__hioGs
-                              )}
-                            >
-                              <div
-                                className={classNames(
-                                  projectcss.all,
-                                  projectcss.__wab_text,
-                                  sty.text__bhSGi
-                                )}
-                              >
-                                {"Selected Exemptions (excluded from results):"}
-                              </div>
-                              {(_par =>
-                                !_par
-                                  ? []
-                                  : Array.isArray(_par)
-                                  ? _par
-                                  : [_par])(
-                                (() => {
-                                  try {
-                                    return $state.servExemptEntitiesFilterSelect
-                                      .value;
-                                  } catch (e) {
-                                    if (
-                                      e instanceof TypeError ||
-                                      e?.plasmicType ===
-                                        "PlasmicUndefinedDataError"
-                                    ) {
-                                      return [];
-                                    }
-                                    throw e;
-                                  }
-                                })()
-                              ).map((__plasmic_item_0, __plasmic_idx_0) => {
-                                const currentItem = __plasmic_item_0;
-                                const currentIndex = __plasmic_idx_0;
-                                return (
-                                  <Stack__
-                                    as={"div"}
-                                    hasGap={true}
-                                    className={classNames(
-                                      projectcss.all,
-                                      sty.freeBox__jp3Aj
-                                    )}
-                                    key={currentIndex}
-                                  >
-                                    <IconIcon
-                                      className={classNames(
-                                        projectcss.all,
-                                        sty.svg__ve7Wd
-                                      )}
-                                      role={"img"}
-                                    />
-
-                                    <div
-                                      className={classNames(
-                                        projectcss.all,
-                                        projectcss.__wab_text,
-                                        sty.text__sZchk
-                                      )}
-                                    >
-                                      <React.Fragment>
-                                        {(() => {
-                                          try {
-                                            return currentItem;
-                                          } catch (e) {
-                                            if (
-                                              e instanceof TypeError ||
-                                              e?.plasmicType ===
-                                                "PlasmicUndefinedDataError"
-                                            ) {
-                                              return "";
-                                            }
-                                            throw e;
-                                          }
-                                        })()}
-                                      </React.Fragment>
-                                    </div>
-                                  </Stack__>
-                                );
-                              })}
-                            </div>
-                          </section>
-                        ) : null}
+                          })()}
+                        </React.Fragment>
                       </div>
-                    }
-                    contentText={"Popover contents"}
-                    defaultOpen={false}
-                    defaultStylesClassName={classNames(
-                      projectcss.root_reset,
-                      projectcss.plasmic_default_styles,
-                      projectcss.plasmic_mixins,
-                      projectcss.plasmic_tokens,
-                      plasmic_antd_5_hostless_css.plasmic_tokens
-                    )}
-                    mouseEnterDelay={0}
-                    mouseLeaveDelay={1}
-                    onOpenChange={generateStateOnChangeProp($state, [
-                      "popover",
-                      "open"
-                    ])}
-                    open={generateStateValueProp($state, ["popover", "open"])}
-                    overlayClassName={classNames({
-                      [sty["pcls_GBTISuXT58m7"]]: true
-                    })}
-                    placement={"right"}
-                    popoverScopeClassName={sty["popover__popover"]}
-                    title={
-                      <React.Fragment>
-                        {(() => {
-                          try {
-                            return (
-                              (typeof $state.stateNameFilterSelect.value !=
-                                "undefined" &&
-                                $state.stateNameFilterSelect.value.length >
-                                  0) ||
-                              (typeof $state.licenseTypeFilterSelect.value !=
-                                "undefined" &&
-                                $state.licenseTypeFilterSelect.value.length >
-                                  0) ||
-                              (typeof $state.prodExcludedFeatureSelect.value !=
-                                "undefined" &&
-                                $state.prodExcludedFeatureSelect.value.length >
-                                  0) ||
-                              (typeof $state.activityTypeSelect.value !=
-                                "undefined" &&
-                                $state.activityTypeSelect.value.length > 0) ||
-                              (typeof $state.licenseTriggerFilterSelect.value !=
-                                "undefined" &&
-                                $state.licenseTriggerFilterSelect.value.length >
-                                  0) ||
-                              (typeof $state.servExemptEntitiesFilterSelect
-                                .value != "undefined" &&
-                                $state.servExemptEntitiesFilterSelect.value
-                                  .length > 0)
-                            );
-                          } catch (e) {
-                            if (
-                              e instanceof TypeError ||
-                              e?.plasmicType === "PlasmicUndefinedDataError"
-                            ) {
-                              return true;
-                            }
-                            throw e;
-                          }
-                        })() ? (
-                          <div
-                            className={classNames(
-                              projectcss.all,
-                              projectcss.__wab_text,
-                              sty.text___0JiR5
-                            )}
-                          >
-                            {"Current Filters"}
-                          </div>
-                        ) : null}
-                        {(() => {
-                          try {
-                            return !(
-                              (typeof $state.stateNameFilterSelect.value !=
-                                "undefined" &&
-                                $state.stateNameFilterSelect.value.length >
-                                  0) ||
-                              (typeof $state.licenseTypeFilterSelect.value !=
-                                "undefined" &&
-                                $state.licenseTypeFilterSelect.value.length >
-                                  0) ||
-                              (typeof $state.prodExcludedFeatureSelect.value !=
-                                "undefined" &&
-                                $state.prodExcludedFeatureSelect.value.length >
-                                  0) ||
-                              (typeof $state.activityTypeSelect.value !=
-                                "undefined" &&
-                                $state.activityTypeSelect.value.length > 0) ||
-                              (typeof $state.licenseTriggerFilterSelect.value !=
-                                "undefined" &&
-                                $state.licenseTriggerFilterSelect.value.length >
-                                  0) ||
-                              (typeof $state.servExemptEntitiesFilterSelect
-                                .value != "undefined" &&
-                                $state.servExemptEntitiesFilterSelect.value
-                                  .length > 0)
-                            );
-                          } catch (e) {
-                            if (
-                              e instanceof TypeError ||
-                              e?.plasmicType === "PlasmicUndefinedDataError"
-                            ) {
-                              return true;
-                            }
-                            throw e;
-                          }
-                        })() ? (
-                          <div
-                            className={classNames(
-                              projectcss.all,
-                              projectcss.__wab_text,
-                              sty.text__aBgI
-                            )}
-                          >
-                            {"No Filters Applied"}
-                          </div>
-                        ) : null}
-                      </React.Fragment>
-                    }
-                  >
-                    <div
-                      className={classNames(
-                        projectcss.all,
-                        projectcss.__wab_text,
-                        sty.text__vdpsd
-                      )}
-                    >
-                      <React.Fragment>
-                        {(() => {
-                          try {
-                            return $state.viewFiltersVariable == true
-                              ? "Hide Filters"
-                              : "View Filters";
-                          } catch (e) {
-                            if (
-                              e instanceof TypeError ||
-                              e?.plasmicType === "PlasmicUndefinedDataError"
-                            ) {
-                              return "Filters";
-                            }
-                            throw e;
-                          }
-                        })()}
-                      </React.Fragment>
-                    </div>
-                  </AntdPopover>
-                </Button2>
+                    </AntdPopover>
+                  </Button2>
+                ) : null}
                 {(() => {
                   try {
                     return (
-                      (typeof $state.stateNameFilterSelect.value !=
+                      ((typeof $state.stateNameFilterSelect.value !=
                         "undefined" &&
                         $state.stateNameFilterSelect.value.length > 0) ||
-                      (typeof $state.licenseTypeFilterSelect.value !=
-                        "undefined" &&
-                        $state.licenseTypeFilterSelect.value.length > 0) ||
-                      (typeof $state.prodExcludedFeatureSelect.value !=
-                        "undefined" &&
-                        $state.prodExcludedFeatureSelect.value.length > 0) ||
-                      (typeof $state.activityTypeSelect.value != "undefined" &&
-                        $state.activityTypeSelect.value.length > 0) ||
-                      (typeof $state.licenseTriggerFilterSelect.value !=
-                        "undefined" &&
-                        $state.licenseTriggerFilterSelect.value.length > 0) ||
-                      (typeof $state.servExemptEntitiesFilterSelect.value !=
-                        "undefined" &&
-                        $state.servExemptEntitiesFilterSelect.value.length > 0)
+                        (typeof $state.licenseTypeFilterSelect.value !=
+                          "undefined" &&
+                          $state.licenseTypeFilterSelect.value.length > 0) ||
+                        (typeof $state.prodExcludedFeatureSelect.value !=
+                          "undefined" &&
+                          $state.prodExcludedFeatureSelect.value.length > 0) ||
+                        (typeof $state.activityTypeSelect.value !=
+                          "undefined" &&
+                          $state.activityTypeSelect.value.length > 0) ||
+                        (typeof $state.licenseTriggerFilterSelect.value !=
+                          "undefined" &&
+                          $state.licenseTriggerFilterSelect.value.length > 0) ||
+                        (typeof $state.servExemptEntitiesFilterSelect.value !=
+                          "undefined" &&
+                          $state.servExemptEntitiesFilterSelect.value.length >
+                            0)) &&
+                      !$state.viewFiltersVariable
                     );
                   } catch (e) {
                     if (
@@ -1651,6 +1675,354 @@ function PlasmicHomepage__RenderFunc(props: {
                 data-plasmic-override={overrides.filters}
                 className={classNames(projectcss.all, sty.filters)}
               >
+                <div className={classNames(projectcss.all, sty.freeBox__hCjH)}>
+                  <Button2
+                    className={classNames("__wab_instance", sty.button2__kCkIy)}
+                    color={"softSand"}
+                    onClick={async event => {
+                      const $steps = {};
+
+                      $steps["updateViewFiltersVariable"] = true
+                        ? (() => {
+                            const actionArgs = {
+                              variable: {
+                                objRoot: $state,
+                                variablePath: ["viewFiltersVariable"]
+                              },
+                              operation: 1
+                            };
+                            return (({
+                              variable,
+                              value,
+                              startIndex,
+                              deleteCount
+                            }) => {
+                              if (!variable) {
+                                return;
+                              }
+                              const { objRoot, variablePath } = variable;
+
+                              $stateSet(objRoot, variablePath, undefined);
+                              return undefined;
+                            })?.apply(null, [actionArgs]);
+                          })()
+                        : undefined;
+                      if (
+                        $steps["updateViewFiltersVariable"] != null &&
+                        typeof $steps["updateViewFiltersVariable"] ===
+                          "object" &&
+                        typeof $steps["updateViewFiltersVariable"].then ===
+                          "function"
+                      ) {
+                        $steps["updateViewFiltersVariable"] = await $steps[
+                          "updateViewFiltersVariable"
+                        ];
+                      }
+                    }}
+                    size={"compact"}
+                  >
+                    {"Hide Filter View"}
+                  </Button2>
+                  {(() => {
+                    try {
+                      return (
+                        (typeof $state.stateNameFilterSelect.value !=
+                          "undefined" &&
+                          $state.stateNameFilterSelect.value.length > 0) ||
+                        (typeof $state.licenseTypeFilterSelect.value !=
+                          "undefined" &&
+                          $state.licenseTypeFilterSelect.value.length > 0) ||
+                        (typeof $state.prodExcludedFeatureSelect.value !=
+                          "undefined" &&
+                          $state.prodExcludedFeatureSelect.value.length > 0) ||
+                        (typeof $state.activityTypeSelect.value !=
+                          "undefined" &&
+                          $state.activityTypeSelect.value.length > 0) ||
+                        (typeof $state.licenseTriggerFilterSelect.value !=
+                          "undefined" &&
+                          $state.licenseTriggerFilterSelect.value.length > 0) ||
+                        (typeof $state.servExemptEntitiesFilterSelect.value !=
+                          "undefined" &&
+                          $state.servExemptEntitiesFilterSelect.value.length >
+                            0)
+                      );
+                    } catch (e) {
+                      if (
+                        e instanceof TypeError ||
+                        e?.plasmicType === "PlasmicUndefinedDataError"
+                      ) {
+                        return true;
+                      }
+                      throw e;
+                    }
+                  })() ? (
+                    <Button2
+                      className={classNames(
+                        "__wab_instance",
+                        sty.button2__gb3D
+                      )}
+                      color={"softRed"}
+                      onClick={async event => {
+                        const $steps = {};
+
+                        $steps["updateServExemptEntitiesFilterSelectValue"] =
+                          true
+                            ? (() => {
+                                const actionArgs = {
+                                  variable: {
+                                    objRoot: $state,
+                                    variablePath: [
+                                      "servExemptEntitiesFilterSelect",
+                                      "value"
+                                    ]
+                                  },
+                                  operation: 1
+                                };
+                                return (({
+                                  variable,
+                                  value,
+                                  startIndex,
+                                  deleteCount
+                                }) => {
+                                  if (!variable) {
+                                    return;
+                                  }
+                                  const { objRoot, variablePath } = variable;
+
+                                  $stateSet(objRoot, variablePath, undefined);
+                                  return undefined;
+                                })?.apply(null, [actionArgs]);
+                              })()
+                            : undefined;
+                        if (
+                          $steps["updateServExemptEntitiesFilterSelectValue"] !=
+                            null &&
+                          typeof $steps[
+                            "updateServExemptEntitiesFilterSelectValue"
+                          ] === "object" &&
+                          typeof $steps[
+                            "updateServExemptEntitiesFilterSelectValue"
+                          ].then === "function"
+                        ) {
+                          $steps["updateServExemptEntitiesFilterSelectValue"] =
+                            await $steps[
+                              "updateServExemptEntitiesFilterSelectValue"
+                            ];
+                        }
+
+                        $steps["updateProdExcludedFeatureSelectValue"] = true
+                          ? (() => {
+                              const actionArgs = {
+                                variable: {
+                                  objRoot: $state,
+                                  variablePath: [
+                                    "prodExcludedFeatureSelect",
+                                    "value"
+                                  ]
+                                },
+                                operation: 1
+                              };
+                              return (({
+                                variable,
+                                value,
+                                startIndex,
+                                deleteCount
+                              }) => {
+                                if (!variable) {
+                                  return;
+                                }
+                                const { objRoot, variablePath } = variable;
+
+                                $stateSet(objRoot, variablePath, undefined);
+                                return undefined;
+                              })?.apply(null, [actionArgs]);
+                            })()
+                          : undefined;
+                        if (
+                          $steps["updateProdExcludedFeatureSelectValue"] !=
+                            null &&
+                          typeof $steps[
+                            "updateProdExcludedFeatureSelectValue"
+                          ] === "object" &&
+                          typeof $steps["updateProdExcludedFeatureSelectValue"]
+                            .then === "function"
+                        ) {
+                          $steps["updateProdExcludedFeatureSelectValue"] =
+                            await $steps[
+                              "updateProdExcludedFeatureSelectValue"
+                            ];
+                        }
+
+                        $steps["updateLicenseTriggerFilterSelectValue"] = true
+                          ? (() => {
+                              const actionArgs = {
+                                variable: {
+                                  objRoot: $state,
+                                  variablePath: [
+                                    "licenseTriggerFilterSelect",
+                                    "value"
+                                  ]
+                                },
+                                operation: 1
+                              };
+                              return (({
+                                variable,
+                                value,
+                                startIndex,
+                                deleteCount
+                              }) => {
+                                if (!variable) {
+                                  return;
+                                }
+                                const { objRoot, variablePath } = variable;
+
+                                $stateSet(objRoot, variablePath, undefined);
+                                return undefined;
+                              })?.apply(null, [actionArgs]);
+                            })()
+                          : undefined;
+                        if (
+                          $steps["updateLicenseTriggerFilterSelectValue"] !=
+                            null &&
+                          typeof $steps[
+                            "updateLicenseTriggerFilterSelectValue"
+                          ] === "object" &&
+                          typeof $steps["updateLicenseTriggerFilterSelectValue"]
+                            .then === "function"
+                        ) {
+                          $steps["updateLicenseTriggerFilterSelectValue"] =
+                            await $steps[
+                              "updateLicenseTriggerFilterSelectValue"
+                            ];
+                        }
+
+                        $steps["updateStateNameFilterSelectValue"] = true
+                          ? (() => {
+                              const actionArgs = {
+                                variable: {
+                                  objRoot: $state,
+                                  variablePath: [
+                                    "stateNameFilterSelect",
+                                    "value"
+                                  ]
+                                },
+                                operation: 1
+                              };
+                              return (({
+                                variable,
+                                value,
+                                startIndex,
+                                deleteCount
+                              }) => {
+                                if (!variable) {
+                                  return;
+                                }
+                                const { objRoot, variablePath } = variable;
+
+                                $stateSet(objRoot, variablePath, undefined);
+                                return undefined;
+                              })?.apply(null, [actionArgs]);
+                            })()
+                          : undefined;
+                        if (
+                          $steps["updateStateNameFilterSelectValue"] != null &&
+                          typeof $steps["updateStateNameFilterSelectValue"] ===
+                            "object" &&
+                          typeof $steps["updateStateNameFilterSelectValue"]
+                            .then === "function"
+                        ) {
+                          $steps["updateStateNameFilterSelectValue"] =
+                            await $steps["updateStateNameFilterSelectValue"];
+                        }
+
+                        $steps["updateLicenseTypeFilterSelectValue"] = true
+                          ? (() => {
+                              const actionArgs = {
+                                variable: {
+                                  objRoot: $state,
+                                  variablePath: [
+                                    "licenseTypeFilterSelect",
+                                    "value"
+                                  ]
+                                },
+                                operation: 1
+                              };
+                              return (({
+                                variable,
+                                value,
+                                startIndex,
+                                deleteCount
+                              }) => {
+                                if (!variable) {
+                                  return;
+                                }
+                                const { objRoot, variablePath } = variable;
+
+                                $stateSet(objRoot, variablePath, undefined);
+                                return undefined;
+                              })?.apply(null, [actionArgs]);
+                            })()
+                          : undefined;
+                        if (
+                          $steps["updateLicenseTypeFilterSelectValue"] !=
+                            null &&
+                          typeof $steps[
+                            "updateLicenseTypeFilterSelectValue"
+                          ] === "object" &&
+                          typeof $steps["updateLicenseTypeFilterSelectValue"]
+                            .then === "function"
+                        ) {
+                          $steps["updateLicenseTypeFilterSelectValue"] =
+                            await $steps["updateLicenseTypeFilterSelectValue"];
+                        }
+
+                        $steps["updateLicenseTriggerFilterSelectValue2"] = true
+                          ? (() => {
+                              const actionArgs = {
+                                variable: {
+                                  objRoot: $state,
+                                  variablePath: ["activityTypeSelect", "value"]
+                                },
+                                operation: 1
+                              };
+                              return (({
+                                variable,
+                                value,
+                                startIndex,
+                                deleteCount
+                              }) => {
+                                if (!variable) {
+                                  return;
+                                }
+                                const { objRoot, variablePath } = variable;
+
+                                $stateSet(objRoot, variablePath, undefined);
+                                return undefined;
+                              })?.apply(null, [actionArgs]);
+                            })()
+                          : undefined;
+                        if (
+                          $steps["updateLicenseTriggerFilterSelectValue2"] !=
+                            null &&
+                          typeof $steps[
+                            "updateLicenseTriggerFilterSelectValue2"
+                          ] === "object" &&
+                          typeof $steps[
+                            "updateLicenseTriggerFilterSelectValue2"
+                          ].then === "function"
+                        ) {
+                          $steps["updateLicenseTriggerFilterSelectValue2"] =
+                            await $steps[
+                              "updateLicenseTriggerFilterSelectValue2"
+                            ];
+                        }
+                      }}
+                      size={"compact"}
+                    >
+                      {"Reset All Filters"}
+                    </Button2>
+                  ) : null}
+                </div>
                 {(() => {
                   const child$Props = {
                     activeKey: generateStateValueProp($state, [
