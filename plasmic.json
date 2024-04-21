@@ -1629,7 +1629,7 @@
     {
       "projectId": "vztPPRJkwvJUdD2Ft9Ycob",
       "projectApiToken": "jFRoJy2E6qLi4B5WclZFMC9Rw48iKh2Omy7OKJC4HRY7g3GsDUhZ8gZVfMymRc6lE6xPst4XwNBHYQ8KNA",
-      "projectName": "4_19-2024_updated version",
+      "projectName": "current version 4 21 2024",
       "version": "latest",
       "cssFilePath": "plasmic/4_19_2024_updated_version/plasmic.module.css",
       "components": [
@@ -1762,6 +1762,11 @@
           "id": "elNx5pqSPLVY",
           "name": "logo-no-background.png",
           "filePath": "plasmic/4_19_2024_updated_version/images/logoNoBackgroundpng.png"
+        },
+        {
+          "id": "INP2TWPOa8FV",
+          "name": "logo-color.png",
+          "filePath": "plasmic/current_version_4_21_2024/images/logoColorpng.png"
         }
       ],
       "indirect": false,

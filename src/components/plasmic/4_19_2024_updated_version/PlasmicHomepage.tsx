@@ -74,6 +74,7 @@ import { accordionHelpers as AntdAccordion_Helpers } from "@plasmicpkgs/antd5/sk
 import { AntdAccordionItem } from "@plasmicpkgs/antd5/skinny/registerCollapse";
 import { AntdSelect } from "@plasmicpkgs/antd5/skinny/registerSelect";
 import { AntdOption } from "@plasmicpkgs/antd5/skinny/registerSelect";
+import { Embed } from "@plasmicpkgs/plasmic-basic-components";
 import { AntdSingleCollapse } from "@plasmicpkgs/antd5/skinny/registerCollapse";
 import { singleCollapseHelpers as AntdSingleCollapse_Helpers } from "@plasmicpkgs/antd5/skinny/registerCollapse";
 import { Popover } from "@plasmicpkgs/radix-ui";
@@ -96,6 +97,7 @@ import SortAmountDownSvgrepoComsvgIcon from "./icons/PlasmicIcon__SortAmountDown
 import SortAmountUpSvgrepoComsvgIcon from "./icons/PlasmicIcon__SortAmountUpSvgrepoComsvg"; // plasmic-import: _Bi3V3rHe1xF/icon
 import ChecksvgIcon2 from "../radix_ui/icons/PlasmicIcon__Checksvg"; // plasmic-import: Wyt3GMMsLefj/icon
 import logoNoBackgroundpngElNx5PqSplvy from "./images/logoNoBackgroundpng.png"; // plasmic-import: elNx5pqSPLVY/picture
+import logoColorpngInp2TwpOa8Fv from "../current_version_4_21_2024/images/logoColorpng.png"; // plasmic-import: INP2TWPOa8FV/picture
 
 createPlasmicElementProxy;
 
@@ -120,15 +122,16 @@ export type PlasmicHomepage__OverridesType = {
   licenseTypeFilterSelect?: Flex__<typeof AntdSelect>;
   licenseTypeFilterSelectedOption?: Flex__<typeof AntdOption>;
   licenseTypeFilterSelectedText?: Flex__<"div">;
-  productExcludedFeatureFilterAccordion2?: Flex__<typeof AntdAccordionItem>;
-  prodExcludedFeatureSelect?: Flex__<typeof AntdSelect>;
   activityTypeFilterAccordion?: Flex__<typeof AntdAccordionItem>;
   activityTypeSelect?: Flex__<typeof AntdSelect>;
   licenseTriggerFilterAccordion?: Flex__<typeof AntdAccordionItem>;
   licenseTriggerFilterSelect?: Flex__<typeof AntdSelect>;
+  productExcludedFeatureFilterAccordion2?: Flex__<typeof AntdAccordionItem>;
+  prodExcludedFeatureSelect?: Flex__<typeof AntdSelect>;
   licensureExemptEntitiesAccordion?: Flex__<typeof AntdAccordionItem>;
   servExemptEntitiesFilterSelect?: Flex__<typeof AntdSelect>;
   headerSection?: Flex__<"section">;
+  embedHtml?: Flex__<typeof Embed>;
   dataSection?: Flex__<"section">;
   stateDetailsAccordion?: Flex__<typeof AntdAccordion>;
   accordionItem?: Flex__<typeof AntdAccordionItem>;
@@ -171,7 +174,47 @@ export interface DefaultHomepageProps {
 const $$ = {};
 
 export function Head() {
-  return <></>;
+  return (
+    <>
+      <meta name="twitter:card" content="summary_large_image" />
+      <title key="title">{PlasmicHomepage.pageMetadata.title}</title>
+      <meta
+        key="og:title"
+        property="og:title"
+        content={PlasmicHomepage.pageMetadata.title}
+      />
+      <meta
+        key="twitter:title"
+        name="twitter:title"
+        content={PlasmicHomepage.pageMetadata.title}
+      />
+      <meta
+        key="description"
+        name="description"
+        content={PlasmicHomepage.pageMetadata.description}
+      />
+      <meta
+        key="og:description"
+        property="og:description"
+        content={PlasmicHomepage.pageMetadata.description}
+      />
+      <meta
+        key="twitter:description"
+        name="twitter:description"
+        content={PlasmicHomepage.pageMetadata.description}
+      />
+      <meta
+        key="og:image"
+        property="og:image"
+        content={PlasmicHomepage.pageMetadata.ogImageSrc}
+      />
+      <meta
+        key="twitter:image"
+        name="twitter:image"
+        content={PlasmicHomepage.pageMetadata.ogImageSrc}
+      />
+    </>
+  );
 }
 
 function PlasmicHomepage__RenderFunc(props: {
@@ -2708,356 +2751,6 @@ function PlasmicHomepage__RenderFunc(props: {
                             </AntdSelect>
                           </AntdAccordionItem>
                           <AntdAccordionItem
-                            data-plasmic-name={
-                              "productExcludedFeatureFilterAccordion2"
-                            }
-                            data-plasmic-override={
-                              overrides.productExcludedFeatureFilterAccordion2
-                            }
-                            className={classNames(
-                              "__wab_instance",
-                              sty.productExcludedFeatureFilterAccordion2
-                            )}
-                            id={"3"}
-                            label2={
-                              <div
-                                className={classNames(
-                                  projectcss.all,
-                                  sty.columns__xhUGm
-                                )}
-                              >
-                                <div
-                                  className={classNames(
-                                    projectcss.all,
-                                    sty.column__tuY98
-                                  )}
-                                >
-                                  {(() => {
-                                    try {
-                                      return (
-                                        typeof $state.prodExcludedFeatureSelect
-                                          .value == "undefined" ||
-                                        !$state.prodExcludedFeatureSelect.value
-                                          .length > 0
-                                      );
-                                    } catch (e) {
-                                      if (
-                                        e instanceof TypeError ||
-                                        e?.plasmicType ===
-                                          "PlasmicUndefinedDataError"
-                                      ) {
-                                        return true;
-                                      }
-                                      throw e;
-                                    }
-                                  })() ? (
-                                    <div
-                                      className={classNames(
-                                        projectcss.all,
-                                        projectcss.__wab_text,
-                                        sty.text__i7BaS
-                                      )}
-                                    >
-                                      {"How is the regulated product defined?"}
-                                    </div>
-                                  ) : null}
-                                  {(() => {
-                                    try {
-                                      return !(
-                                        typeof $state.prodExcludedFeatureSelect
-                                          .value === "undefined" ||
-                                        $state.prodExcludedFeatureSelect.value
-                                          .length == 0
-                                      );
-                                    } catch (e) {
-                                      if (
-                                        e instanceof TypeError ||
-                                        e?.plasmicType ===
-                                          "PlasmicUndefinedDataError"
-                                      ) {
-                                        return true;
-                                      }
-                                      throw e;
-                                    }
-                                  })() ? (
-                                    <div
-                                      className={classNames(
-                                        projectcss.all,
-                                        projectcss.__wab_text,
-                                        sty.text__zloyH
-                                      )}
-                                    >
-                                      {"What product features are exempt?"}
-                                    </div>
-                                  ) : null}
-                                </div>
-                                {(() => {
-                                  try {
-                                    return !(
-                                      typeof $state.prodExcludedFeatureSelect
-                                        .value === "undefined" ||
-                                      $state.prodExcludedFeatureSelect.value
-                                        .length == 0
-                                    );
-                                  } catch (e) {
-                                    if (
-                                      e instanceof TypeError ||
-                                      e?.plasmicType ===
-                                        "PlasmicUndefinedDataError"
-                                    ) {
-                                      return true;
-                                    }
-                                    throw e;
-                                  }
-                                })() ? (
-                                  <div
-                                    className={classNames(
-                                      projectcss.all,
-                                      sty.column__gWv5V
-                                    )}
-                                  >
-                                    <Button2
-                                      className={classNames(
-                                        "__wab_instance",
-                                        sty.button2__m1ZzA
-                                      )}
-                                      color={"clear"}
-                                      onClick={async event => {
-                                        const $steps = {};
-
-                                        $steps[
-                                          "updateProdExcludedFeatureSelectValue"
-                                        ] = true
-                                          ? (() => {
-                                              const actionArgs = {
-                                                variable: {
-                                                  objRoot: $state,
-                                                  variablePath: [
-                                                    "prodExcludedFeatureSelect",
-                                                    "value"
-                                                  ]
-                                                },
-                                                operation: 1
-                                              };
-                                              return (({
-                                                variable,
-                                                value,
-                                                startIndex,
-                                                deleteCount
-                                              }) => {
-                                                if (!variable) {
-                                                  return;
-                                                }
-                                                const {
-                                                  objRoot,
-                                                  variablePath
-                                                } = variable;
-
-                                                $stateSet(
-                                                  objRoot,
-                                                  variablePath,
-                                                  undefined
-                                                );
-                                                return undefined;
-                                              })?.apply(null, [actionArgs]);
-                                            })()
-                                          : undefined;
-                                        if (
-                                          $steps[
-                                            "updateProdExcludedFeatureSelectValue"
-                                          ] != null &&
-                                          typeof $steps[
-                                            "updateProdExcludedFeatureSelectValue"
-                                          ] === "object" &&
-                                          typeof $steps[
-                                            "updateProdExcludedFeatureSelectValue"
-                                          ].then === "function"
-                                        ) {
-                                          $steps[
-                                            "updateProdExcludedFeatureSelectValue"
-                                          ] = await $steps[
-                                            "updateProdExcludedFeatureSelectValue"
-                                          ];
-                                        }
-                                      }}
-                                      size={"minimal"}
-                                    >
-                                      <div
-                                        className={classNames(
-                                          projectcss.all,
-                                          projectcss.__wab_text,
-                                          sty.text__uqAgv
-                                        )}
-                                      >
-                                        {"Reset Filter"}
-                                      </div>
-                                    </Button2>
-                                  </div>
-                                ) : null}
-                              </div>
-                            }
-                            showArrow={true}
-                          >
-                            <div
-                              className={classNames(
-                                projectcss.all,
-                                projectcss.__wab_text,
-                                sty.text__t88Q
-                              )}
-                            >
-                              <React.Fragment>
-                                <React.Fragment>
-                                  {
-                                    "Each of the below-described items are excluded from the relevant definitions in at least one state.  Select one or more relevant items to "
-                                  }
-                                </React.Fragment>
-                                <span
-                                  className={
-                                    "plasmic_default__all plasmic_default__span"
-                                  }
-                                  style={{ textDecorationLine: "underline" }}
-                                >
-                                  {"exclude"}
-                                </span>
-                                <React.Fragment>
-                                  {
-                                    " these items from your search results for the states in which they are exempt.  If no items are selected, no exclusions will be applied."
-                                  }
-                                </React.Fragment>
-                              </React.Fragment>
-                            </div>
-                            <AntdSelect
-                              data-plasmic-name={"prodExcludedFeatureSelect"}
-                              data-plasmic-override={
-                                overrides.prodExcludedFeatureSelect
-                              }
-                              allowClear={true}
-                              className={classNames(
-                                "__wab_instance",
-                                sty.prodExcludedFeatureSelect
-                              )}
-                              defaultStylesClassName={classNames(
-                                projectcss.root_reset,
-                                projectcss.plasmic_default_styles,
-                                projectcss.plasmic_mixins,
-                                projectcss.plasmic_tokens,
-                                plasmic_antd_5_hostless_css.plasmic_tokens
-                              )}
-                              mode={"multiple"}
-                              onChange={generateStateOnChangeProp($state, [
-                                "prodExcludedFeatureSelect",
-                                "value"
-                              ])}
-                              options={[
-                                {
-                                  value: "option1",
-                                  label: "Option 1",
-                                  type: "option"
-                                },
-                                {
-                                  value: "option2",
-                                  label: "Option 2",
-                                  type: "option"
-                                }
-                              ]}
-                              placeholder={
-                                <div
-                                  className={classNames(
-                                    projectcss.all,
-                                    projectcss.__wab_text,
-                                    sty.text__eubMi
-                                  )}
-                                >
-                                  {"Select..."}
-                                </div>
-                              }
-                              popupScopeClassName={
-                                sty["prodExcludedFeatureSelect__popup"]
-                              }
-                              size={"large"}
-                              useChildren={true}
-                              value={generateStateValueProp($state, [
-                                "prodExcludedFeatureSelect",
-                                "value"
-                              ])}
-                            >
-                              {(_par =>
-                                !_par
-                                  ? []
-                                  : Array.isArray(_par)
-                                  ? _par
-                                  : [_par])(
-                                (() => {
-                                  try {
-                                    return $queries
-                                      .prodExcludedBaseFeaturesQuery.data
-                                      .response.list;
-                                  } catch (e) {
-                                    if (
-                                      e instanceof TypeError ||
-                                      e?.plasmicType ===
-                                        "PlasmicUndefinedDataError"
-                                    ) {
-                                      return [];
-                                    }
-                                    throw e;
-                                  }
-                                })()
-                              ).map((__plasmic_item_0, __plasmic_idx_0) => {
-                                const currentItem = __plasmic_item_0;
-                                const currentIndex = __plasmic_idx_0;
-                                return (
-                                  <AntdOption
-                                    className={classNames(
-                                      "__wab_instance",
-                                      sty.option__pThAx
-                                    )}
-                                    key={currentIndex}
-                                    value={(() => {
-                                      try {
-                                        return currentItem.excluded_product_feature_list;
-                                      } catch (e) {
-                                        if (
-                                          e instanceof TypeError ||
-                                          e?.plasmicType ===
-                                            "PlasmicUndefinedDataError"
-                                        ) {
-                                          return undefined;
-                                        }
-                                        throw e;
-                                      }
-                                    })()}
-                                  >
-                                    <div
-                                      className={classNames(
-                                        projectcss.all,
-                                        projectcss.__wab_text,
-                                        sty.text__oRmh9
-                                      )}
-                                    >
-                                      <React.Fragment>
-                                        {(() => {
-                                          try {
-                                            return currentItem.excluded_product_feature_list;
-                                          } catch (e) {
-                                            if (
-                                              e instanceof TypeError ||
-                                              e?.plasmicType ===
-                                                "PlasmicUndefinedDataError"
-                                            ) {
-                                              return "Option";
-                                            }
-                                            throw e;
-                                          }
-                                        })()}
-                                      </React.Fragment>
-                                    </div>
-                                  </AntdOption>
-                                );
-                              })}
-                            </AntdSelect>
-                          </AntdAccordionItem>
-                          <AntdAccordionItem
                             data-plasmic-name={"activityTypeFilterAccordion"}
                             data-plasmic-override={
                               overrides.activityTypeFilterAccordion
@@ -3686,6 +3379,356 @@ function PlasmicHomepage__RenderFunc(props: {
                           </AntdAccordionItem>
                           <AntdAccordionItem
                             data-plasmic-name={
+                              "productExcludedFeatureFilterAccordion2"
+                            }
+                            data-plasmic-override={
+                              overrides.productExcludedFeatureFilterAccordion2
+                            }
+                            className={classNames(
+                              "__wab_instance",
+                              sty.productExcludedFeatureFilterAccordion2
+                            )}
+                            id={"3"}
+                            label2={
+                              <div
+                                className={classNames(
+                                  projectcss.all,
+                                  sty.columns__xhUGm
+                                )}
+                              >
+                                <div
+                                  className={classNames(
+                                    projectcss.all,
+                                    sty.column__tuY98
+                                  )}
+                                >
+                                  {(() => {
+                                    try {
+                                      return (
+                                        typeof $state.prodExcludedFeatureSelect
+                                          .value == "undefined" ||
+                                        !$state.prodExcludedFeatureSelect.value
+                                          .length > 0
+                                      );
+                                    } catch (e) {
+                                      if (
+                                        e instanceof TypeError ||
+                                        e?.plasmicType ===
+                                          "PlasmicUndefinedDataError"
+                                      ) {
+                                        return true;
+                                      }
+                                      throw e;
+                                    }
+                                  })() ? (
+                                    <div
+                                      className={classNames(
+                                        projectcss.all,
+                                        projectcss.__wab_text,
+                                        sty.text__i7BaS
+                                      )}
+                                    >
+                                      {"How is the regulated product defined?"}
+                                    </div>
+                                  ) : null}
+                                  {(() => {
+                                    try {
+                                      return !(
+                                        typeof $state.prodExcludedFeatureSelect
+                                          .value === "undefined" ||
+                                        $state.prodExcludedFeatureSelect.value
+                                          .length == 0
+                                      );
+                                    } catch (e) {
+                                      if (
+                                        e instanceof TypeError ||
+                                        e?.plasmicType ===
+                                          "PlasmicUndefinedDataError"
+                                      ) {
+                                        return true;
+                                      }
+                                      throw e;
+                                    }
+                                  })() ? (
+                                    <div
+                                      className={classNames(
+                                        projectcss.all,
+                                        projectcss.__wab_text,
+                                        sty.text__zloyH
+                                      )}
+                                    >
+                                      {"What product features are exempt?"}
+                                    </div>
+                                  ) : null}
+                                </div>
+                                {(() => {
+                                  try {
+                                    return !(
+                                      typeof $state.prodExcludedFeatureSelect
+                                        .value === "undefined" ||
+                                      $state.prodExcludedFeatureSelect.value
+                                        .length == 0
+                                    );
+                                  } catch (e) {
+                                    if (
+                                      e instanceof TypeError ||
+                                      e?.plasmicType ===
+                                        "PlasmicUndefinedDataError"
+                                    ) {
+                                      return true;
+                                    }
+                                    throw e;
+                                  }
+                                })() ? (
+                                  <div
+                                    className={classNames(
+                                      projectcss.all,
+                                      sty.column__gWv5V
+                                    )}
+                                  >
+                                    <Button2
+                                      className={classNames(
+                                        "__wab_instance",
+                                        sty.button2__m1ZzA
+                                      )}
+                                      color={"clear"}
+                                      onClick={async event => {
+                                        const $steps = {};
+
+                                        $steps[
+                                          "updateProdExcludedFeatureSelectValue"
+                                        ] = true
+                                          ? (() => {
+                                              const actionArgs = {
+                                                variable: {
+                                                  objRoot: $state,
+                                                  variablePath: [
+                                                    "prodExcludedFeatureSelect",
+                                                    "value"
+                                                  ]
+                                                },
+                                                operation: 1
+                                              };
+                                              return (({
+                                                variable,
+                                                value,
+                                                startIndex,
+                                                deleteCount
+                                              }) => {
+                                                if (!variable) {
+                                                  return;
+                                                }
+                                                const {
+                                                  objRoot,
+                                                  variablePath
+                                                } = variable;
+
+                                                $stateSet(
+                                                  objRoot,
+                                                  variablePath,
+                                                  undefined
+                                                );
+                                                return undefined;
+                                              })?.apply(null, [actionArgs]);
+                                            })()
+                                          : undefined;
+                                        if (
+                                          $steps[
+                                            "updateProdExcludedFeatureSelectValue"
+                                          ] != null &&
+                                          typeof $steps[
+                                            "updateProdExcludedFeatureSelectValue"
+                                          ] === "object" &&
+                                          typeof $steps[
+                                            "updateProdExcludedFeatureSelectValue"
+                                          ].then === "function"
+                                        ) {
+                                          $steps[
+                                            "updateProdExcludedFeatureSelectValue"
+                                          ] = await $steps[
+                                            "updateProdExcludedFeatureSelectValue"
+                                          ];
+                                        }
+                                      }}
+                                      size={"minimal"}
+                                    >
+                                      <div
+                                        className={classNames(
+                                          projectcss.all,
+                                          projectcss.__wab_text,
+                                          sty.text__uqAgv
+                                        )}
+                                      >
+                                        {"Reset Filter"}
+                                      </div>
+                                    </Button2>
+                                  </div>
+                                ) : null}
+                              </div>
+                            }
+                            showArrow={true}
+                          >
+                            <div
+                              className={classNames(
+                                projectcss.all,
+                                projectcss.__wab_text,
+                                sty.text__t88Q
+                              )}
+                            >
+                              <React.Fragment>
+                                <React.Fragment>
+                                  {
+                                    "Each of the below-described items are excluded from the relevant definitions in at least one state.  Select one or more relevant items to "
+                                  }
+                                </React.Fragment>
+                                <span
+                                  className={
+                                    "plasmic_default__all plasmic_default__span"
+                                  }
+                                  style={{ textDecorationLine: "underline" }}
+                                >
+                                  {"exclude"}
+                                </span>
+                                <React.Fragment>
+                                  {
+                                    " these items from your search results for the states in which they are exempt.  If no items are selected, no exclusions will be applied."
+                                  }
+                                </React.Fragment>
+                              </React.Fragment>
+                            </div>
+                            <AntdSelect
+                              data-plasmic-name={"prodExcludedFeatureSelect"}
+                              data-plasmic-override={
+                                overrides.prodExcludedFeatureSelect
+                              }
+                              allowClear={true}
+                              className={classNames(
+                                "__wab_instance",
+                                sty.prodExcludedFeatureSelect
+                              )}
+                              defaultStylesClassName={classNames(
+                                projectcss.root_reset,
+                                projectcss.plasmic_default_styles,
+                                projectcss.plasmic_mixins,
+                                projectcss.plasmic_tokens,
+                                plasmic_antd_5_hostless_css.plasmic_tokens
+                              )}
+                              mode={"multiple"}
+                              onChange={generateStateOnChangeProp($state, [
+                                "prodExcludedFeatureSelect",
+                                "value"
+                              ])}
+                              options={[
+                                {
+                                  value: "option1",
+                                  label: "Option 1",
+                                  type: "option"
+                                },
+                                {
+                                  value: "option2",
+                                  label: "Option 2",
+                                  type: "option"
+                                }
+                              ]}
+                              placeholder={
+                                <div
+                                  className={classNames(
+                                    projectcss.all,
+                                    projectcss.__wab_text,
+                                    sty.text__eubMi
+                                  )}
+                                >
+                                  {"Select..."}
+                                </div>
+                              }
+                              popupScopeClassName={
+                                sty["prodExcludedFeatureSelect__popup"]
+                              }
+                              size={"large"}
+                              useChildren={true}
+                              value={generateStateValueProp($state, [
+                                "prodExcludedFeatureSelect",
+                                "value"
+                              ])}
+                            >
+                              {(_par =>
+                                !_par
+                                  ? []
+                                  : Array.isArray(_par)
+                                  ? _par
+                                  : [_par])(
+                                (() => {
+                                  try {
+                                    return $queries
+                                      .prodExcludedBaseFeaturesQuery.data
+                                      .response.list;
+                                  } catch (e) {
+                                    if (
+                                      e instanceof TypeError ||
+                                      e?.plasmicType ===
+                                        "PlasmicUndefinedDataError"
+                                    ) {
+                                      return [];
+                                    }
+                                    throw e;
+                                  }
+                                })()
+                              ).map((__plasmic_item_0, __plasmic_idx_0) => {
+                                const currentItem = __plasmic_item_0;
+                                const currentIndex = __plasmic_idx_0;
+                                return (
+                                  <AntdOption
+                                    className={classNames(
+                                      "__wab_instance",
+                                      sty.option__pThAx
+                                    )}
+                                    key={currentIndex}
+                                    value={(() => {
+                                      try {
+                                        return currentItem.excluded_product_feature_list;
+                                      } catch (e) {
+                                        if (
+                                          e instanceof TypeError ||
+                                          e?.plasmicType ===
+                                            "PlasmicUndefinedDataError"
+                                        ) {
+                                          return undefined;
+                                        }
+                                        throw e;
+                                      }
+                                    })()}
+                                  >
+                                    <div
+                                      className={classNames(
+                                        projectcss.all,
+                                        projectcss.__wab_text,
+                                        sty.text__oRmh9
+                                      )}
+                                    >
+                                      <React.Fragment>
+                                        {(() => {
+                                          try {
+                                            return currentItem.excluded_product_feature_list;
+                                          } catch (e) {
+                                            if (
+                                              e instanceof TypeError ||
+                                              e?.plasmicType ===
+                                                "PlasmicUndefinedDataError"
+                                            ) {
+                                              return "Option";
+                                            }
+                                            throw e;
+                                          }
+                                        })()}
+                                      </React.Fragment>
+                                    </div>
+                                  </AntdOption>
+                                );
+                              })}
+                            </AntdSelect>
+                          </AntdAccordionItem>
+                          <AntdAccordionItem
+                            data-plasmic-name={
                               "licensureExemptEntitiesAccordion"
                             }
                             data-plasmic-override={
@@ -4286,6 +4329,14 @@ function PlasmicHomepage__RenderFunc(props: {
                   >
                     {"Loading . . . "}
                   </div>
+                  <Embed
+                    data-plasmic-name={"embedHtml"}
+                    data-plasmic-override={overrides.embedHtml}
+                    className={classNames("__wab_instance", sty.embedHtml)}
+                    code={
+                      '<svg width="72" height="72" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12,1A11,11,0,1,0,23,12,11,11,0,0,0,12,1Zm0,20a9,9,0,1,1,9-9A9,9,0,0,1,12,21Z"/><rect x="11" y="6" rx="1" width="2" height="7"><animateTransform attributeName="transform" type="rotate" dur="9s" values="0 12 12;360 12 12" repeatCount="indefinite"/></rect><rect x="11" y="11" rx="1" width="2" height="9"><animateTransform attributeName="transform" type="rotate" dur="0.75s" values="0 12 12;360 12 12" repeatCount="indefinite"/></rect></svg>'
+                    }
+                  />
                 </section>
               ) : null}
               <section
@@ -8418,15 +8469,16 @@ const PlasmicDescendants = {
     "licenseTypeFilterSelect",
     "licenseTypeFilterSelectedOption",
     "licenseTypeFilterSelectedText",
-    "productExcludedFeatureFilterAccordion2",
-    "prodExcludedFeatureSelect",
     "activityTypeFilterAccordion",
     "activityTypeSelect",
     "licenseTriggerFilterAccordion",
     "licenseTriggerFilterSelect",
+    "productExcludedFeatureFilterAccordion2",
+    "prodExcludedFeatureSelect",
     "licensureExemptEntitiesAccordion",
     "servExemptEntitiesFilterSelect",
     "headerSection",
+    "embedHtml",
     "dataSection",
     "stateDetailsAccordion",
     "accordionItem",
@@ -8472,12 +8524,12 @@ const PlasmicDescendants = {
     "licenseTypeFilterSelect",
     "licenseTypeFilterSelectedOption",
     "licenseTypeFilterSelectedText",
-    "productExcludedFeatureFilterAccordion2",
-    "prodExcludedFeatureSelect",
     "activityTypeFilterAccordion",
     "activityTypeSelect",
     "licenseTriggerFilterAccordion",
     "licenseTriggerFilterSelect",
+    "productExcludedFeatureFilterAccordion2",
+    "prodExcludedFeatureSelect",
     "licensureExemptEntitiesAccordion",
     "servExemptEntitiesFilterSelect"
   ],
@@ -8489,12 +8541,12 @@ const PlasmicDescendants = {
     "licenseTypeFilterSelect",
     "licenseTypeFilterSelectedOption",
     "licenseTypeFilterSelectedText",
-    "productExcludedFeatureFilterAccordion2",
-    "prodExcludedFeatureSelect",
     "activityTypeFilterAccordion",
     "activityTypeSelect",
     "licenseTriggerFilterAccordion",
     "licenseTriggerFilterSelect",
+    "productExcludedFeatureFilterAccordion2",
+    "prodExcludedFeatureSelect",
     "licensureExemptEntitiesAccordion",
     "servExemptEntitiesFilterSelect"
   ],
@@ -8516,11 +8568,6 @@ const PlasmicDescendants = {
     "licenseTypeFilterSelectedText"
   ],
   licenseTypeFilterSelectedText: ["licenseTypeFilterSelectedText"],
-  productExcludedFeatureFilterAccordion2: [
-    "productExcludedFeatureFilterAccordion2",
-    "prodExcludedFeatureSelect"
-  ],
-  prodExcludedFeatureSelect: ["prodExcludedFeatureSelect"],
   activityTypeFilterAccordion: [
     "activityTypeFilterAccordion",
     "activityTypeSelect"
@@ -8531,12 +8578,18 @@ const PlasmicDescendants = {
     "licenseTriggerFilterSelect"
   ],
   licenseTriggerFilterSelect: ["licenseTriggerFilterSelect"],
+  productExcludedFeatureFilterAccordion2: [
+    "productExcludedFeatureFilterAccordion2",
+    "prodExcludedFeatureSelect"
+  ],
+  prodExcludedFeatureSelect: ["prodExcludedFeatureSelect"],
   licensureExemptEntitiesAccordion: [
     "licensureExemptEntitiesAccordion",
     "servExemptEntitiesFilterSelect"
   ],
   servExemptEntitiesFilterSelect: ["servExemptEntitiesFilterSelect"],
   headerSection: ["headerSection"],
+  embedHtml: ["embedHtml"],
   dataSection: [
     "dataSection",
     "stateDetailsAccordion",
@@ -8718,15 +8771,16 @@ type NodeDefaultElementType = {
   licenseTypeFilterSelect: typeof AntdSelect;
   licenseTypeFilterSelectedOption: typeof AntdOption;
   licenseTypeFilterSelectedText: "div";
-  productExcludedFeatureFilterAccordion2: typeof AntdAccordionItem;
-  prodExcludedFeatureSelect: typeof AntdSelect;
   activityTypeFilterAccordion: typeof AntdAccordionItem;
   activityTypeSelect: typeof AntdSelect;
   licenseTriggerFilterAccordion: typeof AntdAccordionItem;
   licenseTriggerFilterSelect: typeof AntdSelect;
+  productExcludedFeatureFilterAccordion2: typeof AntdAccordionItem;
+  prodExcludedFeatureSelect: typeof AntdSelect;
   licensureExemptEntitiesAccordion: typeof AntdAccordionItem;
   servExemptEntitiesFilterSelect: typeof AntdSelect;
   headerSection: "section";
+  embedHtml: typeof Embed;
   dataSection: "section";
   stateDetailsAccordion: typeof AntdAccordion;
   accordionItem: typeof AntdAccordionItem;
@@ -8836,10 +8890,6 @@ export const PlasmicHomepage = Object.assign(
     licenseTypeFilterSelectedText: makeNodeComponent(
       "licenseTypeFilterSelectedText"
     ),
-    productExcludedFeatureFilterAccordion2: makeNodeComponent(
-      "productExcludedFeatureFilterAccordion2"
-    ),
-    prodExcludedFeatureSelect: makeNodeComponent("prodExcludedFeatureSelect"),
     activityTypeFilterAccordion: makeNodeComponent(
       "activityTypeFilterAccordion"
     ),
@@ -8848,6 +8898,10 @@ export const PlasmicHomepage = Object.assign(
       "licenseTriggerFilterAccordion"
     ),
     licenseTriggerFilterSelect: makeNodeComponent("licenseTriggerFilterSelect"),
+    productExcludedFeatureFilterAccordion2: makeNodeComponent(
+      "productExcludedFeatureFilterAccordion2"
+    ),
+    prodExcludedFeatureSelect: makeNodeComponent("prodExcludedFeatureSelect"),
     licensureExemptEntitiesAccordion: makeNodeComponent(
       "licensureExemptEntitiesAccordion"
     ),
@@ -8855,6 +8909,7 @@ export const PlasmicHomepage = Object.assign(
       "servExemptEntitiesFilterSelect"
     ),
     headerSection: makeNodeComponent("headerSection"),
+    embedHtml: makeNodeComponent("embedHtml"),
     dataSection: makeNodeComponent("dataSection"),
     stateDetailsAccordion: makeNodeComponent("stateDetailsAccordion"),
     accordionItem: makeNodeComponent("accordionItem"),
@@ -8901,9 +8956,12 @@ export const PlasmicHomepage = Object.assign(
 
     // Page metadata
     pageMetadata: {
-      title: "",
-      description: "",
-      ogImageSrc: "",
+      title:
+        "Student loan servicing and lending license and registration requirements",
+      description:
+        "A summary of license and registration requirements for student loan servicers and creditors. ",
+      ogImageSrc:
+        "https://site-assets.plasmic.app/3c551ef204418d8f7f17c3381736b1ef.png",
       canonical: ""
     }
   }
