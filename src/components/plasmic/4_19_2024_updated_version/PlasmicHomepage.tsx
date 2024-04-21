@@ -404,6 +404,12 @@ function PlasmicHomepage__RenderFunc(props: {
         type: "private",
         variableType: "boolean",
         initFunc: ({ $props, $state, $queries, $ctx }) => false
+      },
+      {
+        path: "acceptedTos",
+        type: "private",
+        variableType: "boolean",
+        initFunc: ({ $props, $state, $queries, $ctx }) => false
       }
     ],
     [$props, $ctx, $refs]
@@ -1272,7 +1278,7 @@ function PlasmicHomepage__RenderFunc(props: {
                         plasmic_antd_5_hostless_css.plasmic_tokens
                       )}
                       mouseEnterDelay={0}
-                      mouseLeaveDelay={1}
+                      mouseLeaveDelay={0}
                       onOpenChange={generateStateOnChangeProp($state, [
                         "popover",
                         "open"
@@ -4098,212 +4104,239 @@ function PlasmicHomepage__RenderFunc(props: {
               </section>
             ) : null}
             <div className={classNames(projectcss.all, sty.freeBox__wqdi)}>
-              <section
-                data-plasmic-name={"headerSection"}
-                data-plasmic-override={overrides.headerSection}
-                className={classNames(projectcss.all, sty.headerSection)}
-              >
-                <div className={classNames(projectcss.all, sty.columns__ykOcV)}>
+              {(() => {
+                try {
+                  return true;
+                } catch (e) {
+                  if (
+                    e instanceof TypeError ||
+                    e?.plasmicType === "PlasmicUndefinedDataError"
+                  ) {
+                    return true;
+                  }
+                  throw e;
+                }
+              })() ? (
+                <section
+                  data-plasmic-name={"headerSection"}
+                  data-plasmic-override={overrides.headerSection}
+                  className={classNames(projectcss.all, sty.headerSection)}
+                >
                   <div
-                    className={classNames(projectcss.all, sty.column__yYJc8)}
+                    className={classNames(projectcss.all, sty.columns__ykOcV)}
                   >
-                    <Button2
-                      className={classNames(
-                        "__wab_instance",
-                        sty.button2__yJcdt
-                      )}
-                      color={"clear"}
-                      endIcon={
-                        <React.Fragment>
-                          {(() => {
-                            try {
-                              return !$state.stateSortVariable;
-                            } catch (e) {
-                              if (
-                                e instanceof TypeError ||
-                                e?.plasmicType === "PlasmicUndefinedDataError"
-                              ) {
-                                return true;
-                              }
-                              throw e;
-                            }
-                          })() ? (
-                            <SortAmountDownSvgrepoComsvgIcon
-                              className={classNames(
-                                projectcss.all,
-                                sty.svg__rEaBd
-                              )}
-                              role={"img"}
-                            />
-                          ) : null}
-                          {(() => {
-                            try {
-                              return $state.stateSortVariable;
-                            } catch (e) {
-                              if (
-                                e instanceof TypeError ||
-                                e?.plasmicType === "PlasmicUndefinedDataError"
-                              ) {
-                                return true;
-                              }
-                              throw e;
-                            }
-                          })() ? (
-                            <SortAmountUpSvgrepoComsvgIcon
-                              className={classNames(
-                                projectcss.all,
-                                sty.svg__upmUm
-                              )}
-                              role={"img"}
-                            />
-                          ) : null}
-                        </React.Fragment>
-                      }
-                      onClick={async event => {
-                        const $steps = {};
-
-                        $steps["updateVariable"] = true
-                          ? (() => {
-                              const actionArgs = {
-                                variable: {
-                                  objRoot: $state,
-                                  variablePath: ["stateSortVariable"]
-                                },
-                                operation: 4
-                              };
-                              return (({
-                                variable,
-                                value,
-                                startIndex,
-                                deleteCount
-                              }) => {
-                                if (!variable) {
-                                  return;
+                    <div
+                      className={classNames(projectcss.all, sty.column__yYJc8)}
+                    >
+                      <Button2
+                        className={classNames(
+                          "__wab_instance",
+                          sty.button2__yJcdt
+                        )}
+                        color={"clear"}
+                        endIcon={
+                          <React.Fragment>
+                            {(() => {
+                              try {
+                                return !$state.stateSortVariable;
+                              } catch (e) {
+                                if (
+                                  e instanceof TypeError ||
+                                  e?.plasmicType === "PlasmicUndefinedDataError"
+                                ) {
+                                  return true;
                                 }
-                                const { objRoot, variablePath } = variable;
-
-                                const oldValue = $stateGet(
-                                  objRoot,
-                                  variablePath
-                                );
-                                $stateSet(objRoot, variablePath, !oldValue);
-                                return !oldValue;
-                              })?.apply(null, [actionArgs]);
-                            })()
-                          : undefined;
-                        if (
-                          $steps["updateVariable"] != null &&
-                          typeof $steps["updateVariable"] === "object" &&
-                          typeof $steps["updateVariable"].then === "function"
-                        ) {
-                          $steps["updateVariable"] = await $steps[
-                            "updateVariable"
-                          ];
+                                throw e;
+                              }
+                            })() ? (
+                              <SortAmountDownSvgrepoComsvgIcon
+                                className={classNames(
+                                  projectcss.all,
+                                  sty.svg__rEaBd
+                                )}
+                                role={"img"}
+                              />
+                            ) : null}
+                            {(() => {
+                              try {
+                                return $state.stateSortVariable;
+                              } catch (e) {
+                                if (
+                                  e instanceof TypeError ||
+                                  e?.plasmicType === "PlasmicUndefinedDataError"
+                                ) {
+                                  return true;
+                                }
+                                throw e;
+                              }
+                            })() ? (
+                              <SortAmountUpSvgrepoComsvgIcon
+                                className={classNames(
+                                  projectcss.all,
+                                  sty.svg__upmUm
+                                )}
+                                role={"img"}
+                              />
+                            ) : null}
+                          </React.Fragment>
                         }
-                      }}
-                      showEndIcon={true}
-                    >
-                      {"State"}
-                    </Button2>
+                        onClick={async event => {
+                          const $steps = {};
+
+                          $steps["updateVariable"] = true
+                            ? (() => {
+                                const actionArgs = {
+                                  variable: {
+                                    objRoot: $state,
+                                    variablePath: ["stateSortVariable"]
+                                  },
+                                  operation: 4
+                                };
+                                return (({
+                                  variable,
+                                  value,
+                                  startIndex,
+                                  deleteCount
+                                }) => {
+                                  if (!variable) {
+                                    return;
+                                  }
+                                  const { objRoot, variablePath } = variable;
+
+                                  const oldValue = $stateGet(
+                                    objRoot,
+                                    variablePath
+                                  );
+                                  $stateSet(objRoot, variablePath, !oldValue);
+                                  return !oldValue;
+                                })?.apply(null, [actionArgs]);
+                              })()
+                            : undefined;
+                          if (
+                            $steps["updateVariable"] != null &&
+                            typeof $steps["updateVariable"] === "object" &&
+                            typeof $steps["updateVariable"].then === "function"
+                          ) {
+                            $steps["updateVariable"] = await $steps[
+                              "updateVariable"
+                            ];
+                          }
+                        }}
+                        showEndIcon={true}
+                      >
+                        {"State"}
+                      </Button2>
+                    </div>
+                    {(() => {
+                      try {
+                        return (
+                          $state.licenseTypeFilterSelect.value
+                            .flat()
+                            .indexOf(`Student Loan Servicing License`) != -1 ||
+                          $state.licenseTypeFilterSelect.value.length == 0
+                        );
+                      } catch (e) {
+                        if (
+                          e instanceof TypeError ||
+                          e?.plasmicType === "PlasmicUndefinedDataError"
+                        ) {
+                          return true;
+                        }
+                        throw e;
+                      }
+                    })() ? (
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          sty.column__pKgku
+                        )}
+                      >
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            projectcss.__wab_text,
+                            sty.text__itHib
+                          )}
+                        >
+                          {"Licenses Student Loan Servicers?"}
+                        </div>
+                      </div>
+                    ) : null}
+                    {(() => {
+                      try {
+                        return (
+                          $state.licenseTypeFilterSelect.value
+                            .flat()
+                            .indexOf(`Student Loan Creditor Registration`) !=
+                            -1 ||
+                          $state.licenseTypeFilterSelect.value.length == 0
+                        );
+                      } catch (e) {
+                        if (
+                          e instanceof TypeError ||
+                          e?.plasmicType === "PlasmicUndefinedDataError"
+                        ) {
+                          return true;
+                        }
+                        throw e;
+                      }
+                    })() ? (
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          sty.column__hOe5G
+                        )}
+                      >
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            projectcss.__wab_text,
+                            sty.text___3AOeo
+                          )}
+                        >
+                          {"Student Loan Creditors Must Register?"}
+                        </div>
+                      </div>
+                    ) : null}
+                    {(() => {
+                      try {
+                        return (
+                          $state.licenseTypeFilterSelect.value
+                            .flat()
+                            .indexOf(`Student Loan Servicer Notification`) !=
+                            -1 ||
+                          $state.licenseTypeFilterSelect.value.length == 0
+                        );
+                      } catch (e) {
+                        if (
+                          e instanceof TypeError ||
+                          e?.plasmicType === "PlasmicUndefinedDataError"
+                        ) {
+                          return true;
+                        }
+                        throw e;
+                      }
+                    })() ? (
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          sty.column__dp8Tj
+                        )}
+                      >
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            projectcss.__wab_text,
+                            sty.text__carc3
+                          )}
+                        >
+                          {"Student Loan Servicers Must Notify Ombudsman?"}
+                        </div>
+                      </div>
+                    ) : null}
                   </div>
-                  {(() => {
-                    try {
-                      return (
-                        $state.licenseTypeFilterSelect.value
-                          .flat()
-                          .indexOf(`Student Loan Servicing License`) != -1 ||
-                        $state.licenseTypeFilterSelect.value.length == 0
-                      );
-                    } catch (e) {
-                      if (
-                        e instanceof TypeError ||
-                        e?.plasmicType === "PlasmicUndefinedDataError"
-                      ) {
-                        return true;
-                      }
-                      throw e;
-                    }
-                  })() ? (
-                    <div
-                      className={classNames(projectcss.all, sty.column__pKgku)}
-                    >
-                      <div
-                        className={classNames(
-                          projectcss.all,
-                          projectcss.__wab_text,
-                          sty.text__itHib
-                        )}
-                      >
-                        {"Licenses Student Loan Servicers?"}
-                      </div>
-                    </div>
-                  ) : null}
-                  {(() => {
-                    try {
-                      return (
-                        $state.licenseTypeFilterSelect.value
-                          .flat()
-                          .indexOf(`Student Loan Creditor Registration`) !=
-                          -1 || $state.licenseTypeFilterSelect.value.length == 0
-                      );
-                    } catch (e) {
-                      if (
-                        e instanceof TypeError ||
-                        e?.plasmicType === "PlasmicUndefinedDataError"
-                      ) {
-                        return true;
-                      }
-                      throw e;
-                    }
-                  })() ? (
-                    <div
-                      className={classNames(projectcss.all, sty.column__hOe5G)}
-                    >
-                      <div
-                        className={classNames(
-                          projectcss.all,
-                          projectcss.__wab_text,
-                          sty.text___3AOeo
-                        )}
-                      >
-                        {"Student Loan Creditors Must Register?"}
-                      </div>
-                    </div>
-                  ) : null}
-                  {(() => {
-                    try {
-                      return (
-                        $state.licenseTypeFilterSelect.value
-                          .flat()
-                          .indexOf(`Student Loan Servicer Notification`) !=
-                          -1 || $state.licenseTypeFilterSelect.value.length == 0
-                      );
-                    } catch (e) {
-                      if (
-                        e instanceof TypeError ||
-                        e?.plasmicType === "PlasmicUndefinedDataError"
-                      ) {
-                        return true;
-                      }
-                      throw e;
-                    }
-                  })() ? (
-                    <div
-                      className={classNames(projectcss.all, sty.column__dp8Tj)}
-                    >
-                      <div
-                        className={classNames(
-                          projectcss.all,
-                          projectcss.__wab_text,
-                          sty.text__carc3
-                        )}
-                      >
-                        {"Student Loan Servicers Must Notify Ombudsman?"}
-                      </div>
-                    </div>
-                  ) : null}
-                </div>
-              </section>
+                </section>
+              ) : null}
               {(() => {
                 try {
                   return $queries.allFiltersQuery.isLoading;
@@ -4337,6 +4370,30 @@ function PlasmicHomepage__RenderFunc(props: {
                       '<svg width="72" height="72" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12,1A11,11,0,1,0,23,12,11,11,0,0,0,12,1Zm0,20a9,9,0,1,1,9-9A9,9,0,0,1,12,21Z"/><rect x="11" y="6" rx="1" width="2" height="7"><animateTransform attributeName="transform" type="rotate" dur="9s" values="0 12 12;360 12 12" repeatCount="indefinite"/></rect><rect x="11" y="11" rx="1" width="2" height="9"><animateTransform attributeName="transform" type="rotate" dur="0.75s" values="0 12 12;360 12 12" repeatCount="indefinite"/></rect></svg>'
                     }
                   />
+
+                  <div
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.__wab_text,
+                      sty.text__nruGb
+                    )}
+                  >
+                    <React.Fragment>
+                      {(() => {
+                        try {
+                          return "This website only provides information about state legal requirements that apply specifically to extending and servicing education finance products, such as lender-originated loans and postsecondary school/institutional financing.  This site does not describe the numerous laws that generally regulate lenders, retail installment sellers, assignees, marketers, debt collectors, credit services organizations, or other types of regulated entities. Consult a qualified attorney for legal guidance that is applicable to your specific circumstances. Your use of this website is subject to the Terms of Use at the bottom of this page.";
+                        } catch (e) {
+                          if (
+                            e instanceof TypeError ||
+                            e?.plasmicType === "PlasmicUndefinedDataError"
+                          ) {
+                            return "";
+                          }
+                          throw e;
+                        }
+                      })()}
+                    </React.Fragment>
+                  </div>
                 </section>
               ) : null}
               <section
@@ -4742,6 +4799,9 @@ function PlasmicHomepage__RenderFunc(props: {
                             try {
                               return (
                                 currentItem.required_license_types.indexOf(
+                                  "Student Loan Servicing License"
+                                ) != -1 &&
+                                $state.licenseTypeFilterSelect.value.indexOf(
                                   "Student Loan Servicing License"
                                 ) != -1
                               );
@@ -6235,6 +6295,9 @@ function PlasmicHomepage__RenderFunc(props: {
                               return (
                                 currentItem.required_license_types.indexOf(
                                   "Student Loan Creditor Registration"
+                                ) != -1 &&
+                                $state.licenseTypeFilterSelect.value.indexOf(
+                                  "Student Loan Creditor Registration"
                                 ) != -1
                               );
                             } catch (e) {
@@ -7641,6 +7704,9 @@ function PlasmicHomepage__RenderFunc(props: {
                             try {
                               return (
                                 currentItem.required_license_types.indexOf(
+                                  "Student Loan Servicer Notification"
+                                ) != -1 &&
+                                $state.licenseTypeFilterSelect.value.indexOf(
                                   "Student Loan Servicer Notification"
                                 ) != -1
                               );
