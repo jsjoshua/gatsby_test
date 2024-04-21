@@ -1027,14 +1027,14 @@
           "checksum": "6a893e44fe18497c8603bc35302aa59c"
         },
         {
-          "assetId": "vztPPRJkwvJUdD2Ft9Ycob",
-          "type": "projectCss",
-          "checksum": "9aed6b09572054cdc9bb3e97ef4022a3"
-        },
-        {
           "type": "image",
           "assetId": "INP2TWPOa8FV",
           "checksum": "5c58a7375afc828f291533cf8986e932"
+        },
+        {
+          "assetId": "vztPPRJkwvJUdD2Ft9Ycob",
+          "type": "projectCss",
+          "checksum": "9aed6b09572054cdc9bb3e97ef4022a3"
         }
       ],
       "codegenVersion": "0.0.1"
