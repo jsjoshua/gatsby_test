@@ -3428,7 +3428,7 @@ function PlasmicHomepage__RenderFunc(props: {
                                         sty.text__i7BaS
                                       )}
                                     >
-                                      {"How is the regulated product defined?"}
+                                      {"What product features are exempt?"}
                                     </div>
                                   ) : null}
                                   {(() => {
@@ -4901,36 +4901,57 @@ function PlasmicHomepage__RenderFunc(props: {
                                                     })()}
                                                   </React.Fragment>
                                                 </div>
-                                                <PlasmicLink__
-                                                  className={classNames(
-                                                    projectcss.all,
-                                                    projectcss.a,
-                                                    projectcss.__wab_text,
-                                                    sty.link___0Ema1
-                                                  )}
-                                                  component={Link}
-                                                  href={(() => {
-                                                    try {
-                                                      return currentItem.servicing_law_link;
-                                                    } catch (e) {
-                                                      if (
-                                                        e instanceof
-                                                          TypeError ||
-                                                        e?.plasmicType ===
-                                                          "PlasmicUndefinedDataError"
-                                                      ) {
-                                                        return "https://www.plasmic.app/";
-                                                      }
-                                                      throw e;
+                                                {(() => {
+                                                  try {
+                                                    return (
+                                                      currentItem.servicing_law_link !=
+                                                        null &&
+                                                      currentItem
+                                                        .servicing_law_link
+                                                        .length != 0
+                                                    );
+                                                  } catch (e) {
+                                                    if (
+                                                      e instanceof TypeError ||
+                                                      e?.plasmicType ===
+                                                        "PlasmicUndefinedDataError"
+                                                    ) {
+                                                      return true;
                                                     }
-                                                  })()}
-                                                  platform={"gatsby"}
-                                                  target={"_blank"}
-                                                >
-                                                  {
-                                                    "Open original statute in new tab"
+                                                    throw e;
                                                   }
-                                                </PlasmicLink__>
+                                                })() ? (
+                                                  <PlasmicLink__
+                                                    className={classNames(
+                                                      projectcss.all,
+                                                      projectcss.a,
+                                                      projectcss.__wab_text,
+                                                      sty.link___0Ema1
+                                                    )}
+                                                    component={Link}
+                                                    href={(() => {
+                                                      try {
+                                                        return currentItem.servicing_law_link;
+                                                      } catch (e) {
+                                                        if (
+                                                          e instanceof
+                                                            TypeError ||
+                                                          e?.plasmicType ===
+                                                            "PlasmicUndefinedDataError"
+                                                        ) {
+                                                          return "https://www.plasmic.app/";
+                                                        }
+                                                        throw e;
+                                                      }
+                                                    })()}
+                                                    platform={"gatsby"}
+                                                    target={"_blank"}
+                                                  >
+                                                    {
+                                                      "Open original statute in new tab"
+                                                    }
+                                                  </PlasmicLink__>
+                                                ) : null}
                                               </div>
                                             ),
                                             side: "right",
@@ -5162,36 +5183,57 @@ function PlasmicHomepage__RenderFunc(props: {
                                                     })()}
                                                   </React.Fragment>
                                                 </div>
-                                                <PlasmicLink__
-                                                  className={classNames(
-                                                    projectcss.all,
-                                                    projectcss.a,
-                                                    projectcss.__wab_text,
-                                                    sty.link__enOd
-                                                  )}
-                                                  component={Link}
-                                                  href={(() => {
-                                                    try {
-                                                      return currentItem.servicing_law_link;
-                                                    } catch (e) {
-                                                      if (
-                                                        e instanceof
-                                                          TypeError ||
-                                                        e?.plasmicType ===
-                                                          "PlasmicUndefinedDataError"
-                                                      ) {
-                                                        return "https://www.plasmic.app/";
-                                                      }
-                                                      throw e;
+                                                {(() => {
+                                                  try {
+                                                    return (
+                                                      currentItem.servicing_law_link !=
+                                                        null &&
+                                                      currentItem
+                                                        .servicing_law_link
+                                                        .length != 0
+                                                    );
+                                                  } catch (e) {
+                                                    if (
+                                                      e instanceof TypeError ||
+                                                      e?.plasmicType ===
+                                                        "PlasmicUndefinedDataError"
+                                                    ) {
+                                                      return true;
                                                     }
-                                                  })()}
-                                                  platform={"gatsby"}
-                                                  target={"_blank"}
-                                                >
-                                                  {
-                                                    "Open original statute in new tab"
+                                                    throw e;
                                                   }
-                                                </PlasmicLink__>
+                                                })() ? (
+                                                  <PlasmicLink__
+                                                    className={classNames(
+                                                      projectcss.all,
+                                                      projectcss.a,
+                                                      projectcss.__wab_text,
+                                                      sty.link__enOd
+                                                    )}
+                                                    component={Link}
+                                                    href={(() => {
+                                                      try {
+                                                        return currentItem.servicing_law_link;
+                                                      } catch (e) {
+                                                        if (
+                                                          e instanceof
+                                                            TypeError ||
+                                                          e?.plasmicType ===
+                                                            "PlasmicUndefinedDataError"
+                                                        ) {
+                                                          return "https://www.plasmic.app/";
+                                                        }
+                                                        throw e;
+                                                      }
+                                                    })()}
+                                                    platform={"gatsby"}
+                                                    target={"_blank"}
+                                                  >
+                                                    {
+                                                      "Open original statute in new tab"
+                                                    }
+                                                  </PlasmicLink__>
+                                                ) : null}
                                               </div>
                                             ),
                                             side: "right",
@@ -5424,36 +5466,57 @@ function PlasmicHomepage__RenderFunc(props: {
                                                     })()}
                                                   </React.Fragment>
                                                 </div>
-                                                <PlasmicLink__
-                                                  className={classNames(
-                                                    projectcss.all,
-                                                    projectcss.a,
-                                                    projectcss.__wab_text,
-                                                    sty.link__ceozV
-                                                  )}
-                                                  component={Link}
-                                                  href={(() => {
-                                                    try {
-                                                      return currentItem.servicing_law_link;
-                                                    } catch (e) {
-                                                      if (
-                                                        e instanceof
-                                                          TypeError ||
-                                                        e?.plasmicType ===
-                                                          "PlasmicUndefinedDataError"
-                                                      ) {
-                                                        return "https://www.plasmic.app/";
-                                                      }
-                                                      throw e;
+                                                {(() => {
+                                                  try {
+                                                    return (
+                                                      currentItem.servicing_law_link !=
+                                                        null &&
+                                                      currentItem
+                                                        .servicing_law_link
+                                                        .length != 0
+                                                    );
+                                                  } catch (e) {
+                                                    if (
+                                                      e instanceof TypeError ||
+                                                      e?.plasmicType ===
+                                                        "PlasmicUndefinedDataError"
+                                                    ) {
+                                                      return true;
                                                     }
-                                                  })()}
-                                                  platform={"gatsby"}
-                                                  target={"_blank"}
-                                                >
-                                                  {
-                                                    "Open original statute in new tab"
+                                                    throw e;
                                                   }
-                                                </PlasmicLink__>
+                                                })() ? (
+                                                  <PlasmicLink__
+                                                    className={classNames(
+                                                      projectcss.all,
+                                                      projectcss.a,
+                                                      projectcss.__wab_text,
+                                                      sty.link__ceozV
+                                                    )}
+                                                    component={Link}
+                                                    href={(() => {
+                                                      try {
+                                                        return currentItem.servicing_law_link;
+                                                      } catch (e) {
+                                                        if (
+                                                          e instanceof
+                                                            TypeError ||
+                                                          e?.plasmicType ===
+                                                            "PlasmicUndefinedDataError"
+                                                        ) {
+                                                          return "https://www.plasmic.app/";
+                                                        }
+                                                        throw e;
+                                                      }
+                                                    })()}
+                                                    platform={"gatsby"}
+                                                    target={"_blank"}
+                                                  >
+                                                    {
+                                                      "Open original statute in new tab"
+                                                    }
+                                                  </PlasmicLink__>
+                                                ) : null}
                                               </div>
                                             ),
                                             side: "right",
@@ -5684,36 +5747,57 @@ function PlasmicHomepage__RenderFunc(props: {
                                                     })()}
                                                   </React.Fragment>
                                                 </div>
-                                                <PlasmicLink__
-                                                  className={classNames(
-                                                    projectcss.all,
-                                                    projectcss.a,
-                                                    projectcss.__wab_text,
-                                                    sty.link__mjwOn
-                                                  )}
-                                                  component={Link}
-                                                  href={(() => {
-                                                    try {
-                                                      return currentItem.servicing_law_link;
-                                                    } catch (e) {
-                                                      if (
-                                                        e instanceof
-                                                          TypeError ||
-                                                        e?.plasmicType ===
-                                                          "PlasmicUndefinedDataError"
-                                                      ) {
-                                                        return "https://www.plasmic.app/";
-                                                      }
-                                                      throw e;
+                                                {(() => {
+                                                  try {
+                                                    return (
+                                                      currentItem.servicing_law_link !=
+                                                        null &&
+                                                      currentItem
+                                                        .servicing_law_link
+                                                        .length != 0
+                                                    );
+                                                  } catch (e) {
+                                                    if (
+                                                      e instanceof TypeError ||
+                                                      e?.plasmicType ===
+                                                        "PlasmicUndefinedDataError"
+                                                    ) {
+                                                      return true;
                                                     }
-                                                  })()}
-                                                  platform={"gatsby"}
-                                                  target={"_blank"}
-                                                >
-                                                  {
-                                                    "Open original statute in new tab"
+                                                    throw e;
                                                   }
-                                                </PlasmicLink__>
+                                                })() ? (
+                                                  <PlasmicLink__
+                                                    className={classNames(
+                                                      projectcss.all,
+                                                      projectcss.a,
+                                                      projectcss.__wab_text,
+                                                      sty.link__mjwOn
+                                                    )}
+                                                    component={Link}
+                                                    href={(() => {
+                                                      try {
+                                                        return currentItem.servicing_law_link;
+                                                      } catch (e) {
+                                                        if (
+                                                          e instanceof
+                                                            TypeError ||
+                                                          e?.plasmicType ===
+                                                            "PlasmicUndefinedDataError"
+                                                        ) {
+                                                          return "https://www.plasmic.app/";
+                                                        }
+                                                        throw e;
+                                                      }
+                                                    })()}
+                                                    platform={"gatsby"}
+                                                    target={"_blank"}
+                                                  >
+                                                    {
+                                                      "Open original statute in new tab"
+                                                    }
+                                                  </PlasmicLink__>
+                                                ) : null}
                                               </div>
                                             ),
                                             side: "right",
@@ -5944,36 +6028,57 @@ function PlasmicHomepage__RenderFunc(props: {
                                                     })()}
                                                   </React.Fragment>
                                                 </div>
-                                                <PlasmicLink__
-                                                  className={classNames(
-                                                    projectcss.all,
-                                                    projectcss.a,
-                                                    projectcss.__wab_text,
-                                                    sty.link__zxJrJ
-                                                  )}
-                                                  component={Link}
-                                                  href={(() => {
-                                                    try {
-                                                      return currentItem.servicing_law_link;
-                                                    } catch (e) {
-                                                      if (
-                                                        e instanceof
-                                                          TypeError ||
-                                                        e?.plasmicType ===
-                                                          "PlasmicUndefinedDataError"
-                                                      ) {
-                                                        return "https://www.plasmic.app/";
-                                                      }
-                                                      throw e;
+                                                {(() => {
+                                                  try {
+                                                    return (
+                                                      currentItem.servicing_law_link !=
+                                                        null &&
+                                                      currentItem
+                                                        .servicing_law_link
+                                                        .length != 0
+                                                    );
+                                                  } catch (e) {
+                                                    if (
+                                                      e instanceof TypeError ||
+                                                      e?.plasmicType ===
+                                                        "PlasmicUndefinedDataError"
+                                                    ) {
+                                                      return true;
                                                     }
-                                                  })()}
-                                                  platform={"gatsby"}
-                                                  target={"_blank"}
-                                                >
-                                                  {
-                                                    "Open original statute in new tab"
+                                                    throw e;
                                                   }
-                                                </PlasmicLink__>
+                                                })() ? (
+                                                  <PlasmicLink__
+                                                    className={classNames(
+                                                      projectcss.all,
+                                                      projectcss.a,
+                                                      projectcss.__wab_text,
+                                                      sty.link__zxJrJ
+                                                    )}
+                                                    component={Link}
+                                                    href={(() => {
+                                                      try {
+                                                        return currentItem.servicing_law_link;
+                                                      } catch (e) {
+                                                        if (
+                                                          e instanceof
+                                                            TypeError ||
+                                                          e?.plasmicType ===
+                                                            "PlasmicUndefinedDataError"
+                                                        ) {
+                                                          return "https://www.plasmic.app/";
+                                                        }
+                                                        throw e;
+                                                      }
+                                                    })()}
+                                                    platform={"gatsby"}
+                                                    target={"_blank"}
+                                                  >
+                                                    {
+                                                      "Open original statute in new tab"
+                                                    }
+                                                  </PlasmicLink__>
+                                                ) : null}
                                               </div>
                                             ),
                                             side: "right",
@@ -6288,36 +6393,57 @@ function PlasmicHomepage__RenderFunc(props: {
                                                     })()}
                                                   </React.Fragment>
                                                 </div>
-                                                <PlasmicLink__
-                                                  className={classNames(
-                                                    projectcss.all,
-                                                    projectcss.a,
-                                                    projectcss.__wab_text,
-                                                    sty.link__yii9A
-                                                  )}
-                                                  component={Link}
-                                                  href={(() => {
-                                                    try {
-                                                      return currentItem.reg_law_link;
-                                                    } catch (e) {
-                                                      if (
-                                                        e instanceof
-                                                          TypeError ||
-                                                        e?.plasmicType ===
-                                                          "PlasmicUndefinedDataError"
-                                                      ) {
-                                                        return "https://www.plasmic.app/";
-                                                      }
-                                                      throw e;
+                                                {(() => {
+                                                  try {
+                                                    return (
+                                                      currentItem.reg_law_link !=
+                                                        null &&
+                                                      currentItem.currentItem
+                                                        .reg_law_link.length !=
+                                                        0
+                                                    );
+                                                  } catch (e) {
+                                                    if (
+                                                      e instanceof TypeError ||
+                                                      e?.plasmicType ===
+                                                        "PlasmicUndefinedDataError"
+                                                    ) {
+                                                      return true;
                                                     }
-                                                  })()}
-                                                  platform={"gatsby"}
-                                                  target={"_blank"}
-                                                >
-                                                  {
-                                                    "Open original statute in new tab"
+                                                    throw e;
                                                   }
-                                                </PlasmicLink__>
+                                                })() ? (
+                                                  <PlasmicLink__
+                                                    className={classNames(
+                                                      projectcss.all,
+                                                      projectcss.a,
+                                                      projectcss.__wab_text,
+                                                      sty.link__yii9A
+                                                    )}
+                                                    component={Link}
+                                                    href={(() => {
+                                                      try {
+                                                        return currentItem.reg_law_link;
+                                                      } catch (e) {
+                                                        if (
+                                                          e instanceof
+                                                            TypeError ||
+                                                          e?.plasmicType ===
+                                                            "PlasmicUndefinedDataError"
+                                                        ) {
+                                                          return "https://www.plasmic.app/";
+                                                        }
+                                                        throw e;
+                                                      }
+                                                    })()}
+                                                    platform={"gatsby"}
+                                                    target={"_blank"}
+                                                  >
+                                                    {
+                                                      "Open original statute in new tab"
+                                                    }
+                                                  </PlasmicLink__>
+                                                ) : null}
                                               </div>
                                             ),
                                             side: "right",
@@ -7674,36 +7800,54 @@ function PlasmicHomepage__RenderFunc(props: {
                                                     })()}
                                                   </React.Fragment>
                                                 </div>
-                                                <PlasmicLink__
-                                                  className={classNames(
-                                                    projectcss.all,
-                                                    projectcss.a,
-                                                    projectcss.__wab_text,
-                                                    sty.link__gt8Hc
-                                                  )}
-                                                  component={Link}
-                                                  href={(() => {
-                                                    try {
-                                                      return currentItem.reg_law_link;
-                                                    } catch (e) {
-                                                      if (
-                                                        e instanceof
-                                                          TypeError ||
-                                                        e?.plasmicType ===
-                                                          "PlasmicUndefinedDataError"
-                                                      ) {
-                                                        return "https://www.plasmic.app/";
-                                                      }
-                                                      throw e;
+                                                {(() => {
+                                                  try {
+                                                    return (
+                                                      currentItem.reg_law_link
+                                                        .length > 0
+                                                    );
+                                                  } catch (e) {
+                                                    if (
+                                                      e instanceof TypeError ||
+                                                      e?.plasmicType ===
+                                                        "PlasmicUndefinedDataError"
+                                                    ) {
+                                                      return true;
                                                     }
-                                                  })()}
-                                                  platform={"gatsby"}
-                                                  target={"_blank"}
-                                                >
-                                                  {
-                                                    "Open original statute in new tab"
+                                                    throw e;
                                                   }
-                                                </PlasmicLink__>
+                                                })() ? (
+                                                  <PlasmicLink__
+                                                    className={classNames(
+                                                      projectcss.all,
+                                                      projectcss.a,
+                                                      projectcss.__wab_text,
+                                                      sty.link__gt8Hc
+                                                    )}
+                                                    component={Link}
+                                                    href={(() => {
+                                                      try {
+                                                        return currentItem.reg_law_link;
+                                                      } catch (e) {
+                                                        if (
+                                                          e instanceof
+                                                            TypeError ||
+                                                          e?.plasmicType ===
+                                                            "PlasmicUndefinedDataError"
+                                                        ) {
+                                                          return "https://www.plasmic.app/";
+                                                        }
+                                                        throw e;
+                                                      }
+                                                    })()}
+                                                    platform={"gatsby"}
+                                                    target={"_blank"}
+                                                  >
+                                                    {
+                                                      "Open original statute in new tab"
+                                                    }
+                                                  </PlasmicLink__>
+                                                ) : null}
                                               </div>
                                             ),
                                             side: "right",
@@ -7934,36 +8078,54 @@ function PlasmicHomepage__RenderFunc(props: {
                                                     })()}
                                                   </React.Fragment>
                                                 </div>
-                                                <PlasmicLink__
-                                                  className={classNames(
-                                                    projectcss.all,
-                                                    projectcss.a,
-                                                    projectcss.__wab_text,
-                                                    sty.link__n4Dq
-                                                  )}
-                                                  component={Link}
-                                                  href={(() => {
-                                                    try {
-                                                      return currentItem.reg_law_link;
-                                                    } catch (e) {
-                                                      if (
-                                                        e instanceof
-                                                          TypeError ||
-                                                        e?.plasmicType ===
-                                                          "PlasmicUndefinedDataError"
-                                                      ) {
-                                                        return "https://www.plasmic.app/";
-                                                      }
-                                                      throw e;
+                                                {(() => {
+                                                  try {
+                                                    return (
+                                                      currentItem.reg_law_link
+                                                        .length > 0
+                                                    );
+                                                  } catch (e) {
+                                                    if (
+                                                      e instanceof TypeError ||
+                                                      e?.plasmicType ===
+                                                        "PlasmicUndefinedDataError"
+                                                    ) {
+                                                      return true;
                                                     }
-                                                  })()}
-                                                  platform={"gatsby"}
-                                                  target={"_blank"}
-                                                >
-                                                  {
-                                                    "Open original statute in new tab"
+                                                    throw e;
                                                   }
-                                                </PlasmicLink__>
+                                                })() ? (
+                                                  <PlasmicLink__
+                                                    className={classNames(
+                                                      projectcss.all,
+                                                      projectcss.a,
+                                                      projectcss.__wab_text,
+                                                      sty.link__n4Dq
+                                                    )}
+                                                    component={Link}
+                                                    href={(() => {
+                                                      try {
+                                                        return currentItem.reg_law_link;
+                                                      } catch (e) {
+                                                        if (
+                                                          e instanceof
+                                                            TypeError ||
+                                                          e?.plasmicType ===
+                                                            "PlasmicUndefinedDataError"
+                                                        ) {
+                                                          return "https://www.plasmic.app/";
+                                                        }
+                                                        throw e;
+                                                      }
+                                                    })()}
+                                                    platform={"gatsby"}
+                                                    target={"_blank"}
+                                                  >
+                                                    {
+                                                      "Open original statute in new tab"
+                                                    }
+                                                  </PlasmicLink__>
+                                                ) : null}
                                               </div>
                                             ),
                                             side: "right",
@@ -8196,36 +8358,54 @@ function PlasmicHomepage__RenderFunc(props: {
                                                     })()}
                                                   </React.Fragment>
                                                 </div>
-                                                <PlasmicLink__
-                                                  className={classNames(
-                                                    projectcss.all,
-                                                    projectcss.a,
-                                                    projectcss.__wab_text,
-                                                    sty.link__w7On3
-                                                  )}
-                                                  component={Link}
-                                                  href={(() => {
-                                                    try {
-                                                      return currentItem.reg_law_link;
-                                                    } catch (e) {
-                                                      if (
-                                                        e instanceof
-                                                          TypeError ||
-                                                        e?.plasmicType ===
-                                                          "PlasmicUndefinedDataError"
-                                                      ) {
-                                                        return "https://www.plasmic.app/";
-                                                      }
-                                                      throw e;
+                                                {(() => {
+                                                  try {
+                                                    return (
+                                                      currentItem.reg_law_link
+                                                        .length > 0
+                                                    );
+                                                  } catch (e) {
+                                                    if (
+                                                      e instanceof TypeError ||
+                                                      e?.plasmicType ===
+                                                        "PlasmicUndefinedDataError"
+                                                    ) {
+                                                      return true;
                                                     }
-                                                  })()}
-                                                  platform={"gatsby"}
-                                                  target={"_blank"}
-                                                >
-                                                  {
-                                                    "Open original statute in new tab"
+                                                    throw e;
                                                   }
-                                                </PlasmicLink__>
+                                                })() ? (
+                                                  <PlasmicLink__
+                                                    className={classNames(
+                                                      projectcss.all,
+                                                      projectcss.a,
+                                                      projectcss.__wab_text,
+                                                      sty.link__w7On3
+                                                    )}
+                                                    component={Link}
+                                                    href={(() => {
+                                                      try {
+                                                        return currentItem.reg_law_link;
+                                                      } catch (e) {
+                                                        if (
+                                                          e instanceof
+                                                            TypeError ||
+                                                          e?.plasmicType ===
+                                                            "PlasmicUndefinedDataError"
+                                                        ) {
+                                                          return "https://www.plasmic.app/";
+                                                        }
+                                                        throw e;
+                                                      }
+                                                    })()}
+                                                    platform={"gatsby"}
+                                                    target={"_blank"}
+                                                  >
+                                                    {
+                                                      "Open original statute in new tab"
+                                                    }
+                                                  </PlasmicLink__>
+                                                ) : null}
                                               </div>
                                             ),
                                             side: "right",

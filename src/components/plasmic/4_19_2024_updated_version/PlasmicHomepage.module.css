@@ -701,7 +701,7 @@
   width: 100%;
   height: auto;
   max-width: 100%;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
   min-width: 0;
 }
@@ -716,6 +716,8 @@
 }
 .text__iJ4HA {
   white-space: pre-wrap;
+  text-align: center;
+  font-size: 12px;
 }
 .svg__epu5G {
   position: relative;
@@ -817,7 +819,7 @@
   width: 100%;
   height: auto;
   max-width: 100%;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
   min-width: 0;
 }
@@ -832,6 +834,8 @@
 }
 .text__yhRgz {
   white-space: pre-wrap;
+  font-size: 12px;
+  text-align: center;
 }
 .svg__mBacy {
   position: relative;
@@ -933,7 +937,7 @@
   width: 100%;
   height: auto;
   max-width: 100%;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
   min-width: 0;
 }
@@ -948,6 +952,8 @@
 }
 .text__wpZCv {
   white-space: pre-wrap;
+  font-size: 12px;
+  text-align: center;
 }
 .svg__ic5Tf {
   position: relative;
@@ -1049,7 +1055,7 @@
   width: 100%;
   height: auto;
   max-width: 100%;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
   min-width: 0;
 }
@@ -1064,6 +1070,8 @@
 }
 .text__qRiJf {
   white-space: pre-wrap;
+  font-size: 12px;
+  text-align: center;
 }
 .svg__emkeT {
   position: relative;
@@ -1136,11 +1144,12 @@
 }
 .text__i7BaS {
   position: relative;
-  width: 100%;
+  width: auto;
   height: auto;
   max-width: 100%;
   font-size: 14px;
-  min-width: 0;
+  text-align: left;
+  align-self: flex-start;
 }
 .text__zloyH {
   position: relative;
@@ -1157,7 +1166,7 @@
   width: 100%;
   height: auto;
   max-width: 100%;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
   min-width: 0;
 }
@@ -1172,6 +1181,8 @@
 }
 .text__uqAgv {
   white-space: pre-wrap;
+  font-size: 12px;
+  text-align: center;
 }
 .svg__m7VWb {
   position: relative;
@@ -1278,7 +1289,7 @@
   width: 100%;
   height: auto;
   max-width: 100%;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
   min-width: 0;
 }
@@ -1293,6 +1304,8 @@
 }
 .text__vv8Qt {
   white-space: pre-wrap;
+  font-size: 12px;
+  text-align: center;
 }
 .svg__ijl1F {
   position: relative;
@@ -1896,9 +1909,13 @@
   align-items: stretch;
   box-shadow: 0px 4px 16px 0px #00000033;
   background: white;
+  overflow: auto;
   border-radius: 8px;
   padding: 16px;
   border: 1px solid #e2e8f0;
+}
+.text___4QbMo {
+  white-space: pre-wrap;
 }
 .link___0Ema1 {
   position: relative;
@@ -3421,6 +3438,7 @@
   align-items: stretch;
   box-shadow: 0px 4px 16px 0px #00000033;
   background: white;
+  overflow: auto;
   border-radius: 8px;
   padding: 16px;
   border: 1px solid #e2e8f0;
