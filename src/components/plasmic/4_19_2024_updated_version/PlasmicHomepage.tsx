@@ -594,41 +594,41 @@ function PlasmicHomepage__RenderFunc(props: {
             sty.root
           )}
         >
+          <PlasmicLink__
+            className={classNames(
+              projectcss.all,
+              projectcss.a,
+              sty.link__h6Zfr
+            )}
+            component={Link}
+            href={"https://www.joshualawfirm.com"}
+            platform={"gatsby"}
+            target={"_blank"}
+            title={"Opens in new tab"}
+          >
+            <PlasmicImg__
+              data-plasmic-name={"img"}
+              data-plasmic-override={overrides.img}
+              alt={""}
+              className={classNames(sty.img)}
+              displayHeight={"auto"}
+              displayMaxHeight={"none"}
+              displayMaxWidth={"100%"}
+              displayMinHeight={"0"}
+              displayMinWidth={"0"}
+              displayWidth={"auto"}
+              loading={"lazy"}
+              src={{
+                src: logoNoBackgroundpngElNx5PqSplvy,
+                fullWidth: 1000,
+                fullHeight: 169,
+                aspectRatio: undefined
+              }}
+            />
+          </PlasmicLink__>
           <section className={classNames(projectcss.all, sty.section__xwUM)}>
             <div className={classNames(projectcss.all, sty.freeBox__gbAtw)}>
               <div className={classNames(projectcss.all, sty.freeBox__yujli)}>
-                <PlasmicLink__
-                  className={classNames(
-                    projectcss.all,
-                    projectcss.a,
-                    sty.link__h6Zfr
-                  )}
-                  component={Link}
-                  href={"https://www.joshualawfirm.com"}
-                  platform={"gatsby"}
-                  target={"_blank"}
-                  title={"Opens in new tab"}
-                >
-                  <PlasmicImg__
-                    data-plasmic-name={"img"}
-                    data-plasmic-override={overrides.img}
-                    alt={""}
-                    className={classNames(sty.img)}
-                    displayHeight={"auto"}
-                    displayMaxHeight={"none"}
-                    displayMaxWidth={"100%"}
-                    displayMinHeight={"0"}
-                    displayMinWidth={"0"}
-                    displayWidth={"auto"}
-                    loading={"lazy"}
-                    src={{
-                      src: logoNoBackgroundpngElNx5PqSplvy,
-                      fullWidth: 1000,
-                      fullHeight: 169,
-                      aspectRatio: undefined
-                    }}
-                  />
-                </PlasmicLink__>
                 {(() => {
                   try {
                     return !$state.viewFiltersVariable;
@@ -8581,9 +8581,7 @@ function PlasmicHomepage__RenderFunc(props: {
                                 sty.text__bJhNx
                               )}
                             >
-                              {
-                                "No required licenses (check applicable filters)"
-                              }
+                              {"No required licenses"}
                             </div>
                           ) : null}
                         </AntdAccordionItem>
