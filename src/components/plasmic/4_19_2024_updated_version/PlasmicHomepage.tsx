@@ -96,6 +96,7 @@ import Icon38Icon from "./icons/PlasmicIcon__Icon38"; // plasmic-import: qv3guZj
 import SortAmountDownSvgrepoComsvgIcon from "./icons/PlasmicIcon__SortAmountDownSvgrepoComsvg"; // plasmic-import: ctFqc-G7qri0/icon
 import SortAmountUpSvgrepoComsvgIcon from "./icons/PlasmicIcon__SortAmountUpSvgrepoComsvg"; // plasmic-import: _Bi3V3rHe1xF/icon
 import ChecksvgIcon2 from "../radix_ui/icons/PlasmicIcon__Checksvg"; // plasmic-import: Wyt3GMMsLefj/icon
+import UntitledsvgIcon from "../current_version_4_21_2024/icons/PlasmicIcon__Untitledsvg"; // plasmic-import: nPyv0KyG-xTZ/icon
 import logoNoBackgroundpngElNx5PqSplvy from "./images/logoNoBackgroundpng.png"; // plasmic-import: elNx5pqSPLVY/picture
 import logoColorpngInp2TwpOa8Fv from "../current_version_4_21_2024/images/logoColorpng.png"; // plasmic-import: INP2TWPOa8FV/picture
 
@@ -165,6 +166,7 @@ export type PlasmicHomepage__OverridesType = {
   notDefServ2?: Flex__<"div">;
   popoverCore13?: Flex__<typeof Popover>;
   footer?: Flex__<typeof Footer>;
+  faviconsvg?: Flex__<"svg">;
 };
 
 export interface DefaultHomepageProps {
@@ -8690,6 +8692,13 @@ function PlasmicHomepage__RenderFunc(props: {
                     data-plasmic-override={overrides.footer}
                     className={classNames("__wab_instance", sty.footer)}
                   />
+
+                  <UntitledsvgIcon
+                    data-plasmic-name={"faviconsvg"}
+                    data-plasmic-override={overrides.faviconsvg}
+                    className={classNames(projectcss.all, sty.faviconsvg)}
+                    role={"img"}
+                  />
                 </section>
               </section>
             </div>
@@ -8755,7 +8764,8 @@ const PlasmicDescendants = {
     "popoverCore12",
     "notDefServ2",
     "popoverCore13",
-    "footer"
+    "footer",
+    "faviconsvg"
   ],
   img: ["img"],
   popover: ["popover"],
@@ -8867,7 +8877,8 @@ const PlasmicDescendants = {
     "popoverCore12",
     "notDefServ2",
     "popoverCore13",
-    "footer"
+    "footer",
+    "faviconsvg"
   ],
   stateDetailsAccordion: [
     "stateDetailsAccordion",
@@ -8998,7 +9009,8 @@ const PlasmicDescendants = {
   popoverCore12: ["popoverCore12"],
   notDefServ2: ["notDefServ2", "popoverCore13"],
   popoverCore13: ["popoverCore13"],
-  footer: ["footer"]
+  footer: ["footer"],
+  faviconsvg: ["faviconsvg"]
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
 type DescendantsType<T extends NodeNameType> =
@@ -9058,6 +9070,7 @@ type NodeDefaultElementType = {
   notDefServ2: "div";
   popoverCore13: typeof Popover;
   footer: typeof Footer;
+  faviconsvg: "svg";
 };
 
 type ReservedPropsType = "variants" | "args" | "overrides";
@@ -9193,6 +9206,7 @@ export const PlasmicHomepage = Object.assign(
     notDefServ2: makeNodeComponent("notDefServ2"),
     popoverCore13: makeNodeComponent("popoverCore13"),
     footer: makeNodeComponent("footer"),
+    faviconsvg: makeNodeComponent("faviconsvg"),
 
     // Metadata about props expected for PlasmicHomepage
     internalVariantProps: PlasmicHomepage__VariantProps,

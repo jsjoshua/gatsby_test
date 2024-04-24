@@ -1750,6 +1750,16 @@
           "id": "_Bi3V3rHe1xF",
           "name": "SortAmountUpSvgrepoComsvgIcon",
           "moduleFilePath": "plasmic/4_19_2024_updated_version/icons/PlasmicIcon__SortAmountUpSvgrepoComsvg.tsx"
+        },
+        {
+          "id": "QOEE7hGfjMKH",
+          "name": "LogoNoBackgroundsvgIcon",
+          "moduleFilePath": "plasmic/current_version_4_21_2024/icons/PlasmicIcon__LogoNoBackgroundsvg.tsx"
+        },
+        {
+          "id": "nPyv0KyG-xTZ",
+          "name": "UntitledsvgIcon",
+          "moduleFilePath": "plasmic/current_version_4_21_2024/icons/PlasmicIcon__Untitledsvg.tsx"
         }
       ],
       "images": [
