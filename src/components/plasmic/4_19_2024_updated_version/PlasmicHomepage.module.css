@@ -371,7 +371,7 @@
 }
 .freeBox__yw5EC > :global(.__wab_flex-container) {
   flex-direction: row;
-  align-items: center;
+  align-items: flex-start;
   justify-content: flex-start;
   min-width: 0;
   margin-left: calc(0px - 5px);
@@ -1897,13 +1897,13 @@
   text-align: center;
   min-width: 0;
 }
-.svg___6Cf8Q {
+.svg__yOcam {
   position: relative;
   object-fit: cover;
   width: auto;
   height: 1em;
 }
-.svg__rMckv {
+.svg__uG1Kw {
   position: relative;
   object-fit: cover;
   width: auto;
@@ -2038,13 +2038,13 @@
   text-align: center;
   min-width: 0;
 }
-.svg__aFr0C {
+.svg__dS6Rl {
   position: relative;
   object-fit: cover;
   width: auto;
   height: 1em;
 }
-.svg__jx0Ez {
+.svg__dBjR {
   position: relative;
   object-fit: cover;
   width: auto;
@@ -2175,13 +2175,13 @@
   text-align: center;
   min-width: 0;
 }
-.svg___1R1Bv {
+.svg___1Z35K {
   position: relative;
   object-fit: cover;
   width: auto;
   height: 1em;
 }
-.svg__uR7J {
+.svg__eyTuv {
   position: relative;
   object-fit: cover;
   width: auto;
@@ -2312,13 +2312,13 @@
   text-align: center;
   min-width: 0;
 }
-.svg__wApzg {
+.svg__gYuBm {
   position: relative;
   object-fit: cover;
   width: auto;
   height: 1em;
 }
-.svg__wFw7U {
+.svg__cJfr {
   position: relative;
   object-fit: cover;
   width: auto;
@@ -2451,13 +2451,13 @@
   text-align: center;
   min-width: 0;
 }
-.svg__qybov {
+.svg__zL69F {
   position: relative;
   object-fit: cover;
   width: auto;
   height: 1em;
 }
-.svg__ijtZq {
+.svg__hWgBv {
   position: relative;
   object-fit: cover;
   width: auto;
@@ -2597,13 +2597,13 @@
   text-align: center;
   min-width: 0;
 }
-.svg___0ACaj {
+.svg___9JxfY {
   position: relative;
   object-fit: cover;
   width: auto;
   height: 1em;
 }
-.svg__eaDlM {
+.svg__qygRb {
   position: relative;
   object-fit: cover;
   width: auto;
@@ -2734,13 +2734,13 @@
   text-align: center;
   min-width: 0;
 }
-.svg__fbAnu {
+.svg___1QAv5 {
   position: relative;
   object-fit: cover;
   width: auto;
   height: 1em;
 }
-.svg__i2HFy {
+.svg__fKiFu {
   position: relative;
   object-fit: cover;
   width: auto;
@@ -2871,13 +2871,13 @@
   text-align: center;
   min-width: 0;
 }
-.svg__ioAv1 {
+.svg__mTjJz {
   position: relative;
   object-fit: cover;
   width: auto;
   height: 1em;
 }
-.svg__quUep {
+.svg___455RW {
   position: relative;
   object-fit: cover;
   width: auto;
@@ -3008,13 +3008,13 @@
   text-align: center;
   min-width: 0;
 }
-.svg__w265A {
+.svg__s9Its {
   position: relative;
   object-fit: cover;
   width: auto;
   height: 1em;
 }
-.svg__tcpce {
+.svg__aqCuy {
   position: relative;
   object-fit: cover;
   width: auto;
@@ -3145,13 +3145,13 @@
   text-align: center;
   min-width: 0;
 }
-.svg__cd762 {
+.svg__cJ5Gz {
   position: relative;
   object-fit: cover;
   width: auto;
   height: 1em;
 }
-.svg___6OerD {
+.svg__s9ZwF {
   position: relative;
   object-fit: cover;
   width: auto;
@@ -3289,13 +3289,13 @@
   text-align: center;
   min-width: 0;
 }
-.svg__lhbu3 {
+.svg__srMIb {
   position: relative;
   object-fit: cover;
   width: auto;
   height: 1em;
 }
-.svg__t3PyD {
+.svg__yk8F7 {
   position: relative;
   object-fit: cover;
   width: auto;
@@ -3426,13 +3426,13 @@
   text-align: center;
   min-width: 0;
 }
-.svg___4LzAi {
+.svg___3USqW {
   position: relative;
   object-fit: cover;
   width: auto;
   height: 1em;
 }
-.svg__rj8SF {
+.svg__ml7TQ {
   position: relative;
   object-fit: cover;
   width: auto;
@@ -3564,13 +3564,13 @@
   text-align: center;
   min-width: 0;
 }
-.svg__ydFuj {
+.svg___8Tiz {
   position: relative;
   object-fit: cover;
   width: auto;
   height: 1em;
 }
-.svg__ulA79 {
+.svg__yoU {
   position: relative;
   object-fit: cover;
   width: auto;
