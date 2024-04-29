@@ -2,7 +2,7 @@ import * as React from "react";
 import {
   PlasmicCheckbox,
   DefaultCheckboxProps
-} from "./plasmic/4_19_2024_updated_version/PlasmicCheckbox";
+} from "./plasmic/improved_mobile_version_current_version_4_21_2024/PlasmicCheckbox";
 
 import { CheckboxRef } from "@plasmicapp/react-web";
 
