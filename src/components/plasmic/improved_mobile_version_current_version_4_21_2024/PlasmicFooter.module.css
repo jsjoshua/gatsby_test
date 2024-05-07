@@ -34,7 +34,7 @@
   flex-shrink: 1;
   max-width: 100%;
   flex-direction: row;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   border-top-style: solid;
   border-top-width: 1px;
   min-width: 0;
