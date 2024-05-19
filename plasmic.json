@@ -109,8 +109,7 @@
           "componentImportPath": "@plasmicpkgs/radix-ui"
         }
       ],
-      "customFunctions": [],
-      "jsBundleThemes": []
+      "customFunctions": []
     },
     {
       "projectId": "7nJ7UcFmq9UzB6eXfC5z4a",
@@ -191,8 +190,7 @@
           "componentImportPath": "@plasmicpkgs/plasmic-basic-components"
         }
       ],
-      "customFunctions": [],
-      "jsBundleThemes": []
+      "customFunctions": []
     },
     {
       "projectId": "jkU633o1Cz7HrJdwdxhVHk",
@@ -647,8 +645,7 @@
           "componentImportPath": "@plasmicpkgs/antd5/skinny/registerBreadcrumb"
         }
       ],
-      "customFunctions": [],
-      "jsBundleThemes": []
+      "customFunctions": []
     },
     {
       "projectId": "bgrEjR4gGnPuYqLGQjeP4y",
@@ -1623,8 +1620,7 @@
           "componentImportPath": "@plasmicpkgs/plasmic-link-preview"
         }
       ],
-      "customFunctions": [],
-      "jsBundleThemes": []
+      "customFunctions": []
     },
     {
       "projectId": "vztPPRJkwvJUdD2Ft9Ycob",
@@ -1819,8 +1815,7 @@
           "componentImportPath": "@plasmicpkgs/plasmic-basic-components"
         }
       ],
-      "customFunctions": [],
-      "jsBundleThemes": []
+      "customFunctions": []
     },
     {
       "projectId": "5dGW8Awro3qq8Hh5MveXLP",
@@ -1848,8 +1843,7 @@
           "componentImportPath": "@plasmicpkgs/lottie-react"
         }
       ],
-      "customFunctions": [],
-      "jsBundleThemes": []
+      "customFunctions": []
     },
     {
       "projectId": "iceCZNERGwb45EFQXuutPV",
@@ -2074,6 +2068,6 @@
   "gatsbyConfig": {
     "pagesDir": "../pages"
   },
-  "cliVersion": "0.1.329",
-  "$schema": "https://unpkg.com/@plasmicapp/cli@0.1.329/dist/plasmic.schema.json"
+  "cliVersion": "0.1.330",
+  "$schema": "https://unpkg.com/@plasmicapp/cli@0.1.330/dist/plasmic.schema.json"
 }

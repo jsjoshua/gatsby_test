@@ -67,6 +67,7 @@ import {
   usePlasmicInvalidate
 } from "@plasmicapp/react-web/lib/data-sources";
 
+import { Embed } from "@plasmicpkgs/plasmic-basic-components";
 import Button2 from "../../Button2"; // plasmic-import: hQy9QSkyPxTG/component
 import { AntdPopover } from "@plasmicpkgs/antd5/skinny/registerPopover";
 import { AntdAccordion } from "@plasmicpkgs/antd5/skinny/registerCollapse";
@@ -74,7 +75,6 @@ import { accordionHelpers as AntdAccordion_Helpers } from "@plasmicpkgs/antd5/sk
 import { AntdAccordionItem } from "@plasmicpkgs/antd5/skinny/registerCollapse";
 import { AntdSelect } from "@plasmicpkgs/antd5/skinny/registerSelect";
 import { AntdOption } from "@plasmicpkgs/antd5/skinny/registerSelect";
-import { Embed } from "@plasmicpkgs/plasmic-basic-components";
 import { AntdSingleCollapse } from "@plasmicpkgs/antd5/skinny/registerCollapse";
 import { singleCollapseHelpers as AntdSingleCollapse_Helpers } from "@plasmicpkgs/antd5/skinny/registerCollapse";
 import { Popover } from "@plasmicpkgs/radix-ui";
@@ -132,7 +132,6 @@ export type PlasmicHomepage__OverridesType = {
   licensureExemptEntitiesAccordion?: Flex__<typeof AntdAccordionItem>;
   servExemptEntitiesFilterSelect?: Flex__<typeof AntdSelect>;
   headerSection?: Flex__<"section">;
-  embedHtml?: Flex__<typeof Embed>;
   dataSection?: Flex__<"section">;
   stateDetailsAccordion?: Flex__<typeof AntdAccordion>;
   accordionItem?: Flex__<typeof AntdAccordionItem>;
@@ -603,6 +602,13 @@ function PlasmicHomepage__RenderFunc(props: {
             sty.root
           )}
         >
+          <Embed
+            className={classNames("__wab_instance", sty.embedHtml__wk5Wb)}
+            code={
+              '<script defer src="https://umami.app.studentloancompliance.com/script.js" data-website-id="55185fdd-d0f1-47ef-8843-d7446eb305ca"></script>'
+            }
+          />
+
           <PlasmicLink__
             className={classNames(
               projectcss.all,
@@ -4370,9 +4376,10 @@ function PlasmicHomepage__RenderFunc(props: {
                     {"Loading . . . "}
                   </div>
                   <Embed
-                    data-plasmic-name={"embedHtml"}
-                    data-plasmic-override={overrides.embedHtml}
-                    className={classNames("__wab_instance", sty.embedHtml)}
+                    className={classNames(
+                      "__wab_instance",
+                      sty.embedHtml__hGzm
+                    )}
                     code={
                       '<svg width="72" height="72" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12,1A11,11,0,1,0,23,12,11,11,0,0,0,12,1Zm0,20a9,9,0,1,1,9-9A9,9,0,0,1,12,21Z"/><rect x="11" y="6" rx="1" width="2" height="7"><animateTransform attributeName="transform" type="rotate" dur="9s" values="0 12 12;360 12 12" repeatCount="indefinite"/></rect><rect x="11" y="11" rx="1" width="2" height="9"><animateTransform attributeName="transform" type="rotate" dur="0.75s" values="0 12 12;360 12 12" repeatCount="indefinite"/></rect></svg>'
                     }
@@ -8736,7 +8743,6 @@ const PlasmicDescendants = {
     "licensureExemptEntitiesAccordion",
     "servExemptEntitiesFilterSelect",
     "headerSection",
-    "embedHtml",
     "dataSection",
     "stateDetailsAccordion",
     "accordionItem",
@@ -8848,7 +8854,6 @@ const PlasmicDescendants = {
   ],
   servExemptEntitiesFilterSelect: ["servExemptEntitiesFilterSelect"],
   headerSection: ["headerSection"],
-  embedHtml: ["embedHtml"],
   dataSection: [
     "dataSection",
     "stateDetailsAccordion",
@@ -9041,7 +9046,6 @@ type NodeDefaultElementType = {
   licensureExemptEntitiesAccordion: typeof AntdAccordionItem;
   servExemptEntitiesFilterSelect: typeof AntdSelect;
   headerSection: "section";
-  embedHtml: typeof Embed;
   dataSection: "section";
   stateDetailsAccordion: typeof AntdAccordion;
   accordionItem: typeof AntdAccordionItem;
@@ -9171,7 +9175,6 @@ export const PlasmicHomepage = Object.assign(
       "servExemptEntitiesFilterSelect"
     ),
     headerSection: makeNodeComponent("headerSection"),
-    embedHtml: makeNodeComponent("embedHtml"),
     dataSection: makeNodeComponent("dataSection"),
     stateDetailsAccordion: makeNodeComponent("stateDetailsAccordion"),
     accordionItem: makeNodeComponent("accordionItem"),
