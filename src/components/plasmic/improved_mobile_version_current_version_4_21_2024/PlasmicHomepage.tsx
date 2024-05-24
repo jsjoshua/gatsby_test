@@ -136,8 +136,9 @@ export type PlasmicHomepage__OverridesType = {
   stateDetailsAccordion?: Flex__<typeof AntdAccordion>;
   accordionItem?: Flex__<typeof AntdAccordionItem>;
   servicingDetailsCollapse?: Flex__<typeof AntdSingleCollapse>;
-  servLicTriggers?: Flex__<"div">;
-  popoverCore4?: Flex__<typeof Popover>;
+  servInEffect?: Flex__<"div">;
+  servLicTriggers2?: Flex__<"div">;
+  popoverCore6?: Flex__<typeof Popover>;
   servDefStudentLoan2?: Flex__<"div">;
   popoverCore2?: Flex__<typeof Popover>;
   servDefStudentLoanExceptions?: Flex__<"div">;
@@ -147,8 +148,9 @@ export type PlasmicHomepage__OverridesType = {
   servLicExemptions?: Flex__<"div">;
   popoverCore5?: Flex__<typeof Popover>;
   creditorRegistrationCollapse?: Flex__<typeof AntdSingleCollapse>;
-  regTriggers?: Flex__<"div">;
-  popoverCore6?: Flex__<typeof Popover>;
+  creditorRegInEffect?: Flex__<"div">;
+  regTriggers2?: Flex__<"div">;
+  popoverCore14?: Flex__<typeof Popover>;
   regDefCreditor?: Flex__<"div">;
   popoverCore7?: Flex__<typeof Popover>;
   regDefStudentLoan?: Flex__<"div">;
@@ -158,8 +160,9 @@ export type PlasmicHomepage__OverridesType = {
   regExemptEntities?: Flex__<"div">;
   popoverCore10?: Flex__<typeof Popover>;
   servicerNotificationCollapse?: Flex__<typeof AntdSingleCollapse>;
-  notTriggers2?: Flex__<"div">;
-  popoverCore11?: Flex__<typeof Popover>;
+  notInEffect?: Flex__<"div">;
+  notTriggers3?: Flex__<"div">;
+  popoverCore15?: Flex__<typeof Popover>;
   notDefServ?: Flex__<"div">;
   popoverCore12?: Flex__<typeof Popover>;
   notDefServ2?: Flex__<"div">;
@@ -333,11 +336,6 @@ function PlasmicHomepage__RenderFunc(props: {
         initFunc: ({ $props, $state, $queries, $ctx }) => undefined
       },
       {
-        path: "popoverCore4[].open",
-        type: "private",
-        variableType: "boolean"
-      },
-      {
         path: "popoverCore5[].open",
         type: "private",
         variableType: "boolean"
@@ -347,11 +345,6 @@ function PlasmicHomepage__RenderFunc(props: {
         type: "private",
         variableType: "text",
         initFunc: ({ $props, $state, $queries, $ctx }) => undefined
-      },
-      {
-        path: "popoverCore6[].open",
-        type: "private",
-        variableType: "boolean"
       },
       {
         path: "popoverCore7[].open",
@@ -370,11 +363,6 @@ function PlasmicHomepage__RenderFunc(props: {
       },
       {
         path: "popoverCore10[].open",
-        type: "private",
-        variableType: "boolean"
-      },
-      {
-        path: "popoverCore11[].open",
         type: "private",
         variableType: "boolean"
       },
@@ -412,6 +400,21 @@ function PlasmicHomepage__RenderFunc(props: {
         type: "private",
         variableType: "boolean",
         initFunc: ({ $props, $state, $queries, $ctx }) => false
+      },
+      {
+        path: "popoverCore14[].open",
+        type: "private",
+        variableType: "boolean"
+      },
+      {
+        path: "popoverCore6[].open",
+        type: "private",
+        variableType: "boolean"
+      },
+      {
+        path: "popoverCore15[].open",
+        type: "private",
+        variableType: "boolean"
       }
     ],
     [$props, $ctx, $refs]
@@ -4582,7 +4585,26 @@ function PlasmicHomepage__RenderFunc(props: {
                                         sty.text__muz6H
                                       )}
                                     >
-                                      {"Yes"}
+                                      <React.Fragment>
+                                        {(() => {
+                                          try {
+                                            return currentItem.serv_license_future_date <
+                                              Date()
+                                              ? "Yes, starting on " +
+                                                  currentItem.serv_license_future_date
+                                              : "Yes";
+                                          } catch (e) {
+                                            if (
+                                              e instanceof TypeError ||
+                                              e?.plasmicType ===
+                                                "PlasmicUndefinedDataError"
+                                            ) {
+                                              return "Yes";
+                                            }
+                                            throw e;
+                                          }
+                                        })()}
+                                      </React.Fragment>
                                     </div>
                                   ) : null}
                                   {(() => {
@@ -4677,7 +4699,26 @@ function PlasmicHomepage__RenderFunc(props: {
                                         sty.text__bdoub
                                       )}
                                     >
-                                      {"Yes"}
+                                      <React.Fragment>
+                                        {(() => {
+                                          try {
+                                            return currentItem.reg_license_future_effective_date <
+                                              Date()
+                                              ? "Yes, starting on " +
+                                                  currentItem.reg_license_future_effective_date
+                                              : "Yes";
+                                          } catch (e) {
+                                            if (
+                                              e instanceof TypeError ||
+                                              e?.plasmicType ===
+                                                "PlasmicUndefinedDataError"
+                                            ) {
+                                              return "Yes";
+                                            }
+                                            throw e;
+                                          }
+                                        })()}
+                                      </React.Fragment>
                                     </div>
                                   ) : null}
                                   {(() => {
@@ -4772,7 +4813,26 @@ function PlasmicHomepage__RenderFunc(props: {
                                         sty.text__aNwY
                                       )}
                                     >
-                                      {"Yes"}
+                                      <React.Fragment>
+                                        {(() => {
+                                          try {
+                                            return currentItem.not_future_effective_date <
+                                              Date()
+                                              ? "Yes, starting on " +
+                                                  currentItem.not_future_effective_date
+                                              : "Yes";
+                                          } catch (e) {
+                                            if (
+                                              e instanceof TypeError ||
+                                              e?.plasmicType ===
+                                                "PlasmicUndefinedDataError"
+                                            ) {
+                                              return "Yes";
+                                            }
+                                            throw e;
+                                          }
+                                        })()}
+                                      </React.Fragment>
                                     </div>
                                   ) : null}
                                   {(() => {
@@ -4893,13 +4953,13 @@ function PlasmicHomepage__RenderFunc(props: {
                                     {...child$Props}
                                   >
                                     <div
-                                      data-plasmic-name={"servLicTriggers"}
+                                      data-plasmic-name={"servInEffect"}
                                       data-plasmic-override={
-                                        overrides.servLicTriggers
+                                        overrides.servInEffect
                                       }
                                       className={classNames(
                                         projectcss.all,
-                                        sty.servLicTriggers
+                                        sty.servInEffect
                                       )}
                                     >
                                       <div
@@ -4915,6 +4975,68 @@ function PlasmicHomepage__RenderFunc(props: {
                                             sty.text__x1MXj
                                           )}
                                         >
+                                          {"Currently In Effect?"}
+                                        </div>
+                                      </div>
+                                      <div
+                                        className={classNames(
+                                          projectcss.all,
+                                          sty.column__ce0W
+                                        )}
+                                      >
+                                        <div
+                                          className={classNames(
+                                            projectcss.all,
+                                            projectcss.__wab_text,
+                                            sty.text__ngI7R
+                                          )}
+                                        >
+                                          <React.Fragment>
+                                            {(() => {
+                                              try {
+                                                return currentItem.serv_license_future_date >
+                                                  Date()
+                                                  ? "No. Goes into effect on " +
+                                                      currentItem.serv_license_future_date
+                                                  : "Yes";
+                                              } catch (e) {
+                                                if (
+                                                  e instanceof TypeError ||
+                                                  e?.plasmicType ===
+                                                    "PlasmicUndefinedDataError"
+                                                ) {
+                                                  return "";
+                                                }
+                                                throw e;
+                                              }
+                                            })()}
+                                          </React.Fragment>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div
+                                      data-plasmic-name={"servLicTriggers2"}
+                                      data-plasmic-override={
+                                        overrides.servLicTriggers2
+                                      }
+                                      className={classNames(
+                                        projectcss.all,
+                                        sty.servLicTriggers2
+                                      )}
+                                    >
+                                      <div
+                                        className={classNames(
+                                          projectcss.all,
+                                          sty.column__ttEv8
+                                        )}
+                                      >
+                                        <div
+                                          className={classNames(
+                                            projectcss.all,
+                                            projectcss.__wab_text,
+                                            sty.text__oQDg
+                                          )}
+                                        >
                                           {
                                             "What triggers the requirement to obtain a student loan servicing license?"
                                           }
@@ -4924,13 +5046,13 @@ function PlasmicHomepage__RenderFunc(props: {
                                             align: "center",
                                             className: classNames(
                                               "__wab_instance",
-                                              sty.popoverCore4
+                                              sty.popoverCore6
                                             ),
                                             onOpenChange:
                                               generateStateOnChangeProp(
                                                 $state,
                                                 [
-                                                  "popoverCore4",
+                                                  "popoverCore6",
                                                   __plasmic_idx_0,
                                                   "open"
                                                 ]
@@ -4938,7 +5060,7 @@ function PlasmicHomepage__RenderFunc(props: {
                                             open: generateStateValueProp(
                                               $state,
                                               [
-                                                "popoverCore4",
+                                                "popoverCore6",
                                                 __plasmic_idx_0,
                                                 "open"
                                               ]
@@ -4947,14 +5069,14 @@ function PlasmicHomepage__RenderFunc(props: {
                                               <div
                                                 className={classNames(
                                                   projectcss.all,
-                                                  sty.freeBox__fdhMj
+                                                  sty.freeBox__bDp6P
                                                 )}
                                               >
                                                 <div
                                                   className={classNames(
                                                     projectcss.all,
                                                     projectcss.__wab_text,
-                                                    sty.text__bOu86
+                                                    sty.text__co24
                                                   )}
                                                 >
                                                   <React.Fragment>
@@ -5000,7 +5122,7 @@ function PlasmicHomepage__RenderFunc(props: {
                                                       projectcss.all,
                                                       projectcss.a,
                                                       projectcss.__wab_text,
-                                                      sty.link___5NrmY
+                                                      sty.link__sd1F
                                                     )}
                                                     component={Link}
                                                     href={(() => {
@@ -5043,7 +5165,7 @@ function PlasmicHomepage__RenderFunc(props: {
                                               {
                                                 name: "open",
                                                 plasmicStateName:
-                                                  "popoverCore4[].open"
+                                                  "popoverCore6[].open"
                                               }
                                             ],
                                             [__plasmic_idx_0],
@@ -5054,7 +5176,7 @@ function PlasmicHomepage__RenderFunc(props: {
                                             $state,
                                             [
                                               {
-                                                name: "popoverCore4[].open",
+                                                name: "popoverCore6[].open",
                                                 initFunc: ({
                                                   $props,
                                                   $state,
@@ -5066,16 +5188,16 @@ function PlasmicHomepage__RenderFunc(props: {
                                           );
                                           return (
                                             <Popover
-                                              data-plasmic-name={"popoverCore4"}
+                                              data-plasmic-name={"popoverCore6"}
                                               data-plasmic-override={
-                                                overrides.popoverCore4
+                                                overrides.popoverCore6
                                               }
                                               {...child$Props}
                                             >
                                               <Button
                                                 className={classNames(
                                                   "__wab_instance",
-                                                  sty.button__gbIcv
+                                                  sty.button__mHFb
                                                 )}
                                                 color={"softSand"}
                                                 size={"compact"}
@@ -5084,7 +5206,7 @@ function PlasmicHomepage__RenderFunc(props: {
                                                   className={classNames(
                                                     projectcss.all,
                                                     projectcss.__wab_text,
-                                                    sty.text__jxLe9
+                                                    sty.text__dvO8Q
                                                   )}
                                                 >
                                                   {"View Statute"}
@@ -5097,7 +5219,7 @@ function PlasmicHomepage__RenderFunc(props: {
                                       <div
                                         className={classNames(
                                           projectcss.all,
-                                          sty.column__ce0W
+                                          sty.column___4A2SL
                                         )}
                                       >
                                         {(_par =>
@@ -5134,7 +5256,7 @@ function PlasmicHomepage__RenderFunc(props: {
                                               <div
                                                 className={classNames(
                                                   projectcss.all,
-                                                  sty.freeBox__cpUw6
+                                                  sty.freeBox___3QJRn
                                                 )}
                                                 key={currentIndex}
                                               >
@@ -5142,7 +5264,7 @@ function PlasmicHomepage__RenderFunc(props: {
                                                   className={classNames(
                                                     projectcss.all,
                                                     projectcss.__wab_text,
-                                                    sty.text__ytuem
+                                                    sty.text__wFfIh
                                                   )}
                                                 >
                                                   <React.Fragment>
@@ -6388,13 +6510,13 @@ function PlasmicHomepage__RenderFunc(props: {
                                     {...child$Props}
                                   >
                                     <div
-                                      data-plasmic-name={"regTriggers"}
+                                      data-plasmic-name={"creditorRegInEffect"}
                                       data-plasmic-override={
-                                        overrides.regTriggers
+                                        overrides.creditorRegInEffect
                                       }
                                       className={classNames(
                                         projectcss.all,
-                                        sty.regTriggers
+                                        sty.creditorRegInEffect
                                       )}
                                     >
                                       <div
@@ -6410,6 +6532,68 @@ function PlasmicHomepage__RenderFunc(props: {
                                             sty.text__xCIuT
                                           )}
                                         >
+                                          {"Currently In effect?"}
+                                        </div>
+                                      </div>
+                                      <div
+                                        className={classNames(
+                                          projectcss.all,
+                                          sty.column__lCvYz
+                                        )}
+                                      >
+                                        <div
+                                          className={classNames(
+                                            projectcss.all,
+                                            projectcss.__wab_text,
+                                            sty.text__vs0EJ
+                                          )}
+                                        >
+                                          <React.Fragment>
+                                            {(() => {
+                                              try {
+                                                return currentItem.reg_license_future_effective_date <
+                                                  Date()
+                                                  ? "No. Goes into effect on " +
+                                                      currentItem.reg_license_future_effective_date
+                                                  : "Yes";
+                                              } catch (e) {
+                                                if (
+                                                  e instanceof TypeError ||
+                                                  e?.plasmicType ===
+                                                    "PlasmicUndefinedDataError"
+                                                ) {
+                                                  return "";
+                                                }
+                                                throw e;
+                                              }
+                                            })()}
+                                          </React.Fragment>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div
+                                      data-plasmic-name={"regTriggers2"}
+                                      data-plasmic-override={
+                                        overrides.regTriggers2
+                                      }
+                                      className={classNames(
+                                        projectcss.all,
+                                        sty.regTriggers2
+                                      )}
+                                    >
+                                      <div
+                                        className={classNames(
+                                          projectcss.all,
+                                          sty.column___0Tul9
+                                        )}
+                                      >
+                                        <div
+                                          className={classNames(
+                                            projectcss.all,
+                                            projectcss.__wab_text,
+                                            sty.text__mr5Yh
+                                          )}
+                                        >
                                           {
                                             "What triggers the obligation to register as a private student loan creditor?"
                                           }
@@ -6419,13 +6603,13 @@ function PlasmicHomepage__RenderFunc(props: {
                                             align: "center",
                                             className: classNames(
                                               "__wab_instance",
-                                              sty.popoverCore6
+                                              sty.popoverCore14
                                             ),
                                             onOpenChange:
                                               generateStateOnChangeProp(
                                                 $state,
                                                 [
-                                                  "popoverCore6",
+                                                  "popoverCore14",
                                                   __plasmic_idx_0,
                                                   "open"
                                                 ]
@@ -6433,7 +6617,7 @@ function PlasmicHomepage__RenderFunc(props: {
                                             open: generateStateValueProp(
                                               $state,
                                               [
-                                                "popoverCore6",
+                                                "popoverCore14",
                                                 __plasmic_idx_0,
                                                 "open"
                                               ]
@@ -6442,14 +6626,14 @@ function PlasmicHomepage__RenderFunc(props: {
                                               <div
                                                 className={classNames(
                                                   projectcss.all,
-                                                  sty.freeBox__ftRcb
+                                                  sty.freeBox__kBv6V
                                                 )}
                                               >
                                                 <div
                                                   className={classNames(
                                                     projectcss.all,
                                                     projectcss.__wab_text,
-                                                    sty.text__e60Gm
+                                                    sty.text__g68Ar
                                                   )}
                                                 >
                                                   <React.Fragment>
@@ -6495,7 +6679,7 @@ function PlasmicHomepage__RenderFunc(props: {
                                                       projectcss.all,
                                                       projectcss.a,
                                                       projectcss.__wab_text,
-                                                      sty.link___1K9Qd
+                                                      sty.link__yRBd8
                                                     )}
                                                     component={Link}
                                                     href={(() => {
@@ -6538,7 +6722,7 @@ function PlasmicHomepage__RenderFunc(props: {
                                               {
                                                 name: "open",
                                                 plasmicStateName:
-                                                  "popoverCore6[].open"
+                                                  "popoverCore14[].open"
                                               }
                                             ],
                                             [__plasmic_idx_0],
@@ -6549,7 +6733,7 @@ function PlasmicHomepage__RenderFunc(props: {
                                             $state,
                                             [
                                               {
-                                                name: "popoverCore6[].open",
+                                                name: "popoverCore14[].open",
                                                 initFunc: ({
                                                   $props,
                                                   $state,
@@ -6561,16 +6745,18 @@ function PlasmicHomepage__RenderFunc(props: {
                                           );
                                           return (
                                             <Popover
-                                              data-plasmic-name={"popoverCore6"}
+                                              data-plasmic-name={
+                                                "popoverCore14"
+                                              }
                                               data-plasmic-override={
-                                                overrides.popoverCore6
+                                                overrides.popoverCore14
                                               }
                                               {...child$Props}
                                             >
                                               <Button
                                                 className={classNames(
                                                   "__wab_instance",
-                                                  sty.button__k2Dsb
+                                                  sty.button__vznmN
                                                 )}
                                                 color={"softSand"}
                                                 size={"compact"}
@@ -6579,7 +6765,7 @@ function PlasmicHomepage__RenderFunc(props: {
                                                   className={classNames(
                                                     projectcss.all,
                                                     projectcss.__wab_text,
-                                                    sty.text__gapQu
+                                                    sty.text__rBCe4
                                                   )}
                                                 >
                                                   {"View Statute"}
@@ -6592,7 +6778,7 @@ function PlasmicHomepage__RenderFunc(props: {
                                       <div
                                         className={classNames(
                                           projectcss.all,
-                                          sty.column__lCvYz
+                                          sty.column__dzLoK
                                         )}
                                       >
                                         {(_par =>
@@ -6628,7 +6814,7 @@ function PlasmicHomepage__RenderFunc(props: {
                                               <div
                                                 className={classNames(
                                                   projectcss.all,
-                                                  sty.freeBox___6Fxto
+                                                  sty.freeBox__ckNxv
                                                 )}
                                                 key={currentIndex}
                                               >
@@ -6636,7 +6822,7 @@ function PlasmicHomepage__RenderFunc(props: {
                                                   className={classNames(
                                                     projectcss.all,
                                                     projectcss.__wab_text,
-                                                    sty.text__nEzaa
+                                                    sty.text__lebXd
                                                   )}
                                                 >
                                                   <React.Fragment>
@@ -7798,13 +7984,13 @@ function PlasmicHomepage__RenderFunc(props: {
                                     {...child$Props}
                                   >
                                     <div
-                                      data-plasmic-name={"notTriggers2"}
+                                      data-plasmic-name={"notInEffect"}
                                       data-plasmic-override={
-                                        overrides.notTriggers2
+                                        overrides.notInEffect
                                       }
                                       className={classNames(
                                         projectcss.all,
-                                        sty.notTriggers2
+                                        sty.notInEffect
                                       )}
                                     >
                                       <div
@@ -7820,6 +8006,68 @@ function PlasmicHomepage__RenderFunc(props: {
                                             sty.text___6V90Q
                                           )}
                                         >
+                                          {"Currently in Effect?"}
+                                        </div>
+                                      </div>
+                                      <div
+                                        className={classNames(
+                                          projectcss.all,
+                                          sty.column__ybe5B
+                                        )}
+                                      >
+                                        <div
+                                          className={classNames(
+                                            projectcss.all,
+                                            projectcss.__wab_text,
+                                            sty.text__jxHpT
+                                          )}
+                                        >
+                                          <React.Fragment>
+                                            {(() => {
+                                              try {
+                                                return currentItem.not_future_effective_date >
+                                                  Date()
+                                                  ? "No. Goes into effect on " +
+                                                      currentItem.not_future_effective_date
+                                                  : "Yes";
+                                              } catch (e) {
+                                                if (
+                                                  e instanceof TypeError ||
+                                                  e?.plasmicType ===
+                                                    "PlasmicUndefinedDataError"
+                                                ) {
+                                                  return "";
+                                                }
+                                                throw e;
+                                              }
+                                            })()}
+                                          </React.Fragment>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div
+                                      data-plasmic-name={"notTriggers3"}
+                                      data-plasmic-override={
+                                        overrides.notTriggers3
+                                      }
+                                      className={classNames(
+                                        projectcss.all,
+                                        sty.notTriggers3
+                                      )}
+                                    >
+                                      <div
+                                        className={classNames(
+                                          projectcss.all,
+                                          sty.column__z3Ey7
+                                        )}
+                                      >
+                                        <div
+                                          className={classNames(
+                                            projectcss.all,
+                                            projectcss.__wab_text,
+                                            sty.text__qbWji
+                                          )}
+                                        >
                                           {
                                             "What triggers the requirement to file a student loan servicing notification?"
                                           }
@@ -7829,13 +8077,13 @@ function PlasmicHomepage__RenderFunc(props: {
                                             align: "center",
                                             className: classNames(
                                               "__wab_instance",
-                                              sty.popoverCore11
+                                              sty.popoverCore15
                                             ),
                                             onOpenChange:
                                               generateStateOnChangeProp(
                                                 $state,
                                                 [
-                                                  "popoverCore11",
+                                                  "popoverCore15",
                                                   __plasmic_idx_0,
                                                   "open"
                                                 ]
@@ -7843,7 +8091,7 @@ function PlasmicHomepage__RenderFunc(props: {
                                             open: generateStateValueProp(
                                               $state,
                                               [
-                                                "popoverCore11",
+                                                "popoverCore15",
                                                 __plasmic_idx_0,
                                                 "open"
                                               ]
@@ -7852,14 +8100,14 @@ function PlasmicHomepage__RenderFunc(props: {
                                               <div
                                                 className={classNames(
                                                   projectcss.all,
-                                                  sty.freeBox__dLaA
+                                                  sty.freeBox__xxQ9K
                                                 )}
                                               >
                                                 <div
                                                   className={classNames(
                                                     projectcss.all,
                                                     projectcss.__wab_text,
-                                                    sty.text__idFp1
+                                                    sty.text__gNxlI
                                                   )}
                                                 >
                                                   <React.Fragment>
@@ -7902,7 +8150,7 @@ function PlasmicHomepage__RenderFunc(props: {
                                                       projectcss.all,
                                                       projectcss.a,
                                                       projectcss.__wab_text,
-                                                      sty.link___0E1UZ
+                                                      sty.link__r8Xrp
                                                     )}
                                                     component={Link}
                                                     href={(() => {
@@ -7945,7 +8193,7 @@ function PlasmicHomepage__RenderFunc(props: {
                                               {
                                                 name: "open",
                                                 plasmicStateName:
-                                                  "popoverCore11[].open"
+                                                  "popoverCore15[].open"
                                               }
                                             ],
                                             [__plasmic_idx_0],
@@ -7956,7 +8204,7 @@ function PlasmicHomepage__RenderFunc(props: {
                                             $state,
                                             [
                                               {
-                                                name: "popoverCore11[].open",
+                                                name: "popoverCore15[].open",
                                                 initFunc: ({
                                                   $props,
                                                   $state,
@@ -7969,17 +8217,17 @@ function PlasmicHomepage__RenderFunc(props: {
                                           return (
                                             <Popover
                                               data-plasmic-name={
-                                                "popoverCore11"
+                                                "popoverCore15"
                                               }
                                               data-plasmic-override={
-                                                overrides.popoverCore11
+                                                overrides.popoverCore15
                                               }
                                               {...child$Props}
                                             >
                                               <Button
                                                 className={classNames(
                                                   "__wab_instance",
-                                                  sty.button__g7Pp
+                                                  sty.button__bbwl
                                                 )}
                                                 color={"softSand"}
                                                 size={"compact"}
@@ -7988,7 +8236,7 @@ function PlasmicHomepage__RenderFunc(props: {
                                                   className={classNames(
                                                     projectcss.all,
                                                     projectcss.__wab_text,
-                                                    sty.text__kJmN
+                                                    sty.text__wqRKz
                                                   )}
                                                 >
                                                   {"View Statute"}
@@ -8001,7 +8249,7 @@ function PlasmicHomepage__RenderFunc(props: {
                                       <div
                                         className={classNames(
                                           projectcss.all,
-                                          sty.column__ybe5B
+                                          sty.column__ox7R9
                                         )}
                                       >
                                         {(_par =>
@@ -8037,7 +8285,7 @@ function PlasmicHomepage__RenderFunc(props: {
                                               <div
                                                 className={classNames(
                                                   projectcss.all,
-                                                  sty.freeBox__rkjma
+                                                  sty.freeBox__fo2Yu
                                                 )}
                                                 key={currentIndex}
                                               >
@@ -8045,7 +8293,7 @@ function PlasmicHomepage__RenderFunc(props: {
                                                   className={classNames(
                                                     projectcss.all,
                                                     projectcss.__wab_text,
-                                                    sty.text__n4Epf
+                                                    sty.text__icht7
                                                   )}
                                                 >
                                                   <React.Fragment>
@@ -8747,8 +8995,9 @@ const PlasmicDescendants = {
     "stateDetailsAccordion",
     "accordionItem",
     "servicingDetailsCollapse",
-    "servLicTriggers",
-    "popoverCore4",
+    "servInEffect",
+    "servLicTriggers2",
+    "popoverCore6",
     "servDefStudentLoan2",
     "popoverCore2",
     "servDefStudentLoanExceptions",
@@ -8758,8 +9007,9 @@ const PlasmicDescendants = {
     "servLicExemptions",
     "popoverCore5",
     "creditorRegistrationCollapse",
-    "regTriggers",
-    "popoverCore6",
+    "creditorRegInEffect",
+    "regTriggers2",
+    "popoverCore14",
     "regDefCreditor",
     "popoverCore7",
     "regDefStudentLoan",
@@ -8769,8 +9019,9 @@ const PlasmicDescendants = {
     "regExemptEntities",
     "popoverCore10",
     "servicerNotificationCollapse",
-    "notTriggers2",
-    "popoverCore11",
+    "notInEffect",
+    "notTriggers3",
+    "popoverCore15",
     "notDefServ",
     "popoverCore12",
     "notDefServ2",
@@ -8859,8 +9110,9 @@ const PlasmicDescendants = {
     "stateDetailsAccordion",
     "accordionItem",
     "servicingDetailsCollapse",
-    "servLicTriggers",
-    "popoverCore4",
+    "servInEffect",
+    "servLicTriggers2",
+    "popoverCore6",
     "servDefStudentLoan2",
     "popoverCore2",
     "servDefStudentLoanExceptions",
@@ -8870,8 +9122,9 @@ const PlasmicDescendants = {
     "servLicExemptions",
     "popoverCore5",
     "creditorRegistrationCollapse",
-    "regTriggers",
-    "popoverCore6",
+    "creditorRegInEffect",
+    "regTriggers2",
+    "popoverCore14",
     "regDefCreditor",
     "popoverCore7",
     "regDefStudentLoan",
@@ -8881,8 +9134,9 @@ const PlasmicDescendants = {
     "regExemptEntities",
     "popoverCore10",
     "servicerNotificationCollapse",
-    "notTriggers2",
-    "popoverCore11",
+    "notInEffect",
+    "notTriggers3",
+    "popoverCore15",
     "notDefServ",
     "popoverCore12",
     "notDefServ2",
@@ -8894,8 +9148,9 @@ const PlasmicDescendants = {
     "stateDetailsAccordion",
     "accordionItem",
     "servicingDetailsCollapse",
-    "servLicTriggers",
-    "popoverCore4",
+    "servInEffect",
+    "servLicTriggers2",
+    "popoverCore6",
     "servDefStudentLoan2",
     "popoverCore2",
     "servDefStudentLoanExceptions",
@@ -8905,8 +9160,9 @@ const PlasmicDescendants = {
     "servLicExemptions",
     "popoverCore5",
     "creditorRegistrationCollapse",
-    "regTriggers",
-    "popoverCore6",
+    "creditorRegInEffect",
+    "regTriggers2",
+    "popoverCore14",
     "regDefCreditor",
     "popoverCore7",
     "regDefStudentLoan",
@@ -8916,8 +9172,9 @@ const PlasmicDescendants = {
     "regExemptEntities",
     "popoverCore10",
     "servicerNotificationCollapse",
-    "notTriggers2",
-    "popoverCore11",
+    "notInEffect",
+    "notTriggers3",
+    "popoverCore15",
     "notDefServ",
     "popoverCore12",
     "notDefServ2",
@@ -8926,8 +9183,9 @@ const PlasmicDescendants = {
   accordionItem: [
     "accordionItem",
     "servicingDetailsCollapse",
-    "servLicTriggers",
-    "popoverCore4",
+    "servInEffect",
+    "servLicTriggers2",
+    "popoverCore6",
     "servDefStudentLoan2",
     "popoverCore2",
     "servDefStudentLoanExceptions",
@@ -8937,8 +9195,9 @@ const PlasmicDescendants = {
     "servLicExemptions",
     "popoverCore5",
     "creditorRegistrationCollapse",
-    "regTriggers",
-    "popoverCore6",
+    "creditorRegInEffect",
+    "regTriggers2",
+    "popoverCore14",
     "regDefCreditor",
     "popoverCore7",
     "regDefStudentLoan",
@@ -8948,8 +9207,9 @@ const PlasmicDescendants = {
     "regExemptEntities",
     "popoverCore10",
     "servicerNotificationCollapse",
-    "notTriggers2",
-    "popoverCore11",
+    "notInEffect",
+    "notTriggers3",
+    "popoverCore15",
     "notDefServ",
     "popoverCore12",
     "notDefServ2",
@@ -8957,8 +9217,9 @@ const PlasmicDescendants = {
   ],
   servicingDetailsCollapse: [
     "servicingDetailsCollapse",
-    "servLicTriggers",
-    "popoverCore4",
+    "servInEffect",
+    "servLicTriggers2",
+    "popoverCore6",
     "servDefStudentLoan2",
     "popoverCore2",
     "servDefStudentLoanExceptions",
@@ -8968,8 +9229,9 @@ const PlasmicDescendants = {
     "servLicExemptions",
     "popoverCore5"
   ],
-  servLicTriggers: ["servLicTriggers", "popoverCore4"],
-  popoverCore4: ["popoverCore4"],
+  servInEffect: ["servInEffect"],
+  servLicTriggers2: ["servLicTriggers2", "popoverCore6"],
+  popoverCore6: ["popoverCore6"],
   servDefStudentLoan2: ["servDefStudentLoan2", "popoverCore2"],
   popoverCore2: ["popoverCore2"],
   servDefStudentLoanExceptions: [
@@ -8983,8 +9245,9 @@ const PlasmicDescendants = {
   popoverCore5: ["popoverCore5"],
   creditorRegistrationCollapse: [
     "creditorRegistrationCollapse",
-    "regTriggers",
-    "popoverCore6",
+    "creditorRegInEffect",
+    "regTriggers2",
+    "popoverCore14",
     "regDefCreditor",
     "popoverCore7",
     "regDefStudentLoan",
@@ -8994,8 +9257,9 @@ const PlasmicDescendants = {
     "regExemptEntities",
     "popoverCore10"
   ],
-  regTriggers: ["regTriggers", "popoverCore6"],
-  popoverCore6: ["popoverCore6"],
+  creditorRegInEffect: ["creditorRegInEffect"],
+  regTriggers2: ["regTriggers2", "popoverCore14"],
+  popoverCore14: ["popoverCore14"],
   regDefCreditor: ["regDefCreditor", "popoverCore7"],
   popoverCore7: ["popoverCore7"],
   regDefStudentLoan: ["regDefStudentLoan", "popoverCore8"],
@@ -9006,15 +9270,17 @@ const PlasmicDescendants = {
   popoverCore10: ["popoverCore10"],
   servicerNotificationCollapse: [
     "servicerNotificationCollapse",
-    "notTriggers2",
-    "popoverCore11",
+    "notInEffect",
+    "notTriggers3",
+    "popoverCore15",
     "notDefServ",
     "popoverCore12",
     "notDefServ2",
     "popoverCore13"
   ],
-  notTriggers2: ["notTriggers2", "popoverCore11"],
-  popoverCore11: ["popoverCore11"],
+  notInEffect: ["notInEffect"],
+  notTriggers3: ["notTriggers3", "popoverCore15"],
+  popoverCore15: ["popoverCore15"],
   notDefServ: ["notDefServ", "popoverCore12"],
   popoverCore12: ["popoverCore12"],
   notDefServ2: ["notDefServ2", "popoverCore13"],
@@ -9050,8 +9316,9 @@ type NodeDefaultElementType = {
   stateDetailsAccordion: typeof AntdAccordion;
   accordionItem: typeof AntdAccordionItem;
   servicingDetailsCollapse: typeof AntdSingleCollapse;
-  servLicTriggers: "div";
-  popoverCore4: typeof Popover;
+  servInEffect: "div";
+  servLicTriggers2: "div";
+  popoverCore6: typeof Popover;
   servDefStudentLoan2: "div";
   popoverCore2: typeof Popover;
   servDefStudentLoanExceptions: "div";
@@ -9061,8 +9328,9 @@ type NodeDefaultElementType = {
   servLicExemptions: "div";
   popoverCore5: typeof Popover;
   creditorRegistrationCollapse: typeof AntdSingleCollapse;
-  regTriggers: "div";
-  popoverCore6: typeof Popover;
+  creditorRegInEffect: "div";
+  regTriggers2: "div";
+  popoverCore14: typeof Popover;
   regDefCreditor: "div";
   popoverCore7: typeof Popover;
   regDefStudentLoan: "div";
@@ -9072,8 +9340,9 @@ type NodeDefaultElementType = {
   regExemptEntities: "div";
   popoverCore10: typeof Popover;
   servicerNotificationCollapse: typeof AntdSingleCollapse;
-  notTriggers2: "div";
-  popoverCore11: typeof Popover;
+  notInEffect: "div";
+  notTriggers3: "div";
+  popoverCore15: typeof Popover;
   notDefServ: "div";
   popoverCore12: typeof Popover;
   notDefServ2: "div";
@@ -9179,8 +9448,9 @@ export const PlasmicHomepage = Object.assign(
     stateDetailsAccordion: makeNodeComponent("stateDetailsAccordion"),
     accordionItem: makeNodeComponent("accordionItem"),
     servicingDetailsCollapse: makeNodeComponent("servicingDetailsCollapse"),
-    servLicTriggers: makeNodeComponent("servLicTriggers"),
-    popoverCore4: makeNodeComponent("popoverCore4"),
+    servInEffect: makeNodeComponent("servInEffect"),
+    servLicTriggers2: makeNodeComponent("servLicTriggers2"),
+    popoverCore6: makeNodeComponent("popoverCore6"),
     servDefStudentLoan2: makeNodeComponent("servDefStudentLoan2"),
     popoverCore2: makeNodeComponent("popoverCore2"),
     servDefStudentLoanExceptions: makeNodeComponent(
@@ -9194,8 +9464,9 @@ export const PlasmicHomepage = Object.assign(
     creditorRegistrationCollapse: makeNodeComponent(
       "creditorRegistrationCollapse"
     ),
-    regTriggers: makeNodeComponent("regTriggers"),
-    popoverCore6: makeNodeComponent("popoverCore6"),
+    creditorRegInEffect: makeNodeComponent("creditorRegInEffect"),
+    regTriggers2: makeNodeComponent("regTriggers2"),
+    popoverCore14: makeNodeComponent("popoverCore14"),
     regDefCreditor: makeNodeComponent("regDefCreditor"),
     popoverCore7: makeNodeComponent("popoverCore7"),
     regDefStudentLoan: makeNodeComponent("regDefStudentLoan"),
@@ -9207,8 +9478,9 @@ export const PlasmicHomepage = Object.assign(
     servicerNotificationCollapse: makeNodeComponent(
       "servicerNotificationCollapse"
     ),
-    notTriggers2: makeNodeComponent("notTriggers2"),
-    popoverCore11: makeNodeComponent("popoverCore11"),
+    notInEffect: makeNodeComponent("notInEffect"),
+    notTriggers3: makeNodeComponent("notTriggers3"),
+    popoverCore15: makeNodeComponent("popoverCore15"),
     notDefServ: makeNodeComponent("notDefServ"),
     popoverCore12: makeNodeComponent("popoverCore12"),
     notDefServ2: makeNodeComponent("notDefServ2"),
